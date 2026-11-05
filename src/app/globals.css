@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 240 10% 3.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 240 10% 3.9%;
+  --border: 240 5.9% 90%;
+  --input: 240 5.9% 90%;
+  --primary: 158 64% 32%; /* Emerald 700 */
+  --primary-foreground: 0 0% 98%;
+  --secondary: 240 4.8% 95.9%; /* Zinc 100 */
+  --secondary-foreground: 240 5.9% 10%;
+  --muted: 240 4.8% 95.9%;
+  --muted-foreground: 240 3.8% 46.1%; /* Zinc 500 */
+  --accent: 158 64% 96%; /* Emerald 50 */
+  --accent-foreground: 158 64% 20%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 158 64% 32%;
+}
+
+.dark {
+  --background: 240 10% 3.9%; /* Zinc 950 */
+  --foreground: 0 0% 98%;
+  --card: 240 10% 4.9%; /* Zinc 900 */
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%; /* Zinc 800 */
+  --input: 240 3.7% 15.9%;
+  --primary: 158 64% 45%; /* Emerald 500 */
+  --primary-foreground: 240 10% 3.9%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --accent: 158 64% 12%;
+  --accent-foreground: 158 64% 75%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 158 64% 45%;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  color: hsl(var(--foreground));
+  background: hsl(var(--background));
+  font-feature-settings: "rlig" 1, "calt" 1, "tnum" 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Swiss Grid Institutional Structural Patterns */
+.swiss-grid-pattern {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(161, 161, 170, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(161, 161, 170, 0.08) 1px, transparent 1px);
+}
+
+.swiss-dot-pattern {
+  background-image: radial-gradient(rgba(113, 113, 122, 0.15) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Crisp Swiss Border Cards */
+.swiss-card {
+  background-color: #ffffff;
+  border: 1px solid #e4e4e7; /* zinc-200 */
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03);
+}
+
+.swiss-card-header {
+  border-bottom: 1px solid #f4f4f5; /* zinc-100 */
+  padding: 1rem 1.25rem;
+}
+
+/* Monospace Metrics Ribbons */
+.swiss-metric-label {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.6875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #71717a; /* zinc-500 */
+}
+
+.swiss-metric-value {
+  font-family: var(--font-mono, monospace);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+/* High-contrast status badges */
+.badge-evidence-confirmed {
+  background-color: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  color: #047857;
+}
+
+.badge-evidence-partial {
+  background-color: #fffbeb;
+  border: 1px solid #fde68a;
+  color: #b45309;
+}
+
+.badge-evidence-missing {
+  background-color: #f4f4f5;
+  border: 1px solid #d4d4d8;
+  color: #52525b;
+}
+
+.badge-evidence-absence {
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+}
+

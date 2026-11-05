@@ -1,0 +1,1680 @@
+import {
+  PlatformDatabaseSchema,
+  JobVacancy,
+  ParsedResume,
+  MatchEvaluation,
+  ApplicationRecord,
+  InterviewQuestion,
+  InterviewSchedule,
+  UserAccount,
+} from "@/types/platform";
+
+export const SEED_USERS: UserAccount[] = [
+  {
+    id: "usr-recruiter-01",
+    role: "recruiter",
+    fullName: "Elena Vance",
+    email: "elena.vance@talentswiss.io",
+    organization: "Apex Core Engineering",
+    title: "Lead Technical Talent Partner",
+    createdAt: "2026-08-01T08:00:00Z",
+  },
+  {
+    id: "usr-candidate-01",
+    role: "candidate",
+    fullName: "Farhan Tariq",
+    email: "farhan.tariq@devmail.com",
+    title: "Senior Backend Engineer",
+    createdAt: "2026-10-12T14:30:00Z",
+  },
+  {
+    id: "usr-candidate-02",
+    role: "candidate",
+    fullName: "Zainab Mirza",
+    email: "zainab.mirza@pytech.org",
+    title: "Full-Stack Python Developer",
+    createdAt: "2026-10-18T09:15:00Z",
+  },
+  {
+    id: "usr-candidate-03",
+    role: "candidate",
+    fullName: "Hamza Bilal",
+    email: "hamza.bilal@codemail.dev",
+    title: "Junior Software Developer",
+    createdAt: "2026-10-25T11:45:00Z",
+  },
+];
+
+// ============================================================================
+// EXACT DEMO SCENARIO: 1 Backend Developer Job Vacancy
+// Requiring Python, Django, PostgreSQL, Docker with explicit skill importance weights
+// Status audit includes closed/reopened events
+// ============================================================================
+
+export const SEED_JOB_BACKEND: JobVacancy = {
+  id: "job-backend-001",
+  title: "Senior Backend Developer (Distributed Systems)",
+  department: "Platform Engineering",
+  location: "Zurich, Switzerland (Hybrid) / Remote EU",
+  workplaceType: "hybrid",
+  employmentType: "full_time",
+  experienceLevel: "senior",
+  salaryRange: {
+    currency: "CHF",
+    min: 135000,
+    max: 165000,
+    period: "annual",
+  },
+  summary:
+    "We are seeking an experienced Backend Developer to architect, scale, and maintain our high-throughput transaction processing engine. You will own asynchronous job queues, database performance tuning, and containerized deployment infrastructure.",
+  description:
+    "Apex Core Engineering builds institutional-grade financial infrastructure. As a Senior Backend Developer on the Core Services team, you will design and optimize Python and Django services handling over 15,000 requests per second. You will lead relational data modeling in PostgreSQL, write query optimization routines, and package services into zero-downtime Docker environments.",
+  responsibilities: [
+    "Design, test, and deploy resilient RESTful and gRPC microservices using Python and Django/Django REST Framework.",
+    "Optimize PostgreSQL relational schemas, execution plans, partition strategies, and connection pooling for multi-tenant isolation.",
+    "Containerize microservices with Docker, author multi-stage production Dockerfiles, and integrate with Kubernetes CI/CD pipelines.",
+    "Enforce rigorous test automation (pytest, factory_boy) and maintain high engineering standards through architectural code reviews.",
+    "Monitor real-time system performance, troubleshoot latency regressions, and diagnose distributed bottlenecks.",
+  ],
+  qualifications: [
+    "Minimum 4+ years of professional backend software engineering with Python.",
+    "Deep production mastery of Django or Django REST Framework in mission-critical environments.",
+    "Proven expertise in PostgreSQL query optimization, transactions, locking mechanisms, and index tuning.",
+    "Hands-on proficiency with Docker container lifecycle, volume management, and containerized deployment.",
+    "Bachelor's degree in Computer Science, Software Engineering, or equivalent practical industry track record.",
+  ],
+  skillWeights: [
+    {
+      skillId: "sk-python",
+      name: "Python",
+      category: "language",
+      importance: "critical",
+      weight: 0.35, // 35% of skills evaluation
+      minimumYearsRequired: 4,
+      description: "Idiomatic Python 3.11+, asynchronous programming (asyncio), concurrency, type annotations, memory profiling.",
+    },
+    {
+      skillId: "sk-django",
+      name: "Django",
+      category: "framework",
+      importance: "critical",
+      weight: 0.30, // 30% of skills evaluation
+      minimumYearsRequired: 3,
+      description: "Django ORM query optimization (select_related, prefetch_related), middleware, DRF serialization, authentication.",
+    },
+    {
+      skillId: "sk-postgres",
+      name: "PostgreSQL",
+      category: "database",
+      importance: "important",
+      weight: 0.20, // 20% of skills evaluation
+      minimumYearsRequired: 2,
+      description: "Complex relational modeling, indexing (B-Tree, GIN, BRIN), EXPLAIN ANALYZE interpretation, ACID transaction isolation.",
+    },
+    {
+      skillId: "sk-docker",
+      name: "Docker",
+      category: "devops",
+      importance: "important",
+      weight: 0.15, // 15% of skills evaluation
+      minimumYearsRequired: 2,
+      description: "Multi-stage builds, alpine/distroless base images, docker-compose orchestration, container networking, vulnerability scanning.",
+    },
+  ],
+  status: "reopened",
+  statusHistory: [
+    {
+      status: "draft",
+      changedAt: "2026-08-10T09:00:00Z",
+      changedBy: "usr-recruiter-01",
+      reason: "Initial job requisition draft created.",
+    },
+    {
+      status: "open",
+      changedAt: "2026-08-15T10:00:00Z",
+      changedBy: "usr-recruiter-01",
+      reason: "Published to internal and external recruitment portals.",
+    },
+    {
+      status: "closed",
+      changedAt: "2026-09-30T17:00:00Z",
+      changedBy: "usr-recruiter-01",
+      reason: "Temporary freeze pending quarterly headcount budget re-allocation.",
+    },
+    {
+      status: "reopened",
+      changedAt: "2026-10-10T08:30:00Z",
+      changedBy: "usr-recruiter-01",
+      reason: "Headcount approved with increased salary bracket and expedited interview loop.",
+    },
+  ],
+  recruiterId: "usr-recruiter-01",
+  createdAt: "2026-08-10T09:00:00Z",
+  updatedAt: "2026-10-10T08:30:00Z",
+  reopenedAt: "2026-10-10T08:30:00Z",
+};
+
+// ============================================================================
+// CANDIDATE 1: Farhan Tariq - Senior Backend Engineer
+// Benchmark Strong Match: Confirmed evidence on Python, Django, PostgreSQL, Docker
+// Zero Hallucinations, 94.5% Composite Score, Pipeline: interview_scheduled
+// ============================================================================
+
+export const SEED_RESUME_FARHAN: ParsedResume = {
+  id: "res-farhan-001",
+  candidateId: "usr-candidate-01",
+  rawText: `FARHAN TARIQ
+Senior Backend Engineer | Zurich, Switzerland | farhan.tariq@devmail.com | github.com/ftariq-dev
+
+PROFESSIONAL SUMMARY
+Senior Backend Engineer with 6+ years of specialized experience designing resilient financial microservices in Python and Django. Proven track record of scaling PostgreSQL databases handling over 250M rows and deploying zero-downtime multi-stage Docker containers in automated CI/CD pipelines.
+
+CORE COMPETENCIES & TECHNICAL SKILLS
+- Programming Languages: Python 3.10-3.12 (Expert, 6 yrs), SQL, Bash
+- Frameworks & Libraries: Django 4.x/5.x (5 yrs), Django REST Framework, Celery, FastAPI, Pytest
+- Databases & Storage: PostgreSQL 14/15/16 (5 yrs), Redis, Elasticsearch
+- DevOps & Cloud: Docker (4 yrs), Docker Compose, Kubernetes, AWS (ECS, RDS, S3), GitHub Actions
+
+WORK EXPERIENCE
+
+Lead Backend Engineer | FinScale Technologies, Zurich
+March 2022 - Present
+- Architected the primary transaction ledger API using Python 3.11, Django, and Django REST Framework, processing 12M+ monthly payments with 99.99% uptime.
+- Optimized mission-critical PostgreSQL queries: redesigned indexing strategies using composite B-Trees and partial indexes, cutting p99 query latency from 840ms to 42ms on 300M+ rows.
+- Containerized the entire backend infrastructure into lightweight Docker containers using multi-stage builds, reducing image size from 1.2GB to 148MB and cutting deployment times by 65%.
+- Implemented Celery distributed task queues backed by Redis to decouple payment webhook reconciliations from synchronous request threads.
+
+Backend Software Engineer | NexaDigital Solutions, Berlin
+June 2019 - February 2022
+- Engineered high-traffic customer onboarding microservices using Python and Django with PostgreSQL.
+- Authored automated test suites with pytest achieving 94% code coverage across 45 critical modules.
+- Created standard Docker Compose development environments, eliminating local onboarding setup friction for a team of 18 engineers.
+
+PROJECTS
+
+Distributed Event Ledger (Open Source)
+github.com/ftariq-dev/event-ledger
+- High-throughput ledger engine written in Python and Django REST Framework.
+- Benchmarked at 4,800 writes/second against PostgreSQL with connection pooling via PgBouncer and containerized local orchestration via Docker Compose.
+
+EDUCATION
+
+B.S. in Computer Science
+Swiss Federal Institute of Technology (ETH Zurich)
+Graduated: July 2019 | GPA: 5.4/6.0
+
+CERTIFICATIONS
+- Docker Certified Associate (DCA) - Issued Nov 2022
+- AWS Certified Solutions Architect - Associate - Issued Mar 2023`,
+  fileMetadata: {
+    fileName: "Farhan_Tariq_Resume_2026.pdf",
+    fileSizeKB: 284,
+    mimeType: "application/pdf",
+    uploadedAt: "2026-10-12T14:32:00Z",
+  },
+  contactInfo: {
+    fullName: "Farhan Tariq",
+    email: "farhan.tariq@devmail.com",
+    location: "Zurich, Switzerland",
+    linkedInUrl: "https://linkedin.com/in/farhantariq-backend",
+    githubUrl: "https://github.com/ftariq-dev",
+  },
+  summary:
+    "Senior Backend Engineer with 6+ years specializing in Python, Django, and high-performance PostgreSQL tuning. Containerized production microservices with Docker.",
+  normalizedSkills: [
+    {
+      skillId: "sk-python",
+      name: "Python",
+      category: "language",
+      normalizedName: "Python",
+      claimedYears: 6,
+      proficiencyLevel: "expert",
+      citationIds: ["cit-farhan-01", "cit-farhan-05"],
+    },
+    {
+      skillId: "sk-django",
+      name: "Django",
+      category: "framework",
+      normalizedName: "Django",
+      claimedYears: 5,
+      proficiencyLevel: "expert",
+      citationIds: ["cit-farhan-02", "cit-farhan-06"],
+    },
+    {
+      skillId: "sk-postgres",
+      name: "PostgreSQL",
+      category: "database",
+      normalizedName: "PostgreSQL",
+      claimedYears: 5,
+      proficiencyLevel: "expert",
+      citationIds: ["cit-farhan-03", "cit-farhan-07"],
+    },
+    {
+      skillId: "sk-docker",
+      name: "Docker",
+      category: "devops",
+      normalizedName: "Docker",
+      claimedYears: 4,
+      proficiencyLevel: "proficient",
+      citationIds: ["cit-farhan-04", "cit-farhan-08"],
+    },
+  ],
+  workExperience: [
+    {
+      id: "exp-farhan-01",
+      company: "FinScale Technologies",
+      title: "Lead Backend Engineer",
+      location: "Zurich, Switzerland",
+      startDate: "2022-03",
+      endDate: "Present",
+      isCurrent: true,
+      bulletPoints: [
+        "Architected the primary transaction ledger API using Python 3.11, Django, and DRF, processing 12M+ monthly payments with 99.99% uptime.",
+        "Optimized mission-critical PostgreSQL queries: redesigned indexing strategies cutting p99 query latency from 840ms to 42ms on 300M+ rows.",
+        "Containerized backend microservices with multi-stage Docker builds, reducing image footprint by 87%.",
+      ],
+      technologiesUsed: ["Python", "Django", "PostgreSQL", "Docker", "Redis", "Celery", "AWS"],
+      citationIds: ["cit-farhan-01", "cit-farhan-02", "cit-farhan-03", "cit-farhan-04"],
+    },
+    {
+      id: "exp-farhan-02",
+      company: "NexaDigital Solutions",
+      title: "Backend Software Engineer",
+      location: "Berlin, Germany",
+      startDate: "2019-06",
+      endDate: "2022-02",
+      isCurrent: false,
+      bulletPoints: [
+        "Engineered customer onboarding microservices using Python, Django, and PostgreSQL.",
+        "Created standardized Docker Compose dev setups for 18 engineers.",
+      ],
+      technologiesUsed: ["Python", "Django", "PostgreSQL", "Docker Compose", "Pytest"],
+      citationIds: ["cit-farhan-05", "cit-farhan-06", "cit-farhan-07", "cit-farhan-08"],
+    },
+  ],
+  projects: [
+    {
+      id: "proj-farhan-01",
+      title: "Distributed Event Ledger",
+      summary:
+        "High-throughput transactional ledger in Python/Django backed by PostgreSQL connection pooling and Docker Compose orchestration.",
+      technologies: ["Python", "Django", "PostgreSQL", "Docker"],
+      githubUrl: "https://github.com/ftariq-dev/event-ledger",
+      role: "Creator & Maintainer",
+      outcomes: ["Sustained 4,800 writes/sec with automated stress tests"],
+      citationIds: ["cit-farhan-09"],
+    },
+  ],
+  education: [
+    {
+      id: "edu-farhan-01",
+      institution: "Swiss Federal Institute of Technology (ETH Zurich)",
+      degree: "Bachelor of Science",
+      fieldOfStudy: "Computer Science",
+      graduationDate: "2019-07",
+      gradeOrGpa: "5.4 / 6.0",
+      citationIds: ["cit-farhan-10"],
+    },
+  ],
+  certifications: [
+    {
+      id: "cert-farhan-01",
+      title: "Docker Certified Associate (DCA)",
+      issuingOrganization: "Docker Inc.",
+      issueDate: "2022-11",
+      citationIds: ["cit-farhan-11"],
+    },
+  ],
+  excerptMapping: [
+    {
+      id: "cit-farhan-01",
+      targetField: "work_experience",
+      associatedIdentifier: "Python",
+      excerptText: "Architected the primary transaction ledger API using Python 3.11, Django, and Django REST Framework",
+      characterStart: 890,
+      characterEnd: 987,
+      contextSnippet: "Lead Backend Engineer | FinScale Technologies ... Architected the primary transaction ledger API using Python 3.11, Django, and Django REST Framework, processing 12M+ monthly payments",
+      confidence: 0.99,
+    },
+    {
+      id: "cit-farhan-02",
+      targetField: "skill",
+      associatedIdentifier: "Django",
+      excerptText: "Django 4.x/5.x (5 yrs), Django REST Framework, Celery, FastAPI, Pytest",
+      characterStart: 490,
+      characterEnd: 560,
+      contextSnippet: "Frameworks & Libraries: Django 4.x/5.x (5 yrs), Django REST Framework, Celery, FastAPI, Pytest",
+      confidence: 0.98,
+    },
+    {
+      id: "cit-farhan-03",
+      targetField: "work_experience",
+      associatedIdentifier: "PostgreSQL",
+      excerptText: "redesigned indexing strategies using composite B-Trees and partial indexes, cutting p99 query latency from 840ms to 42ms on 300M+ rows",
+      characterStart: 1040,
+      characterEnd: 1178,
+      contextSnippet: "Optimized mission-critical PostgreSQL queries: redesigned indexing strategies using composite B-Trees and partial indexes, cutting p99 query latency from 840ms to 42ms on 300M+ rows.",
+      confidence: 0.99,
+    },
+    {
+      id: "cit-farhan-04",
+      targetField: "work_experience",
+      associatedIdentifier: "Docker",
+      excerptText: "Containerized the entire backend infrastructure into lightweight Docker containers using multi-stage builds, reducing image size from 1.2GB to 148MB",
+      characterStart: 1190,
+      characterEnd: 1334,
+      contextSnippet: "Containerized the entire backend infrastructure into lightweight Docker containers using multi-stage builds, reducing image size from 1.2GB to 148MB and cutting deployment times by 65%.",
+      confidence: 0.98,
+    },
+    {
+      id: "cit-farhan-05",
+      targetField: "work_experience",
+      associatedIdentifier: "Python",
+      excerptText: "Engineered high-traffic customer onboarding microservices using Python and Django with PostgreSQL",
+      characterStart: 1540,
+      characterEnd: 1638,
+      contextSnippet: "NexaDigital Solutions ... Engineered high-traffic customer onboarding microservices using Python and Django with PostgreSQL.",
+      confidence: 0.96,
+    },
+    {
+      id: "cit-farhan-06",
+      targetField: "work_experience",
+      associatedIdentifier: "Django",
+      excerptText: "using Python and Django with PostgreSQL",
+      characterStart: 1600,
+      characterEnd: 1638,
+      contextSnippet: "Engineered high-traffic customer onboarding microservices using Python and Django with PostgreSQL.",
+      confidence: 0.95,
+    },
+    {
+      id: "cit-farhan-07",
+      targetField: "work_experience",
+      associatedIdentifier: "PostgreSQL",
+      excerptText: "PostgreSQL 14/15/16 (5 yrs), Redis, Elasticsearch",
+      characterStart: 590,
+      characterEnd: 642,
+      contextSnippet: "Databases & Storage: PostgreSQL 14/15/16 (5 yrs), Redis, Elasticsearch",
+      confidence: 0.97,
+    },
+    {
+      id: "cit-farhan-08",
+      targetField: "work_experience",
+      associatedIdentifier: "Docker",
+      excerptText: "Created standard Docker Compose development environments, eliminating local onboarding setup friction",
+      characterStart: 1730,
+      characterEnd: 1832,
+      contextSnippet: "Created standard Docker Compose development environments, eliminating local onboarding setup friction for a team of 18 engineers.",
+      confidence: 0.95,
+    },
+    {
+      id: "cit-farhan-09",
+      targetField: "project",
+      associatedIdentifier: "Distributed Event Ledger",
+      excerptText: "High-throughput ledger engine written in Python and Django REST Framework. Benchmarked at 4,800 writes/second against PostgreSQL",
+      characterStart: 1950,
+      characterEnd: 2078,
+      contextSnippet: "github.com/ftariq-dev/event-ledger - High-throughput ledger engine written in Python and Django REST Framework. Benchmarked at 4,800 writes/second against PostgreSQL",
+      confidence: 0.98,
+    },
+    {
+      id: "cit-farhan-10",
+      targetField: "education",
+      associatedIdentifier: "ETH Zurich",
+      excerptText: "Swiss Federal Institute of Technology (ETH Zurich) - B.S. in Computer Science, Graduated July 2019",
+      characterStart: 2150,
+      characterEnd: 2248,
+      contextSnippet: "B.S. in Computer Science - Swiss Federal Institute of Technology (ETH Zurich) - Graduated: July 2019",
+      confidence: 0.99,
+    },
+    {
+      id: "cit-farhan-11",
+      targetField: "certification",
+      associatedIdentifier: "Docker Certified Associate",
+      excerptText: "Docker Certified Associate (DCA) - Issued Nov 2022",
+      characterStart: 2310,
+      characterEnd: 2362,
+      contextSnippet: "CERTIFICATIONS: Docker Certified Associate (DCA) - Issued Nov 2022",
+      confidence: 0.99,
+    },
+  ],
+  parsingConfidence: 0.99,
+  parsedAt: "2026-10-12T14:35:00Z",
+};
+
+export const SEED_EVALUATION_FARHAN: MatchEvaluation = {
+  id: "eval-farhan-001",
+  candidateId: "usr-candidate-01",
+  jobId: "job-backend-001",
+  resumeId: "res-farhan-001",
+  evaluatedAt: "2026-10-12T14:40:00Z",
+  modelIdentifier: "swiss-recruiter-eval-v3",
+  weights: {
+    skills: 0.5,
+    experience: 0.25,
+    projects: 0.15,
+    qualifications: 0.1,
+  },
+  scoreBreakdown: {
+    skillsScore: 97.0, // 50%
+    experienceScore: 94.0, // 25%
+    projectsScore: 92.0, // 15%
+    qualificationsScore: 95.0, // 10%
+    // (97*0.5) + (94*0.25) + (92*0.15) + (95*0.1) = 48.5 + 23.5 + 13.8 + 9.5 = 95.3
+    compositeScore: 95.3,
+  },
+  verdict: "strong_match",
+  skillAssessments: [
+    {
+      skillName: "Python",
+      requiredWeight: 0.35,
+      importance: "critical",
+      evidenceState: "confirmed_present",
+      score: 100,
+      candidateYearsFound: 6,
+      requiredYears: 4,
+      justification: "Explicitly evidenced across 6 years, leading backend development with Python 3.11 at FinScale and NexaDigital.",
+      relevantExcerptIds: ["cit-farhan-01", "cit-farhan-05"],
+      verificationNeeded: false,
+    },
+    {
+      skillName: "Django",
+      requiredWeight: 0.3,
+      importance: "critical",
+      evidenceState: "confirmed_present",
+      score: 98,
+      candidateYearsFound: 5,
+      requiredYears: 3,
+      justification: "Demonstrated production architectural expertise in Django 4/5 and DRF powering 12M+ monthly transactions.",
+      relevantExcerptIds: ["cit-farhan-02", "cit-farhan-06"],
+      verificationNeeded: false,
+    },
+    {
+      skillName: "PostgreSQL",
+      requiredWeight: 0.2,
+      importance: "important",
+      evidenceState: "confirmed_present",
+      score: 95,
+      candidateYearsFound: 5,
+      requiredYears: 2,
+      justification: "Concrete quantitative achievements in B-Tree/partial indexing, query optimization cutting latency from 840ms to 42ms on 300M rows.",
+      relevantExcerptIds: ["cit-farhan-03", "cit-farhan-07"],
+      verificationNeeded: false,
+    },
+    {
+      skillName: "Docker",
+      requiredWeight: 0.15,
+      importance: "important",
+      evidenceState: "confirmed_present",
+      score: 94,
+      candidateYearsFound: 4,
+      requiredYears: 2,
+      justification: "Holds Docker Certified Associate (DCA). Implemented multi-stage Docker builds reducing image sizes to 148MB and standardized dev environments.",
+      relevantExcerptIds: ["cit-farhan-04", "cit-farhan-08", "cit-farhan-11"],
+      verificationNeeded: false,
+    },
+  ],
+  experienceMatchAnalysis: {
+    score: 94,
+    totalYearsRelevant: 6,
+    seniorityAlignment: "exceeds",
+    keyStrengths: [
+      "Led mission-critical financial backend architecture handling 12M+ monthly volume.",
+      "Proven ability to solve complex database bottleneck latency regressions.",
+      "Track record of improving engineering team velocity with Docker standardization.",
+    ],
+    gapsIdentified: [],
+    justification: "Exceeds the 4-year minimum requirement with verified leadership responsibilities in high-concurrency environments.",
+  },
+  projectsMatchAnalysis: {
+    score: 92,
+    complexityRating: "exceptional",
+    relevantProjectsCount: 1,
+    stackOverlapDetails: ["Python", "Django REST Framework", "PostgreSQL", "Docker Compose"],
+    justification: "Open-source distributed event ledger directly proves competence in transaction isolation and performance benchmarking (4.8k writes/sec).",
+  },
+  qualificationsMatchAnalysis: {
+    score: 95,
+    degreeRelevant: true,
+    educationLevelMet: true,
+    certificationsBonus: 5,
+    justification: "Computer Science degree from prestigious ETH Zurich plus active Docker Certified Associate certification.",
+  },
+  isHallucinationFlagged: false,
+  hallucinationRiskLevel: "clean",
+  hallucinationFlags: [],
+  executiveSummary:
+    "Farhan Tariq is an exceptional fit for the Senior Backend Developer position. He displays verified mastery across Python, Django, PostgreSQL, and Docker with zero detected discrepancies or timeline hallucinations. His empirical achievements in database latency reduction and containerized pipelines make him an immediate asset for the Platform Engineering team.",
+  recommendationReasoning: [
+    "100% stack coverage with verified production metrics for all four required core technologies.",
+    "Proven architectural capability with high-volume PostgreSQL workloads.",
+    "Fast-track to technical interview loop.",
+  ],
+  targetedInterviewFocusAreas: [
+    "Deep dive into PostgreSQL locking strategies during concurrent ledger updates.",
+    "Multi-tenant data isolation architecture.",
+  ],
+};
+
+// ============================================================================
+// CANDIDATE 2: Zainab Mirza - Full-Stack / Python Developer
+// Missing Evidence Candidate: Strong Python & Django, but PostgreSQL has only
+// passing mention ('partial_evidence') and Docker is unmentioned ('missing_evidence').
+// Composite Score: 73.8%, Pipeline: ai_evaluated
+// ============================================================================
+
+export const SEED_RESUME_ZAINAB: ParsedResume = {
+  id: "res-zainab-002",
+  candidateId: "usr-candidate-02",
+  rawText: `ZAINAB MIRZA
+Full-Stack Python Engineer | Geneva, Switzerland | zainab.mirza@pytech.org
+
+PROFESSIONAL SUMMARY
+Dynamic software developer with 4 years of experience building web applications and client portals using Python, Django, and modern JavaScript. Passionate about clean code, API integrations, and developer productivity.
+
+SKILLS
+- Languages: Python 3.9+, JavaScript (ES6+), HTML5, CSS3
+- Web Frameworks: Django, Django REST Framework, Flask
+- Databases: SQL Databases, SQLite, Basic MySQL, MongoDB
+- Cloud & Tools: Git, GitHub, Linux, Heroku, AWS S3, Postman
+
+EXPERIENCE
+
+Python Web Developer | Horizon Cloud Labs, Geneva
+January 2023 - Present
+- Developed customer-facing analytics dashboards and REST APIs using Python and Django.
+- Implemented user authorization workflows, background emails, and automated CSV reporting pipelines.
+- Integrated third-party payment gateways (Stripe) and webhook notification listeners in Django.
+- Managed application deployments on Heroku and configured AWS S3 for media storage.
+
+Associate Software Engineer | Valais Digital Agency, Lausanne
+October 2021 - December 2022
+- Maintained e-commerce platforms using Django and Python.
+- Wrote SQL database queries for reporting scripts and customer order status tracking.
+- Collaborated with frontend designers to create responsive user interfaces with Vue.js.
+
+PROJECTS
+
+PyPortal - Task & Team Collaboration Tool
+- Django-based project management platform with real-time notifications and automated digest generation.
+- Deployed on Heroku with PostgreSQL addon.
+
+EDUCATION
+
+B.S. in Information Systems
+University of Geneva
+Graduated: July 2021`,
+  fileMetadata: {
+    fileName: "Zainab_Mirza_CV_2026.pdf",
+    fileSizeKB: 198,
+    mimeType: "application/pdf",
+    uploadedAt: "2026-10-18T09:20:00Z",
+  },
+  contactInfo: {
+    fullName: "Zainab Mirza",
+    email: "zainab.mirza@pytech.org",
+    location: "Geneva, Switzerland",
+    linkedInUrl: "https://linkedin.com/in/zainab-mirza-tech",
+  },
+  summary:
+    "Full-Stack Python Engineer with 4 years building Django web applications and APIs. Experience with cloud deployments and relational databases.",
+  normalizedSkills: [
+    {
+      skillId: "sk-python",
+      name: "Python",
+      category: "language",
+      normalizedName: "Python",
+      claimedYears: 4,
+      proficiencyLevel: "proficient",
+      citationIds: ["cit-zainab-01", "cit-zainab-03"],
+    },
+    {
+      skillId: "sk-django",
+      name: "Django",
+      category: "framework",
+      normalizedName: "Django",
+      claimedYears: 3.5,
+      proficiencyLevel: "proficient",
+      citationIds: ["cit-zainab-02", "cit-zainab-04"],
+    },
+    {
+      skillId: "sk-postgres",
+      name: "PostgreSQL",
+      category: "database",
+      normalizedName: "PostgreSQL",
+      claimedYears: 1.5,
+      proficiencyLevel: "competent",
+      citationIds: ["cit-zainab-05"],
+    },
+    // Note: Docker is completely absent from normalized skills
+  ],
+  workExperience: [
+    {
+      id: "exp-zainab-01",
+      company: "Horizon Cloud Labs",
+      title: "Python Web Developer",
+      location: "Geneva, Switzerland",
+      startDate: "2023-01",
+      endDate: "Present",
+      isCurrent: true,
+      bulletPoints: [
+        "Developed customer-facing analytics dashboards and REST APIs using Python and Django.",
+        "Integrated third-party payment gateways (Stripe) and webhook listeners.",
+        "Managed deployments on Heroku and configured AWS S3 for static assets.",
+      ],
+      technologiesUsed: ["Python", "Django", "Django REST Framework", "Heroku", "AWS S3"],
+      citationIds: ["cit-zainab-01", "cit-zainab-02"],
+    },
+    {
+      id: "exp-zainab-02",
+      company: "Valais Digital Agency",
+      title: "Associate Software Engineer",
+      location: "Lausanne, Switzerland",
+      startDate: "2021-10",
+      endDate: "2022-12",
+      isCurrent: false,
+      bulletPoints: [
+        "Maintained e-commerce platforms using Django and Python.",
+        "Wrote SQL database queries for reporting scripts and order tracking.",
+      ],
+      technologiesUsed: ["Python", "Django", "SQL", "Vue.js"],
+      citationIds: ["cit-zainab-03", "cit-zainab-04", "cit-zainab-05"],
+    },
+  ],
+  projects: [
+    {
+      id: "proj-zainab-01",
+      title: "PyPortal - Task & Team Collaboration Tool",
+      summary: "Django-based project management platform deployed on Heroku with PostgreSQL addon.",
+      technologies: ["Python", "Django", "Heroku", "PostgreSQL"],
+      citationIds: ["cit-zainab-06"],
+    },
+  ],
+  education: [
+    {
+      id: "edu-zainab-01",
+      institution: "University of Geneva",
+      degree: "B.S. in Information Systems",
+      fieldOfStudy: "Information Systems",
+      graduationDate: "2021-07",
+      citationIds: ["cit-zainab-07"],
+    },
+  ],
+  certifications: [],
+  excerptMapping: [
+    {
+      id: "cit-zainab-01",
+      targetField: "work_experience",
+      associatedIdentifier: "Python",
+      excerptText: "Developed customer-facing analytics dashboards and REST APIs using Python and Django",
+      characterStart: 460,
+      characterEnd: 546,
+      contextSnippet: "Horizon Cloud Labs ... Developed customer-facing analytics dashboards and REST APIs using Python and Django.",
+      confidence: 0.98,
+    },
+    {
+      id: "cit-zainab-02",
+      targetField: "work_experience",
+      associatedIdentifier: "Django",
+      excerptText: "REST APIs using Python and Django",
+      characterStart: 512,
+      characterEnd: 546,
+      contextSnippet: "REST APIs using Python and Django. Implemented user authorization workflows",
+      confidence: 0.98,
+    },
+    {
+      id: "cit-zainab-03",
+      targetField: "work_experience",
+      associatedIdentifier: "Python",
+      excerptText: "Maintained e-commerce platforms using Django and Python",
+      characterStart: 890,
+      characterEnd: 945,
+      contextSnippet: "Valais Digital Agency ... Maintained e-commerce platforms using Django and Python.",
+      confidence: 0.95,
+    },
+    {
+      id: "cit-zainab-04",
+      targetField: "work_experience",
+      associatedIdentifier: "Django",
+      excerptText: "e-commerce platforms using Django and Python",
+      characterStart: 902,
+      characterEnd: 945,
+      contextSnippet: "Maintained e-commerce platforms using Django and Python.",
+      confidence: 0.95,
+    },
+    {
+      id: "cit-zainab-05",
+      targetField: "work_experience",
+      associatedIdentifier: "PostgreSQL",
+      excerptText: "Wrote SQL database queries for reporting scripts and customer order status tracking",
+      characterStart: 948,
+      characterEnd: 1032,
+      contextSnippet: "Wrote SQL database queries for reporting scripts and customer order status tracking. Collaborated with frontend designers",
+      confidence: 0.65,
+    },
+    {
+      id: "cit-zainab-06",
+      targetField: "project",
+      associatedIdentifier: "PyPortal",
+      excerptText: "Django-based project management platform with real-time notifications ... Deployed on Heroku with PostgreSQL addon",
+      characterStart: 1140,
+      characterEnd: 1250,
+      contextSnippet: "PyPortal ... Django-based project management platform ... Deployed on Heroku with PostgreSQL addon.",
+      confidence: 0.85,
+    },
+    {
+      id: "cit-zainab-07",
+      targetField: "education",
+      associatedIdentifier: "University of Geneva",
+      excerptText: "B.S. in Information Systems - University of Geneva - Graduated: July 2021",
+      characterStart: 1300,
+      characterEnd: 1375,
+      contextSnippet: "B.S. in Information Systems - University of Geneva - Graduated: July 2021",
+      confidence: 0.99,
+    },
+  ],
+  parsingConfidence: 0.94,
+  parsedAt: "2026-10-18T09:25:00Z",
+};
+
+export const SEED_EVALUATION_ZAINAB: MatchEvaluation = {
+  id: "eval-zainab-002",
+  candidateId: "usr-candidate-02",
+  jobId: "job-backend-001",
+  resumeId: "res-zainab-002",
+  evaluatedAt: "2026-10-18T09:30:00Z",
+  modelIdentifier: "swiss-recruiter-eval-v3",
+  weights: {
+    skills: 0.5,
+    experience: 0.25,
+    projects: 0.15,
+    qualifications: 0.1,
+  },
+  scoreBreakdown: {
+    skillsScore: 68.5, // 50%
+    experienceScore: 74.0, // 25%
+    projectsScore: 72.0, // 15%
+    qualificationsScore: 85.0, // 10%
+    // (68.5 * 0.50) + (74 * 0.25) + (72 * 0.15) + (85 * 0.10)
+    // = 34.25 + 18.5 + 10.8 + 8.5 = 72.05 -> rounded to 72.1
+    compositeScore: 72.1,
+  },
+  verdict: "potential_match",
+  skillAssessments: [
+    {
+      skillName: "Python",
+      requiredWeight: 0.35,
+      importance: "critical",
+      evidenceState: "confirmed_present",
+      score: 95,
+      candidateYearsFound: 4,
+      requiredYears: 4,
+      justification: "Strong 4-year track record with Python in web APIs, background reporting, and third-party integrations.",
+      relevantExcerptIds: ["cit-zainab-01", "cit-zainab-03"],
+      verificationNeeded: false,
+    },
+    {
+      skillName: "Django",
+      requiredWeight: 0.3,
+      importance: "critical",
+      evidenceState: "confirmed_present",
+      score: 90,
+      candidateYearsFound: 3.5,
+      requiredYears: 3,
+      justification: "Evidenced Django and DRF development across two professional roles and a personal project.",
+      relevantExcerptIds: ["cit-zainab-02", "cit-zainab-04", "cit-zainab-06"],
+      verificationNeeded: false,
+    },
+    {
+      skillName: "PostgreSQL",
+      requiredWeight: 0.2,
+      importance: "important",
+      evidenceState: "partial_evidence",
+      score: 55,
+      candidateYearsFound: 1.5,
+      requiredYears: 2,
+      justification: "Resume notes generic 'SQL databases' and a Heroku PostgreSQL addon, but lacks evidence of deep index tuning, query plan analysis, or high-scale schema design.",
+      relevantExcerptIds: ["cit-zainab-05", "cit-zainab-06"],
+      verificationNeeded: true,
+      suggestedProbingQuestion: "Can you describe a scenario where you debugged a slow SQL query in PostgreSQL using EXPLAIN ANALYZE?",
+    },
+    {
+      skillName: "Docker",
+      requiredWeight: 0.15,
+      importance: "important",
+      evidenceState: "missing_evidence",
+      score: 0,
+      candidateYearsFound: 0,
+      requiredYears: 2,
+      justification: "Resume contains NO mention of Docker, containerization, or Docker Compose. Candidate utilized PaaS platforms (Heroku) rather than containers. This is marked as missing evidence (unconfirmed) rather than confirmed absence.",
+      relevantExcerptIds: [],
+      verificationNeeded: true,
+      suggestedProbingQuestion: "Have you worked with Docker or containerized environments outside of what is listed in your CV?",
+    },
+  ],
+  experienceMatchAnalysis: {
+    score: 74,
+    totalYearsRelevant: 4,
+    seniorityAlignment: "matches",
+    keyStrengths: [
+      "Solid Python and Django API development foundations.",
+      "Clear experience with third-party payment gateways and webhooks.",
+    ],
+    gapsIdentified: [
+      "No documented experience with containerized deployments or distributed queues.",
+      "Database work appears limited to standard ORM operations and basic SQL scripts.",
+    ],
+    justification: "Meets baseline 4 years of experience, but scope of responsibility is oriented toward product features rather than high-scale platform infrastructure.",
+  },
+  projectsMatchAnalysis: {
+    score: 72,
+    complexityRating: "moderate",
+    relevantProjectsCount: 1,
+    stackOverlapDetails: ["Python", "Django", "PostgreSQL (Heroku Addon)"],
+    justification: "PyPortal demonstrates standard Django ORM and task management, but lacks stress testing or high-concurrency benchmarks.",
+  },
+  qualificationsMatchAnalysis: {
+    score: 85,
+    degreeRelevant: true,
+    educationLevelMet: true,
+    certificationsBonus: 0,
+    justification: "Holds relevant B.S. in Information Systems from University of Geneva.",
+  },
+  isHallucinationFlagged: false,
+  hallucinationRiskLevel: "low",
+  hallucinationFlags: [
+    {
+      id: "flag-zainab-01",
+      claimType: "ungrounded_skill",
+      suspectClaim: "Full-Stack Python Engineer with Cloud Infrastructure",
+      reason: "Headline suggests comprehensive cloud infrastructure, but employment bullets only substantiate managed Heroku git pushes and S3 static bucket setup.",
+      severity: "low",
+      status: "unverified",
+      detectedConfidence: 0.62,
+      recommendedInterviewProbe: "Ask candidate to clarify their direct hands-on responsibility with AWS beyond basic S3 console uploads.",
+      evidenceExcerptIds: ["cit-zainab-01"],
+    },
+  ],
+  executiveSummary:
+    "Zainab Mirza shows genuine competence in core Python and Django web development. However, her profile exhibits a key evidentiary divergence: Docker containerization has NO evidence (0% confirmed score), and PostgreSQL experience is partial (primarily basic SQL scripts and Heroku managed DB). She is a viable mid-level candidate provided technical interviews verify her adaptability to Docker and deeper relational performance concepts.",
+  recommendationReasoning: [
+    "Solid Python/Django foundation aligns well with application layer requirements.",
+    "Critical missing evidence in Docker requires mandatory technical screening probe.",
+    "Recommend targeted 45-minute technical screening focused on SQL optimization and container basics.",
+  ],
+  targetedInterviewFocusAreas: [
+    "Docker fundamentals: Dockerfile creation, container networking, and local debugging.",
+    "PostgreSQL query optimization: Index types, execution plans, and transaction boundaries.",
+  ],
+};
+
+// ============================================================================
+// CANDIDATE 3: Hamza Bilal - Junior Pivoter / Frontend Heavy
+// Hallucination Flagged / Mismatch:
+// - Temporal Impossibility: Claims 6 years experience, graduated in 2024 (2 yrs ago)
+// - Confirmed Absence: Explicitly states No SQL / relational experience (NoSQL only)
+// - Hallucination Risk: CRITICAL
+// Composite Score: 31.5%, Pipeline: applied
+// ============================================================================
+
+export const SEED_RESUME_HAMZA: ParsedResume = {
+  id: "res-hamza-003",
+  candidateId: "usr-candidate-03",
+  rawText: `HAMZA BILAL
+Senior Lead Distributed Backend Architect | Basel, Switzerland | hamza.bilal@codemail.dev
+
+SUMMARY
+Seasoned backend architect with over 6 years of deep enterprise experience building hyperscale distributed backend systems with Python, Django, Docker, and cutting-edge cloud architectures. Pioneer in reactive event sourcing and high-availability database clustering.
+
+PROFESSIONAL EXPERIENCE
+
+Senior Backend Architect | Basel Web Studios
+March 2024 - Present
+- Spearheaded company-wide backend transformation using modern web architectures.
+- Developed landing pages, interactive frontend forms, and client portals using React.js and HTML/CSS.
+- Experimented with Python automation scripts to scrape website leads.
+- Integrated Firebase Firestore for serverless realtime document storage.
+
+Junior Frontend Developer | SwissApp Solutions
+September 2022 - February 2024
+- Built responsive UI components with React, Tailwind CSS, and TypeScript.
+- Consumed REST APIs developed by senior backend engineers.
+- Maintained company WordPress websites and landing pages.
+
+TECHNICAL EXPERTISE
+- Languages: JavaScript, TypeScript, HTML/CSS, Python (Self-taught / Basic)
+- Frameworks: React.js, Next.js, Django (Tutorial Projects), Express
+- Databases: MongoDB, Firebase Firestore (Note: No relational SQL experience; exclusively NoSQL document stores)
+- DevOps: Docker (Interested in learning / watched tutorials), Git
+
+EDUCATION
+
+Bachelor of Science in Web Technologies
+University of Applied Sciences Northwestern Switzerland (FHNW)
+Graduation Date: June 2024`,
+  fileMetadata: {
+    fileName: "Hamza_Bilal_CV_2026.pdf",
+    fileSizeKB: 215,
+    mimeType: "application/pdf",
+    uploadedAt: "2026-10-25T11:46:00Z",
+  },
+  contactInfo: {
+    fullName: "Hamza Bilal",
+    email: "hamza.bilal@codemail.dev",
+    location: "Basel, Switzerland",
+    githubUrl: "https://github.com/hamza-web-dev",
+  },
+  summary:
+    "Self-proclaimed backend architect claiming 6 years experience. Work history reveals junior frontend developer experience with React and WordPress, graduating university in June 2024.",
+  normalizedSkills: [
+    {
+      skillId: "sk-python",
+      name: "Python",
+      category: "language",
+      normalizedName: "Python",
+      claimedYears: 1,
+      proficiencyLevel: "novice",
+      citationIds: ["cit-hamza-01"],
+    },
+    {
+      skillId: "sk-django",
+      name: "Django",
+      category: "framework",
+      normalizedName: "Django",
+      claimedYears: 0.5,
+      proficiencyLevel: "novice",
+      citationIds: ["cit-hamza-02"],
+    },
+    {
+      skillId: "sk-postgres",
+      name: "PostgreSQL",
+      category: "database",
+      normalizedName: "PostgreSQL",
+      claimedYears: 0,
+      proficiencyLevel: "novice",
+      citationIds: ["cit-hamza-03"],
+    },
+    {
+      skillId: "sk-docker",
+      name: "Docker",
+      category: "devops",
+      normalizedName: "Docker",
+      claimedYears: 0,
+      proficiencyLevel: "novice",
+      citationIds: ["cit-hamza-04"],
+    },
+  ],
+  workExperience: [
+    {
+      id: "exp-hamza-01",
+      company: "Basel Web Studios",
+      title: "Senior Backend Architect (Claimed) / Frontend Developer",
+      location: "Basel, Switzerland",
+      startDate: "2024-03",
+      endDate: "Present",
+      isCurrent: true,
+      bulletPoints: [
+        "Developed landing pages, interactive frontend forms, and client portals using React.js.",
+        "Experimented with Python automation scripts to scrape website leads.",
+        "Integrated Firebase Firestore for serverless realtime document storage.",
+      ],
+      technologiesUsed: ["React", "HTML/CSS", "Python (Scripts)", "Firebase"],
+      citationIds: ["cit-hamza-01", "cit-hamza-05"],
+    },
+    {
+      id: "exp-hamza-02",
+      company: "SwissApp Solutions",
+      title: "Junior Frontend Developer",
+      location: "Basel, Switzerland",
+      startDate: "2022-09",
+      endDate: "2024-02",
+      isCurrent: false,
+      bulletPoints: [
+        "Built responsive UI components with React, Tailwind CSS, and TypeScript.",
+        "Consumed REST APIs developed by backend team.",
+      ],
+      technologiesUsed: ["React", "TypeScript", "Tailwind CSS"],
+      citationIds: ["cit-hamza-06"],
+    },
+  ],
+  projects: [],
+  education: [
+    {
+      id: "edu-hamza-01",
+      institution: "University of Applied Sciences Northwestern Switzerland (FHNW)",
+      degree: "Bachelor of Science",
+      fieldOfStudy: "Web Technologies",
+      graduationDate: "2024-06",
+      citationIds: ["cit-hamza-07"],
+    },
+  ],
+  certifications: [],
+  excerptMapping: [
+    {
+      id: "cit-hamza-01",
+      targetField: "work_experience",
+      associatedIdentifier: "Python",
+      excerptText: "Experimented with Python automation scripts to scrape website leads",
+      characterStart: 490,
+      characterEnd: 558,
+      contextSnippet: "Basel Web Studios ... Experimented with Python automation scripts to scrape website leads.",
+      confidence: 0.9,
+    },
+    {
+      id: "cit-hamza-02",
+      targetField: "skill",
+      associatedIdentifier: "Django",
+      excerptText: "Django (Tutorial Projects)",
+      characterStart: 920,
+      characterEnd: 946,
+      contextSnippet: "Frameworks: React.js, Next.js, Django (Tutorial Projects), Express",
+      confidence: 0.95,
+    },
+    {
+      id: "cit-hamza-03",
+      targetField: "skill",
+      associatedIdentifier: "PostgreSQL",
+      excerptText: "Note: No relational SQL experience; exclusively NoSQL document stores",
+      characterStart: 980,
+      characterEnd: 1052,
+      contextSnippet: "Databases: MongoDB, Firebase Firestore (Note: No relational SQL experience; exclusively NoSQL document stores)",
+      confidence: 0.99,
+    },
+    {
+      id: "cit-hamza-04",
+      targetField: "skill",
+      associatedIdentifier: "Docker",
+      excerptText: "Docker (Interested in learning / watched tutorials)",
+      characterStart: 1070,
+      characterEnd: 1122,
+      contextSnippet: "DevOps: Docker (Interested in learning / watched tutorials), Git",
+      confidence: 0.99,
+    },
+    {
+      id: "cit-hamza-05",
+      targetField: "work_experience",
+      associatedIdentifier: "Senior Backend Architect",
+      excerptText: "Senior Backend Architect | Basel Web Studios | March 2024 - Present",
+      characterStart: 310,
+      characterEnd: 377,
+      contextSnippet: "Senior Backend Architect | Basel Web Studios | March 2024 - Present ... Developed landing pages, interactive frontend forms",
+      confidence: 0.95,
+    },
+    {
+      id: "cit-hamza-06",
+      targetField: "work_experience",
+      associatedIdentifier: "Junior Frontend Developer",
+      excerptText: "Junior Frontend Developer | SwissApp Solutions | September 2022 - February 2024",
+      characterStart: 620,
+      characterEnd: 700,
+      contextSnippet: "Junior Frontend Developer | SwissApp Solutions | September 2022 - February 2024 ... Built responsive UI components with React",
+      confidence: 0.98,
+    },
+    {
+      id: "cit-hamza-07",
+      targetField: "education",
+      associatedIdentifier: "FHNW Graduation",
+      excerptText: "Bachelor of Science in Web Technologies ... Graduation Date: June 2024",
+      characterStart: 1150,
+      characterEnd: 1228,
+      contextSnippet: "Bachelor of Science in Web Technologies - University of Applied Sciences Northwestern Switzerland (FHNW) - Graduation Date: June 2024",
+      confidence: 0.99,
+    },
+  ],
+  parsingConfidence: 0.92,
+  parsedAt: "2026-10-25T11:48:00Z",
+};
+
+export const SEED_EVALUATION_HAMZA: MatchEvaluation = {
+  id: "eval-hamza-003",
+  candidateId: "usr-candidate-03",
+  jobId: "job-backend-001",
+  resumeId: "res-hamza-003",
+  evaluatedAt: "2026-10-25T11:52:00Z",
+  modelIdentifier: "swiss-recruiter-eval-v3",
+  weights: {
+    skills: 0.5,
+    experience: 0.25,
+    projects: 0.15,
+    qualifications: 0.1,
+  },
+  scoreBreakdown: {
+    skillsScore: 16.0, // 50%
+    experienceScore: 22.0, // 25%
+    projectsScore: 18.0, // 15%
+    qualificationsScore: 60.0, // 10%
+    // (16 * 0.50) + (22 * 0.25) + (18 * 0.15) + (60 * 0.10)
+    // = 8.0 + 5.5 + 2.7 + 6.0 = 22.2
+    compositeScore: 22.2,
+  },
+  verdict: "mismatch",
+  skillAssessments: [
+    {
+      skillName: "Python",
+      requiredWeight: 0.35,
+      importance: "critical",
+      evidenceState: "partial_evidence",
+      score: 25,
+      candidateYearsFound: 0.5,
+      requiredYears: 4,
+      justification: "Candidate mentions writing basic web scraping scripts in Python, far short of required 4 years professional backend engineering.",
+      relevantExcerptIds: ["cit-hamza-01"],
+      verificationNeeded: true,
+      suggestedProbingQuestion: "Can you walk through any Python production service you have deployed?",
+    },
+    {
+      skillName: "Django",
+      requiredWeight: 0.3,
+      importance: "critical",
+      evidenceState: "partial_evidence",
+      score: 15,
+      candidateYearsFound: 0.2,
+      requiredYears: 3,
+      justification: "Resume explicitly notes 'Django (Tutorial Projects)' with no commercial deployment.",
+      relevantExcerptIds: ["cit-hamza-02"],
+      verificationNeeded: true,
+    },
+    {
+      skillName: "PostgreSQL",
+      requiredWeight: 0.2,
+      importance: "important",
+      evidenceState: "confirmed_absence",
+      score: 0,
+      candidateYearsFound: 0,
+      requiredYears: 2,
+      justification: "Candidate explicitly wrote: 'Note: No relational SQL experience; exclusively NoSQL document stores'. This constitutes confirmed absence rather than missing evidence.",
+      relevantExcerptIds: ["cit-hamza-03"],
+      verificationNeeded: false,
+    },
+    {
+      skillName: "Docker",
+      requiredWeight: 0.15,
+      importance: "important",
+      evidenceState: "confirmed_absence",
+      score: 0,
+      candidateYearsFound: 0,
+      requiredYears: 2,
+      justification: "Candidate notes 'Interested in learning / watched tutorials'. Zero professional container experience.",
+      relevantExcerptIds: ["cit-hamza-04"],
+      verificationNeeded: false,
+    },
+  ],
+  experienceMatchAnalysis: {
+    score: 22,
+    totalYearsRelevant: 0.5,
+    seniorityAlignment: "below",
+    keyStrengths: ["Frontend React.js UI styling"],
+    gapsIdentified: [
+      "Severe gap in backend engineering experience.",
+      "Work history is overwhelmingly client-side React and WordPress maintenance.",
+    ],
+    justification: "Work experience does not satisfy the requirements of a Senior Backend role in any dimension.",
+  },
+  projectsMatchAnalysis: {
+    score: 18,
+    complexityRating: "low",
+    relevantProjectsCount: 0,
+    stackOverlapDetails: [],
+    justification: "No relevant distributed systems or backend projects provided.",
+  },
+  qualificationsMatchAnalysis: {
+    score: 60,
+    degreeRelevant: false,
+    educationLevelMet: false,
+    certificationsBonus: 0,
+    justification: "Recent B.S. in Web Technologies (graduated June 2024). Lacks theoretical depth in distributed algorithms and relational database architecture.",
+  },
+  isHallucinationFlagged: true,
+  hallucinationRiskLevel: "critical",
+  hallucinationFlags: [
+    {
+      id: "flag-hamza-01",
+      claimType: "temporal_impossibility",
+      suspectClaim: "Over 6 years of deep enterprise backend experience",
+      reason: "Candidate graduated university in June 2024 (2 years ago). Total post-education elapsed time is 2 years, rendering a 6-year enterprise tenure mathematically impossible.",
+      severity: "critical",
+      status: "verified_hallucination",
+      detectedConfidence: 0.99,
+      recommendedInterviewProbe: "Address the chronological contradiction between university graduation in 2024 and the claimed 6 years of enterprise tenure.",
+      evidenceExcerptIds: ["cit-hamza-05", "cit-hamza-07"],
+    },
+    {
+      id: "flag-hamza-02",
+      claimType: "exaggerated_seniority",
+      suspectClaim: "Senior Lead Distributed Backend Architect (March 2024 - Present)",
+      reason: "Title claims Senior Lead Architect immediately upon university graduation, yet actual daily tasks describe developing React landing pages and marketing forms.",
+      severity: "high",
+      status: "verified_hallucination",
+      detectedConfidence: 0.96,
+      recommendedInterviewProbe: "Clarify architectural authority vs UI form building at Basel Web Studios.",
+      evidenceExcerptIds: ["cit-hamza-05"],
+    },
+    {
+      id: "flag-hamza-03",
+      claimType: "ungrounded_skill",
+      suspectClaim: "Pioneer in reactive event sourcing and high-availability database clustering",
+      reason: "Claim is completely ungrounded; candidate's actual database section states they have zero SQL experience and only used Firebase Firestore.",
+      severity: "critical",
+      status: "verified_hallucination",
+      detectedConfidence: 0.98,
+      recommendedInterviewProbe: "Probe candidate on ACID properties or cluster replication topologies.",
+      evidenceExcerptIds: ["cit-hamza-03"],
+    },
+  ],
+  executiveSummary:
+    "Hamza Bilal's application triggers CRITICAL hallucination and temporal inconsistency alerts. While the resume summary advertises '6+ years as Senior Lead Distributed Backend Architect', verifiable dates demonstrate graduation in June 2024 and actual duties centered around React landing pages. Furthermore, candidate confirms zero relational SQL experience. The application represents a severe mismatch for this position.",
+  recommendationReasoning: [
+    "Critical temporal impossibility: 6 claimed years vs 2 calendar years post-grad.",
+    "Confirmed absence of required PostgreSQL and Docker skills.",
+    "Recommend immediate rejection or redirect to Junior Frontend internship pool.",
+  ],
+  targetedInterviewFocusAreas: [
+    "Not recommended for interview loop. Discrepancy report archived in compliance log.",
+  ],
+};
+
+// ============================================================================
+// APPLICATIONS WITH AUDIT TRAILS (7 Pipeline Stages Covered)
+// 1. applied -> 2. screening -> 3. ai_evaluated -> 4. interview_scheduled
+// -> 5. interview_completed -> 6. offer_extended -> 7. hired
+// ============================================================================
+
+export const SEED_APPLICATIONS: ApplicationRecord[] = [
+  // Farhan Tariq: Advanced to 'interview_scheduled'
+  {
+    id: "app-farhan-001",
+    jobId: "job-backend-001",
+    candidateId: "usr-candidate-01",
+    resumeId: "res-farhan-001",
+    evaluationId: "eval-farhan-001",
+    currentStage: "interview_scheduled",
+    appliedDate: "2026-10-12T14:30:00Z",
+    lastUpdated: "2026-10-14T11:00:00Z",
+    candidateProfile: {
+      fullName: "Farhan Tariq",
+      email: "farhan.tariq@devmail.com",
+      location: "Zurich, Switzerland",
+      headline: "Senior Backend Engineer | Python, Django, PostgreSQL, Docker",
+    },
+    tags: ["High Priority", "Verified 95%", "Fast-Track", "Zurich Local"],
+    recruiterNotes: "Exceptional profile. All core technologies empirically grounded with measurable latency reductions. Interview scheduled with Head of Engineering.",
+    auditTrail: [
+      {
+        id: "aud-farhan-01",
+        timestamp: "2026-10-12T14:30:00Z",
+        action: "Application Submitted",
+        newStage: "applied",
+        actor: { id: "usr-candidate-01", name: "Farhan Tariq", role: "candidate" },
+        notes: "Direct application via portal.",
+      },
+      {
+        id: "aud-farhan-02",
+        timestamp: "2026-10-12T14:35:00Z",
+        action: "Automated Resume Parsing",
+        previousStage: "applied",
+        newStage: "screening",
+        actor: { id: "system", name: "SwissParser Engine", role: "system" },
+        notes: "Parsed text with 99% confidence. 11 grounded excerpts catalogued.",
+      },
+      {
+        id: "aud-farhan-03",
+        timestamp: "2026-10-12T14:40:00Z",
+        action: "AI Match Evaluation",
+        previousStage: "screening",
+        newStage: "ai_evaluated",
+        actor: { id: "system", name: "SwissRecruiter MatchEngine", role: "system" },
+        notes: "Weighted match computed at 95.3%. Zero hallucination flags detected.",
+      },
+      {
+        id: "aud-farhan-04",
+        timestamp: "2026-10-14T11:00:00Z",
+        action: "Technical Deep Dive Scheduled",
+        previousStage: "ai_evaluated",
+        newStage: "interview_scheduled",
+        actor: { id: "usr-recruiter-01", name: "Elena Vance", role: "recruiter" },
+        notes: "Scheduled 60-minute session with Lead Architect Marcus Keller.",
+      },
+    ],
+  },
+
+  // Zainab Mirza: Currently at 'ai_evaluated' (Missing evidence flagged for verification)
+  {
+    id: "app-zainab-002",
+    jobId: "job-backend-001",
+    candidateId: "usr-candidate-02",
+    resumeId: "res-zainab-002",
+    evaluationId: "eval-zainab-002",
+    currentStage: "ai_evaluated",
+    appliedDate: "2026-10-18T09:15:00Z",
+    lastUpdated: "2026-10-18T09:30:00Z",
+    candidateProfile: {
+      fullName: "Zainab Mirza",
+      email: "zainab.mirza@pytech.org",
+      location: "Geneva, Switzerland",
+      headline: "Full-Stack Python Developer | Django & Web APIs",
+    },
+    tags: ["Potential Match", "Docker Missing Evidence", "Probing Required"],
+    recruiterNotes: "Strong Python/Django baseline. Must conduct 30-minute tech screen to determine if Docker and Postgres gaps can be bridged.",
+    auditTrail: [
+      {
+        id: "aud-zainab-01",
+        timestamp: "2026-10-18T09:15:00Z",
+        action: "Application Submitted",
+        newStage: "applied",
+        actor: { id: "usr-candidate-02", name: "Zainab Mirza", role: "candidate" },
+        notes: "Applied via LinkedIn easy apply integration.",
+      },
+      {
+        id: "aud-zainab-02",
+        timestamp: "2026-10-18T09:20:00Z",
+        action: "Automated Screening",
+        previousStage: "applied",
+        newStage: "screening",
+        actor: { id: "system", name: "SwissParser Engine", role: "system" },
+        notes: "Normalized 3 core skills. Docker was not identified in raw text.",
+      },
+      {
+        id: "aud-zainab-03",
+        timestamp: "2026-10-18T09:30:00Z",
+        action: "AI Evaluation Complete",
+        previousStage: "screening",
+        newStage: "ai_evaluated",
+        actor: { id: "system", name: "SwissRecruiter MatchEngine", role: "system" },
+        notes: "Composite score: 72.1%. Docker flagged as 'missing_evidence', Postgres as 'partial_evidence'.",
+      },
+    ],
+  },
+
+  // Hamza Bilal: Flagged at 'applied' / auto-investigation stage
+  {
+    id: "app-hamza-003",
+    jobId: "job-backend-001",
+    candidateId: "usr-candidate-03",
+    resumeId: "res-hamza-003",
+    evaluationId: "eval-hamza-003",
+    currentStage: "applied",
+    appliedDate: "2026-10-25T11:45:00Z",
+    lastUpdated: "2026-10-25T11:52:00Z",
+    candidateProfile: {
+      fullName: "Hamza Bilal",
+      email: "hamza.bilal@codemail.dev",
+      location: "Basel, Switzerland",
+      headline: "Junior Developer (Claimed Backend Architect)",
+    },
+    tags: ["Hallucination Flagged", "Temporal Impossibility", "Confirmed Absence"],
+    recruiterNotes: "Critical hallucination alert: claims 6 years experience after graduating in June 2024. Confirmed absence in relational SQL. Candidate disqualified from senior role.",
+    auditTrail: [
+      {
+        id: "aud-hamza-01",
+        timestamp: "2026-10-25T11:45:00Z",
+        action: "Application Submitted",
+        newStage: "applied",
+        actor: { id: "usr-candidate-03", name: "Hamza Bilal", role: "candidate" },
+        notes: "Application received.",
+      },
+      {
+        id: "aud-hamza-02",
+        timestamp: "2026-10-25T11:48:00Z",
+        action: "Screening Parsing",
+        previousStage: "applied",
+        newStage: "screening",
+        actor: { id: "system", name: "SwissParser Engine", role: "system" },
+        notes: "Resume parsed. Found self-declared disclaimer: 'No relational SQL experience'.",
+      },
+      {
+        id: "aud-hamza-03",
+        timestamp: "2026-10-25T11:52:00Z",
+        action: "Hallucination Anomaly Flagged",
+        previousStage: "screening",
+        newStage: "applied",
+        actor: { id: "system", name: "SwissRecruiter MatchEngine", role: "system" },
+        notes: "CRITICAL risk level triggered. Reverted to applied with investigation warning banner.",
+      },
+    ],
+  },
+];
+
+// ============================================================================
+// DYNAMIC INTERVIEW QUESTIONS & TARGETED PROBES
+// High scale system design for Farhan, Missing evidence probes for Zainab
+// ============================================================================
+
+export const SEED_QUESTIONS: InterviewQuestion[] = [
+  // For Farhan Tariq: Advanced System & Concurrency probing
+  {
+    id: "q-farhan-01",
+    jobId: "job-backend-001",
+    candidateId: "usr-candidate-01",
+    evaluationId: "eval-farhan-001",
+    category: "technical",
+    targetSkillOrTopic: "PostgreSQL Concurrency & Locking",
+    questionText:
+      "In your financial ledger project, how did you avoid deadlocks and race conditions when multiple concurrent payment webhooks attempted to update the exact same account balance simultaneously in PostgreSQL?",
+    contextReasoning:
+      "Farhan claims to have processed 12M+ monthly transactions and cut p99 latency to 42ms. This question tests whether he understands SELECT FOR UPDATE vs optimistic row versioning and isolation levels (SERIALIZABLE vs REPEATABLE READ).",
+    difficulty: "senior",
+    expectedSignals: [
+      "Mentions row-level locking (SELECT ... FOR UPDATE) or advisory locks",
+      "Discusses dead-lock prevention via deterministic row sorting",
+      "Explains trade-offs of optimistic locking using version numbers or timestamp checks",
+      "Understands connection pooling saturation when long transactions hold locks",
+    ],
+    redFlagIndicators: [
+      "Suggests locking the entire table or database",
+      "Unaware of phantom reads or isolation levels",
+      "Relies purely on application-level memory locks across multi-worker deployments",
+    ],
+    rubric: {
+      criteria: "Technical mastery of ACID transactional concurrency in PostgreSQL",
+      levels: [
+        {
+          score: 5,
+          description: "Exceptional: Articulates exact row locking semantics, lock ordering strategies, and connection pool sizing.",
+          signalsToLookFor: ["SELECT FOR UPDATE NOWAIT", "Deterministic sort order on IDs", "PgBouncer transaction pooling caveat"],
+        },
+        {
+          score: 3,
+          description: "Competent: Understands database transactions and standard locking, but needs prompting on distributed deadlock scenarios.",
+          signalsToLookFor: ["Standard db.transaction() context manager", "Basic retry loops"],
+        },
+        {
+          score: 1,
+          description: "Unacceptable: Demonstrates no grasp of concurrency bugs; suggests in-memory locks on multi-instance setups.",
+          signalsToLookFor: ["Unaware of race conditions", "Confuses SQLite with Postgres concurrency"],
+        },
+      ],
+    },
+    followUpProbes: [
+      "What happens if PgBouncer is running in transaction mode vs session mode when using prepared statements?",
+      "How do you index an immutable append-only ledger table to maximize insert throughput without degrading balance lookups?",
+    ],
+    evidenceStateTargeted: "confirmed_present",
+  },
+  {
+    id: "q-farhan-02",
+    jobId: "job-backend-001",
+    candidateId: "usr-candidate-01",
+    evaluationId: "eval-farhan-001",
+    category: "technical",
+    targetSkillOrTopic: "Docker Multi-Stage & Security",
+    questionText:
+      "Walk through how you authored your production Dockerfile to reduce Python Django image size to 148MB. What base image did you choose, how did you handle C-extensions (like psycopg2), and how did you enforce non-root security?",
+    contextReasoning:
+      "Verifies his claim of cutting Docker image size from 1.2GB to 148MB and tests knowledge of Linux build stages, wheel compilation, and container hardening.",
+    difficulty: "senior",
+    expectedSignals: [
+      "Uses multi-stage build: builder stage with build-essential, clean runtime stage with python:3.11-slim or distroless",
+      "Compiles wheels in builder stage and installs with --no-index --find-links",
+      "Runs container under dedicated unprivileged USER (e.g. appuser uid 10001)",
+      "Avoids leaving gcc, headers, or apt cache in the final image",
+    ],
+    redFlagIndicators: [
+      "Copies entire virtualenv without path matching or leaves secrets in intermediate layers",
+      "Runs container as root in production",
+      "Uses huge ubuntu-latest image with full dev-tools installed",
+    ],
+    rubric: {
+      criteria: "Container architecture, build optimization, and production container security",
+      levels: [
+        {
+          score: 5,
+          description: "Expert: Flawlessly explains build vs runtime layers, wheel caching, dumb-init/tini PID 1 handling, and non-root USER directive.",
+          signalsToLookFor: ["Multi-stage build separation", "python -m venv replication", "USER nonroot", "Proper signal propagation"],
+        },
+        {
+          score: 3,
+          description: "Acceptable: Mentions python-slim and .dockerignore, but hazy on wheel compilation or non-root user creation.",
+          signalsToLookFor: ["Slim image", ".dockerignore usage"],
+        },
+        {
+          score: 1,
+          description: "Inadequate: Cannot explain what a multi-stage Docker build is.",
+          signalsToLookFor: ["Single stage only", "Installs build packages on final layer"],
+        },
+      ],
+    },
+    followUpProbes: [
+      "How do you ensure proper SIGTERM handling in Gunicorn so active requests finish cleanly during a rolling Kubernetes deployment?",
+    ],
+    evidenceStateTargeted: "confirmed_present",
+  },
+
+  // For Zainab Mirza: Targeted missing evidence verification
+  {
+    id: "q-zainab-01",
+    jobId: "job-backend-001",
+    candidateId: "usr-candidate-02",
+    evaluationId: "eval-zainab-002",
+    category: "evidence_verification",
+    targetSkillOrTopic: "Docker Deployment & Local Containers",
+    questionText:
+      "We noticed that your recent projects were deployed directly on Heroku PaaS. Can you describe any practical experience you have with Docker, such as writing a Dockerfile, using docker-compose locally, or debugging container networking?",
+    contextReasoning:
+      "AI detected MISSING EVIDENCE for Docker in Zainab's resume. This targeted probe clarifies whether she has unlisted hands-on experience or will need structured onboarding.",
+    difficulty: "mid",
+    expectedSignals: [
+      "Candidate honestly explains her current exposure to Docker (e.g., local experiments vs production)",
+      "Demonstrates fundamental conceptual understanding of containers vs virtual machines",
+      "Expresses eagerness and concrete steps she would take to ramp up on our Docker workflow",
+    ],
+    redFlagIndicators: [
+      "Feigns extensive experience that quickly falls apart under basic syntax questioning",
+      "Shows resistance to moving away from PaaS environments",
+    ],
+    rubric: {
+      criteria: "Targeted verification of Docker familiarity and learning curve readiness",
+      levels: [
+        {
+          score: 5,
+          description: "Has unlisted experience with local docker-compose and writes basic Dockerfiles comfortably.",
+          signalsToLookFor: ["Dockerfile instructions", "docker-compose up/down", "Port mapping knowledge"],
+        },
+        {
+          score: 3,
+          description: "Understands the concept and has used Docker Desktop, but has not managed production containers.",
+          signalsToLookFor: ["Conceptually clear", "Willingness to learn"],
+        },
+        {
+          score: 1,
+          description: "Complete lack of familiarity; unable to explain what an image vs a container is.",
+          signalsToLookFor: ["No knowledge", "Evasive answers"],
+        },
+      ],
+    },
+    followUpProbes: [
+      "If a Django container cannot connect to a PostgreSQL container on the same host, what are the first three things you check?",
+    ],
+    evidenceStateTargeted: "missing_evidence",
+  },
+  {
+    id: "q-zainab-02",
+    jobId: "job-backend-001",
+    candidateId: "usr-candidate-02",
+    evaluationId: "eval-zainab-002",
+    category: "evidence_verification",
+    targetSkillOrTopic: "PostgreSQL Query Performance & Optimization",
+    questionText:
+      "In your work at Valais Digital and Horizon Labs, how did you inspect and diagnose slow database queries? Have you used Django's select_related or prefetch_related, or inspected raw EXPLAIN execution plans in PostgreSQL?",
+    contextReasoning:
+      "AI detected PARTIAL EVIDENCE for PostgreSQL (candidate listed generic SQL queries and a Heroku addon). This probe evaluates whether she understands relational performance beyond simple ORM lookups.",
+    difficulty: "mid",
+    expectedSignals: [
+      "Distinguishes between select_related (SQL JOIN) and prefetch_related (separate query with IN clause)",
+      "Recognizes the N+1 query problem in Django ORM",
+      "Has experience adding indexes to foreign keys or frequently filtered columns",
+    ],
+    redFlagIndicators: [
+      "Never heard of the N+1 problem or select_related",
+      "Iterates over querysets making nested DB queries inside template loops without awareness",
+    ],
+    rubric: {
+      criteria: "Verification of relational database performance proficiency in Django/PostgreSQL",
+      levels: [
+        {
+          score: 5,
+          description: "Demonstrates crisp understanding of N+1 problems, query plans, and index definitions in Django models.",
+          signalsToLookFor: ["select_related vs prefetch_related", "django-debug-toolbar", "db_index=True"],
+        },
+        {
+          score: 3,
+          description: "Knows about select_related and indexing, but has limited experience with raw EXPLAIN queries.",
+          signalsToLookFor: ["select_related mentioned", "Understands indexes reduce scan time"],
+        },
+        {
+          score: 1,
+          description: "Does not understand how the ORM communicates with SQL; unaware of query multiplication.",
+          signalsToLookFor: ["Blanks on N+1", "No knowledge of indexing"],
+        },
+      ],
+    },
+    followUpProbes: [
+      "When would you choose NOT to index a column in PostgreSQL?",
+    ],
+    evidenceStateTargeted: "partial_evidence",
+  },
+];
+
+// ============================================================================
+// INTERVIEW SCHEDULES
+// Farhan Tariq scheduled for Technical Deep Dive with Lead Architect
+// ============================================================================
+
+export const SEED_SCHEDULES: InterviewSchedule[] = [
+  {
+    id: "sch-farhan-001",
+    applicationId: "app-farhan-001",
+    jobId: "job-backend-001",
+    candidateId: "usr-candidate-01",
+    interviewType: "technical_deep_dive",
+    title: "Senior Backend Technical Architecture & Systems Interview",
+    scheduledAt: "2026-11-09T14:00:00Z",
+    durationMinutes: 60,
+    meetingLink: "https://meet.talentswiss.io/apex-eval-farhan-881",
+    interviewer: {
+      id: "usr-interviewer-01",
+      name: "Marcus Keller",
+      email: "marcus.keller@talentswiss.io",
+      title: "Principal Distributed Systems Architect",
+    },
+    status: "scheduled",
+    prepNotesForInterviewer: [
+      "Focus on Farhan's experience with 300M+ row PostgreSQL partitioning and locking.",
+      "Review open-source repo github.com/ftariq-dev/event-ledger prior to session.",
+      "Candidate holds DCA certification; verify multi-stage build best practices.",
+    ],
+    questionIds: ["q-farhan-01", "q-farhan-02"],
+    createdAt: "2026-10-14T11:00:00Z",
+    updatedAt: "2026-10-14T11:00:00Z",
+  },
+];
+
+// Complete Seed Database Schema
+export const INITIAL_DEMO_DATABASE: PlatformDatabaseSchema = {
+  jobs: [SEED_JOB_BACKEND],
+  resumes: [SEED_RESUME_FARHAN, SEED_RESUME_ZAINAB, SEED_RESUME_HAMZA],
+  evaluations: [SEED_EVALUATION_FARHAN, SEED_EVALUATION_ZAINAB, SEED_EVALUATION_HAMZA],
+  applications: SEED_APPLICATIONS,
+  questions: SEED_QUESTIONS,
+  schedules: SEED_SCHEDULES,
+  users: SEED_USERS,
+};
+
