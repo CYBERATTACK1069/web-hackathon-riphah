@@ -62,6 +62,7 @@ export async function POST(request: NextRequest) {
       locationHint: body.location,
     });
 
+    // Ensure saveToStore defaults to false unless explicitly passed as true
     let saved = false;
     if (body.saveToStore === true) {
       await saveJob(extractionResult.vacancy);
@@ -82,9 +83,40 @@ export async function POST(request: NextRequest) {
         ? 3
         : 1);
 
+    // Map required skills to { name, importance: 1-5, minYearsRequired, category } for native recruiter consume
+    const mappedSkills = extractionResult.requiredSkills.map((s) => {
+      const n = (s.name || "").toLowerCase();
+      const c = (s.category || "").toLowerCase();
+      let category: "FRONTEND" | "BACKEND" | "DEVOPS" | "AI_ML" | "DATABASE" | "GENERAL" = "BACKEND";
+      if (c === "database" || /postgres|sql|mongo|redis|dynamo|database/i.test(n)) category = "DATABASE";
+      else if (c === "devops" || /docker|kubernetes|k8s|aws|gcp|azure|ci\/cd|terraform/i.test(n)) category = "DEVOPS";
+      else if (c === "frontend" || /react|vue|angular|html|css|tailwind|next\.?js|frontend/i.test(n)) category = "FRONTEND";
+      else if (c === "ai_ml" || /machine learning|deep learning|pytorch|tensorflow|nlp|ai/i.test(n)) category = "AI_ML";
+      else if (c === "language" || c === "framework" || c === "backend" || c === "architecture") category = "BACKEND";
+      else category = "GENERAL";
+
+      let importance = 3;
+      if (s.importance === "critical") importance = 5;
+      else if (s.importance === "important") importance = 4;
+      else if (s.importance === "nice_to_have") importance = 2;
+      else if (typeof s.weight === "number" && s.weight > 0) importance = Math.min(5, Math.max(1, Math.round(s.weight * 5)));
+
+      return {
+        name: s.name,
+        importance,
+        minYearsRequired: s.minimumYearsRequired || minExperienceYears || 2,
+        category,
+      };
+    });
+
+    const qualifications = extractionResult.vacancy?.qualifications || [];
+
     return NextResponse.json(
       {
         success: true,
+        skills: mappedSkills,
+        experienceYears: minExperienceYears,
+        qualifications,
         data: {
           vacancy: extractionResult.vacancy,
           requiredSkills: extractionResult.requiredSkills,
@@ -97,9 +129,10 @@ export async function POST(request: NextRequest) {
           savedToStore: saved,
         },
         requirements: {
-          skills: extractionResult.requiredSkills,
+          skills: mappedSkills,
+          requiredSkills: extractionResult.requiredSkills,
           minExperienceYears,
-          qualifications: extractionResult.vacancy?.qualifications || [],
+          qualifications,
           preferredSkills: extractionResult.preferredSkills,
         },
         extracted: extractionResult.vacancy,

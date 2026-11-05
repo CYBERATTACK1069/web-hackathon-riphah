@@ -99,6 +99,114 @@
       "createdAt": "2026-08-10T09:00:00Z",
       "updatedAt": "2026-10-10T08:30:00Z",
       "reopenedAt": "2026-10-10T08:30:00Z"
+    },
+    {
+      "id": "job-mw3agqln-o472",
+      "title": "Principal Cloud & Distributed Systems Architect",
+      "department": "Cloud Infrastructure Platform",
+      "location": "San Francisco, CA",
+      "workplaceType": "hybrid",
+      "employmentType": "full_time",
+      "experienceLevel": "principal",
+      "salaryRange": {
+        "currency": "USD",
+        "min": 180000,
+        "max": 240000,
+        "period": "annual"
+      },
+      "summary": "This role involves leading the architecture and strategy for next-generation transactional infrastructure and distributed systems. The successful candidate will drive technical excellence in Kubernetes orchestration and relational database optimization while mentoring senior engineering talent.",
+      "description": "Role: Principal Cloud & Distributed Systems Architect\nDepartment: Cloud Infrastructure Platform\nLocation: San Francisco, CA (Hybrid)\nExperience Level: Senior / Principal (6+ years experience)\n\nAbout the Opportunity:\nWe are seeking a seasoned Principal Cloud & Distributed Systems Architect to lead our next-generation transactional infrastructure. In this role, you will define architecture standards, scale our relational datastores, and drive our Kubernetes orchestration strategy.\n\nKey Responsibilities:\n- Architect, build, and maintain mission-critical distributed microservices in TypeScript and Node.js.\n- Champion cloud-native deployments using Docker, Kubernetes (K8s), and Terraform on AWS.\n- Optimize relational data pipelines in PostgreSQL (Postgres) and cache layers in Redis.\n- Partner with product managers and security leaders to enforce SOC2 and PCI-DSS compliance.\n- Mentor senior engineers and conduct deep-dive architectural design reviews.\n\nRequirements & Qualifications:\n- 6+ years of professional experience designing high-scale distributed backend systems.\n- Deep expertise in TypeScript, JavaScript (JS), and Node.js ecosystem.\n- Extensive production hands-on experience with PostgreSQL, relational indexing, and schema migrations.\n- Strong mastery of containerization and orchestration: Docker, Kubernetes, and CI/CD pipelines.\n- Bachelor's degree in Computer Science, Software Engineering, or equivalent industry tenure.\n- Preferred: Experience with Python (Py), GraphQL, and Event-Driven Architecture.",
+      "responsibilities": [
+        "Architect, build, and maintain mission-critical distributed microservices using TypeScript and Node.js.",
+        "Champion cloud-native deployments leveraging Docker, Kubernetes, and Terraform on AWS.",
+        "Optimize relational data pipelines and cache layers using PostgreSQL and Redis.",
+        "Partner with cross-functional leadership to enforce SOC2 and PCI-DSS compliance.",
+        "Mentor senior engineers and facilitate architectural deep-dive design reviews."
+      ],
+      "qualifications": [
+        "6+ years of professional experience in designing high-scale distributed backend systems.",
+        "Deep expertise in TypeScript, JS, and the Node.js ecosystem.",
+        "Extensive production experience with PostgreSQL, including indexing and schema migrations.",
+        "Mastery of containerization and orchestration via Docker, K8s, and CI/CD pipelines.",
+        "Bachelor's degree in Computer Science, Software Engineering, or equivalent experience."
+      ],
+      "skillWeights": [
+        {
+          "skillId": "skill-distributed-systems",
+          "name": "Distributed Systems",
+          "category": "architecture",
+          "importance": "critical",
+          "weight": 0.3,
+          "minimumYearsRequired": 6,
+          "description": "Required expertise in Distributed Systems."
+        },
+        {
+          "skillId": "skill-javascript",
+          "name": "JavaScript",
+          "category": "language",
+          "importance": "critical",
+          "weight": 0.25,
+          "minimumYearsRequired": 4,
+          "description": "Required expertise in JavaScript."
+        },
+        {
+          "skillId": "skill-kubernetes",
+          "name": "Kubernetes",
+          "category": "devops",
+          "importance": "critical",
+          "weight": 0.25,
+          "minimumYearsRequired": 3,
+          "description": "Required expertise in Kubernetes."
+        },
+        {
+          "skillId": "skill-postgresql",
+          "name": "PostgreSQL",
+          "category": "database",
+          "importance": "important",
+          "weight": 0.2,
+          "minimumYearsRequired": 3,
+          "description": "Required expertise in PostgreSQL."
+        },
+        {
+          "skillId": "skill-python",
+          "name": "Python",
+          "category": "language",
+          "importance": "nice_to_have",
+          "weight": 0,
+          "minimumYearsRequired": 1,
+          "description": "Experience with Python in a production environment."
+        },
+        {
+          "skillId": "skill-graphql",
+          "name": "GraphQL",
+          "category": "architecture",
+          "importance": "nice_to_have",
+          "weight": 0,
+          "minimumYearsRequired": 1,
+          "description": "Familiarity with building and maintaining GraphQL schemas."
+        },
+        {
+          "skillId": "skill-event-driven-architecture",
+          "name": "Event-Driven Architecture",
+          "category": "architecture",
+          "importance": "nice_to_have",
+          "weight": 0,
+          "minimumYearsRequired": 1,
+          "description": "Proven experience designing asynchronous event-driven systems."
+        }
+      ],
+      "status": "open",
+      "statusHistory": [
+        {
+          "status": "open",
+          "changedAt": "2026-11-05T08:33:40.523Z",
+          "changedBy": "system-ai-extractor",
+          "reason": "Initial extraction and publishing from AI Job Extractor pipeline"
+        }
+      ],
+      "recruiterId": "usr-recruiter-sarah-chen",
+      "createdAt": "2026-11-05T08:33:40.523Z",
+      "updatedAt": "2026-11-05T08:33:40.523Z"
     }
   ],
   "resumes": [
@@ -1214,6 +1322,205 @@
       ],
       "parsingConfidence": 0.99,
       "parsedAt": "2026-11-05T07:44:18.230Z"
+    },
+    {
+      "id": "res-mw3ae81e-ginz",
+      "candidateId": "cand-sara-khan-mw3ae81e",
+      "rawText": "SARA KHAN\nPython API Developer (FastAPI & Flask)\nEmail: sara.khan.dev@gmail.com | Phone: +92 (321) 555-8821 | Location: Lahore, Pakistan\nGitHub: github.com/sarakhan-dev | LinkedIn: linkedin.com/in/sarakhan-python\n\nPROFESSIONAL SUMMARY\nBackend developer with 2 years of professional experience developing REST APIs and microservices using Python, FastAPI, and Flask. Strong background in relational database modeling in PostgreSQL.\nNote: 0 production Django projects (primary experience in micro-frameworks FastAPI and Flask).\nPossess general familiarity with containers, but have not managed production Docker environments.\n\nCORE TECHNICAL SKILLS\n- Programming Languages: Python (2 years, Competent), SQL, JavaScript\n- Web Frameworks: FastAPI, Flask (Note: 0 production Django projects; exclusively micro-frameworks)\n- Databases: PostgreSQL (2 years, Competent), SQLite, Redis\n- DevOps & Tools: Git, GitHub, Linux, Familiarity with containers (watched Docker tutorials)\n\nWORK EXPERIENCE\n\nPython Backend Developer | DataPulse Tech | 2022 - Present\n- Developed lightweight asynchronous APIs using Python and FastAPI for real-time analytics dashboards.\n- Designed relational database tables and written complex SQL queries in PostgreSQL.\n- Collaborated with DevOps engineers; gained familiarity with containers during staging deployments.\n- Explicit note: Focused exclusively on FastAPI and Flask; 0 production Django projects completed.\n\nJunior Software Engineer | InnovateSoft Labs | 2021 - 2022\n- Built internal reporting tools and data export utilities using Python and Flask.\n- Maintained PostgreSQL database migrations and performed routine database backup scripts.\n\nEDUCATION\nBachelor of Science in Software Engineering (B.S.) | FAST-NUCES (2017 - 2021)",
+      "fileMetadata": {
+        "fileName": "Candidate_2_Partial_Gap.pdf",
+        "fileSizeKB": 2,
+        "mimeType": "text/plain",
+        "uploadedAt": "2026-11-05T08:31:43.154Z"
+      },
+      "contactInfo": {
+        "fullName": "SARA KHAN",
+        "email": "sara.khan.dev@gmail.com",
+        "location": "Lahore, Pakistan",
+        "githubUrl": "github.com/sarakhan-dev",
+        "linkedInUrl": "linkedin.com/in/sarakhan-python",
+        "phone": "+92 (321) 555-8821"
+      },
+      "summary": "Backend developer with 2 years of professional experience developing REST APIs and microservices using Python, FastAPI, and Flask. Strong background in relational database modeling in PostgreSQL.",
+      "normalizedSkills": [
+        {
+          "skillId": "skill-python",
+          "name": "Python",
+          "normalizedName": "Python",
+          "category": "language",
+          "claimedYears": 2,
+          "proficiencyLevel": "competent",
+          "citationIds": [
+            "cit-skill-1"
+          ]
+        },
+        {
+          "skillId": "skill-postgresql",
+          "name": "PostgreSQL",
+          "normalizedName": "PostgreSQL",
+          "category": "database",
+          "claimedYears": 2,
+          "proficiencyLevel": "competent",
+          "citationIds": [
+            "cit-skill-2"
+          ]
+        },
+        {
+          "skillId": "skill-fastapi",
+          "name": "FastAPI",
+          "normalizedName": "FastAPI",
+          "category": "framework",
+          "claimedYears": 2,
+          "proficiencyLevel": "competent",
+          "citationIds": [
+            "cit-skill-3"
+          ]
+        },
+        {
+          "skillId": "skill-flask",
+          "name": "Flask",
+          "normalizedName": "Flask",
+          "category": "framework",
+          "claimedYears": 2,
+          "proficiencyLevel": "competent",
+          "citationIds": [
+            "cit-skill-4"
+          ]
+        }
+      ],
+      "workExperience": [
+        {
+          "id": "exp-1",
+          "company": "DataPulse Tech",
+          "title": "Python Backend Developer",
+          "startDate": "2022",
+          "endDate": "Present",
+          "isCurrent": true,
+          "bulletPoints": [
+            "Developed lightweight asynchronous APIs using Python and FastAPI for real-time analytics dashboards.",
+            "Designed relational database tables and written complex SQL queries in PostgreSQL.",
+            "Collaborated with DevOps engineers; gained familiarity with containers during staging deployments.",
+            "Explicit note: Focused exclusively on FastAPI and Flask; 0 production Django projects completed."
+          ],
+          "technologiesUsed": [
+            "Python",
+            "FastAPI",
+            "PostgreSQL"
+          ],
+          "citationIds": [
+            "cit-work_experience-5"
+          ]
+        },
+        {
+          "id": "exp-2",
+          "company": "InnovateSoft Labs",
+          "title": "Junior Software Engineer",
+          "startDate": "2021",
+          "endDate": "2022",
+          "isCurrent": false,
+          "bulletPoints": [
+            "Built internal reporting tools and data export utilities using Python and Flask.",
+            "Maintained PostgreSQL database migrations and performed routine database backup scripts."
+          ],
+          "technologiesUsed": [
+            "Python",
+            "Flask",
+            "PostgreSQL"
+          ],
+          "citationIds": [
+            "cit-work_experience-6"
+          ]
+        }
+      ],
+      "projects": [],
+      "education": [
+        {
+          "id": "edu-1",
+          "institution": "FAST-NUCES",
+          "degree": "Bachelor of Science in Software Engineering (B.S.)",
+          "fieldOfStudy": "Software Engineering",
+          "startDate": "2017",
+          "graduationDate": "2021",
+          "citationIds": [
+            "cit-education-7"
+          ]
+        }
+      ],
+      "certifications": [],
+      "excerptMapping": [
+        {
+          "id": "cit-skill-1",
+          "targetField": "skill",
+          "associatedIdentifier": "Python",
+          "excerptText": "Python (2 years, Competent)",
+          "characterStart": 672,
+          "characterEnd": 699,
+          "contextSnippet": "...ments. CORE TECHNICAL SKILLS - Programming Languages: Python (2 years, Competent), SQL, JavaScript - Web Frameworks: FastAPI, Flask (Not...",
+          "confidence": 1
+        },
+        {
+          "id": "cit-skill-2",
+          "targetField": "skill",
+          "associatedIdentifier": "PostgreSQL",
+          "excerptText": "PostgreSQL (2 years, Competent)",
+          "characterStart": 830,
+          "characterEnd": 861,
+          "contextSnippet": "...o projects; exclusively micro-frameworks) - Databases: PostgreSQL (2 years, Competent), SQLite, Redis - DevOps & Tools: Git, GitHub, Linux, F...",
+          "confidence": 1
+        },
+        {
+          "id": "cit-skill-3",
+          "targetField": "skill",
+          "associatedIdentifier": "FastAPI",
+          "excerptText": "FastAPI",
+          "characterStart": 32,
+          "characterEnd": 39,
+          "contextSnippet": "SARA KHAN Python API Developer (FastAPI & Flask) Email: sara.khan.dev@gmail.com | Phone: +92 (...",
+          "confidence": 1
+        },
+        {
+          "id": "cit-skill-4",
+          "targetField": "skill",
+          "associatedIdentifier": "Flask",
+          "excerptText": "Flask",
+          "characterStart": 42,
+          "characterEnd": 47,
+          "contextSnippet": "SARA KHAN Python API Developer (FastAPI & Flask) Email: sara.khan.dev@gmail.com | Phone: +92 (321) 555...",
+          "confidence": 1
+        },
+        {
+          "id": "cit-work_experience-5",
+          "targetField": "work_experience",
+          "associatedIdentifier": "Python Backend Developer at DataPulse Tech",
+          "excerptText": "Python Backend Developer | DataPulse Tech | 2022 - Present",
+          "characterStart": 988,
+          "characterEnd": 1046,
+          "contextSnippet": "...ontainers (watched Docker tutorials) WORK EXPERIENCE Python Backend Developer | DataPulse Tech | 2022 - Present - Developed lightweight asynchronous APIs using Python...",
+          "confidence": 1
+        },
+        {
+          "id": "cit-work_experience-6",
+          "targetField": "work_experience",
+          "associatedIdentifier": "Junior Software Engineer at InnovateSoft Labs",
+          "excerptText": "Junior Software Engineer | InnovateSoft Labs | 2021 - 2022",
+          "characterStart": 1436,
+          "characterEnd": 1494,
+          "contextSnippet": "...PI and Flask; 0 production Django projects completed. Junior Software Engineer | InnovateSoft Labs | 2021 - 2022 - Built internal reporting tools and data export utili...",
+          "confidence": 1
+        },
+        {
+          "id": "cit-education-7",
+          "targetField": "education",
+          "associatedIdentifier": "Bachelor of Science in Software Engineering (B.S.) - FAST-NUCES",
+          "excerptText": "Bachelor of Science in Software Engineering (B.S.) | FAST-NUCES (2017 - 2021)",
+          "characterStart": 1680,
+          "characterEnd": 1757,
+          "contextSnippet": "...performed routine database backup scripts. EDUCATION Bachelor of Science in Software Engineering (B.S.) | FAST-NUCES (2017 - 2021)",
+          "confidence": 1
+        }
+      ],
+      "parsingConfidence": 0.99,
+      "parsedAt": "2026-11-05T08:31:43.154Z"
     }
   ],
   "evaluations": [
@@ -1916,6 +2223,129 @@
         "[HALLUCINATION RISK] Next.js (12 years claimed): Candidate claims 12 years of experience in Next.js, but documented employment history spans only ~5 years.",
         "[HALLUCINATION RISK] QuantumFluxDB (8 years claimed): Candidate claims 8 years of experience in QuantumFluxDB, but documented employment history spans only ~5 years."
       ]
+    },
+    {
+      "id": "eval-cand-sara-khan-mw3ae81e-3159",
+      "candidateId": "cand-sara-khan-mw3ae81e",
+      "jobId": "job-backend-001",
+      "resumeId": "res-mw3ae81e-ginz",
+      "evaluatedAt": "2026-11-05T08:31:43.159Z",
+      "modelIdentifier": "gemini-3.1-flash-lite",
+      "weights": {
+        "skills": 0.5,
+        "experience": 0.25,
+        "projects": 0.15,
+        "qualifications": 0.1
+      },
+      "scoreBreakdown": {
+        "skillsScore": 43.8,
+        "experienceScore": 90,
+        "projectsScore": 70,
+        "qualificationsScore": 80,
+        "compositeScore": 62.9
+      },
+      "verdict": "potential_match",
+      "skillAssessments": [
+        {
+          "skillName": "Python",
+          "requiredWeight": 0.35,
+          "importance": "critical",
+          "evidenceState": "partial_evidence",
+          "score": 68,
+          "candidateYearsFound": 2,
+          "requiredYears": 4,
+          "justification": "Candidate demonstrates verified competence in Python with 2 year(s) experience, but role requires minimum 4 years.",
+          "relevantExcerptIds": [
+            "cit-skill-1"
+          ],
+          "verificationNeeded": true,
+          "suggestedProbingQuestion": "Assess candidate's ability to handle high-complexity Python problems given 2 year(s) of tenure."
+        },
+        {
+          "skillName": "Django",
+          "requiredWeight": 0.3,
+          "importance": "critical",
+          "evidenceState": "confirmed_absence",
+          "score": 0,
+          "candidateYearsFound": 0,
+          "requiredYears": 3,
+          "justification": "Candidate explicitly disclosed: '0 production Django projects (primary experience in micro-frameworks FastAPI and Flask)'. This constitutes a confirmed absence gap.",
+          "relevantExcerptIds": [],
+          "verificationNeeded": false,
+          "suggestedProbingQuestion": "Can you describe how your micro-framework experience with FastAPI and Flask translates to Django's batteries-included ORM, migrations, and middleware architecture?"
+        },
+        {
+          "skillName": "PostgreSQL",
+          "requiredWeight": 0.2,
+          "importance": "important",
+          "evidenceState": "confirmed_present",
+          "score": 85,
+          "candidateYearsFound": 2,
+          "requiredYears": 2,
+          "justification": "Verified 2 years hands-on experience in PostgreSQL (competent). Backed by production work experience and verifiable citations.",
+          "relevantExcerptIds": [
+            "cit-skill-2"
+          ],
+          "verificationNeeded": false
+        },
+        {
+          "skillName": "Docker",
+          "requiredWeight": 0.15,
+          "importance": "important",
+          "evidenceState": "missing_evidence",
+          "score": 20,
+          "candidateYearsFound": 0.5,
+          "requiredYears": 2,
+          "justification": "Resume notes 'familiarity with containers (watched Docker tutorials)' but explicitly states candidate has not managed production Docker environments. Missing production evidence.",
+          "relevantExcerptIds": [],
+          "verificationNeeded": true,
+          "suggestedProbingQuestion": "You noted general familiarity with containers. How would you construct a multi-stage Dockerfile for a production Python backend to minimize final image size and attack surface?"
+        }
+      ],
+      "experienceMatchAnalysis": {
+        "score": 90,
+        "totalYearsRelevant": 5,
+        "seniorityAlignment": "exceeds",
+        "keyStrengths": [
+          "Verified 2y hands-on proficiency in PostgreSQL."
+        ],
+        "gapsIdentified": [
+          "Tenure gap in Python: found 2y vs required 4y.",
+          "Confirmed absence for Django: candidate explicitly disclosed lack of production experience.",
+          "Missing evidence for Docker: unmentioned in verified employment history."
+        ],
+        "justification": "SARA KHAN demonstrates foundational capability (62.9% fit), but exhibits critical gaps: missing production container evidence and lack of Django framework depth."
+      },
+      "projectsMatchAnalysis": {
+        "score": 70,
+        "complexityRating": "moderate",
+        "relevantProjectsCount": 0,
+        "stackOverlapDetails": [
+          "Python",
+          "PostgreSQL",
+          "Docker"
+        ],
+        "justification": "Candidate completed 0 relevant technical project(s)."
+      },
+      "qualificationsMatchAnalysis": {
+        "score": 80,
+        "degreeRelevant": true,
+        "educationLevelMet": true,
+        "certificationsBonus": 0,
+        "justification": "Degree and qualification evaluation scored at 80%."
+      },
+      "isHallucinationFlagged": false,
+      "hallucinationRiskLevel": "clean",
+      "hallucinationFlags": [],
+      "executiveSummary": "SARA KHAN demonstrates foundational capability (62.9% fit), but exhibits critical gaps: missing production container evidence and lack of Django framework depth.",
+      "recommendationReasoning": [
+        "Verified 2y hands-on proficiency in PostgreSQL."
+      ],
+      "targetedInterviewFocusAreas": [
+        "Tenure gap in Python: found 2y vs required 4y.",
+        "Confirmed absence for Django: candidate explicitly disclosed lack of production experience.",
+        "Missing evidence for Docker: unmentioned in verified employment history."
+      ]
     }
   ],
   "applications": [
@@ -2226,6 +2656,54 @@
       "tags": [
         "Under Review",
         "Hallucination Alert"
+      ]
+    },
+    {
+      "id": "app-cand-sara-khan-mw3ae81e",
+      "candidateId": "cand-sara-khan-mw3ae81e",
+      "jobId": "job-backend-001",
+      "resumeId": "res-mw3ae81e-ginz",
+      "evaluationId": "eval-cand-sara-khan-mw3ae81e-3159",
+      "appliedDate": "2026-11-05T08:31:43.196Z",
+      "currentStage": "ai_evaluated",
+      "lastUpdated": "2026-11-05T08:31:43.196Z",
+      "candidateProfile": {
+        "fullName": "SARA KHAN",
+        "email": "sara.khan.dev@gmail.com",
+        "phone": "+92 (321) 555-8821",
+        "location": "Lahore, Pakistan",
+        "headline": "Python Backend Developer"
+      },
+      "auditTrail": [
+        {
+          "id": "aud-sub-mw3ae82k",
+          "timestamp": "2026-11-05T08:31:43.196Z",
+          "action": "Application Submitted & Resume Ingested",
+          "newStage": "applied",
+          "actor": {
+            "id": "cand-sara-khan-mw3ae81e",
+            "name": "SARA KHAN",
+            "role": "candidate"
+          },
+          "notes": "Uploaded Candidate_2_Partial_Gap.pdf (2KB). Raw text extracted (1757 chars)."
+        },
+        {
+          "id": "aud-eval-mw3ae82k",
+          "timestamp": "2026-11-05T08:31:43.196Z",
+          "action": "AI Evaluation & Citation Mapping Completed",
+          "previousStage": "applied",
+          "newStage": "ai_evaluated",
+          "actor": {
+            "id": "sys-evaluator",
+            "name": "Swiss-Grid AI Talent Engine",
+            "role": "system"
+          },
+          "notes": "Calculated 62.9% composite score. Verdict: potential_match."
+        }
+      ],
+      "tags": [
+        "Under Review",
+        "Verified Credentials"
       ]
     }
   ],
@@ -2743,6 +3221,162 @@
       "followUpProbes": [
         "Can you share the commit history or repository for this work?"
       ]
+    },
+    {
+      "id": "q-dynamic-cand-sara-khan-mw3ae81e-1",
+      "jobId": "job-backend-001",
+      "candidateId": "cand-sara-khan-mw3ae81e",
+      "questionText": "Assess candidate's ability to handle high-complexity Python problems given 2 year(s) of tenure.",
+      "category": "technical",
+      "targetSkillOrTopic": "Python",
+      "contextReasoning": "Investigating partial evidence status for required skill Python",
+      "difficulty": "senior",
+      "expectedSignals": [
+        "Python",
+        "production architecture",
+        "performance tuning"
+      ],
+      "redFlagIndicators": [
+        "Unable to explain internals",
+        "Surface-level buzzwords"
+      ],
+      "rubric": {
+        "criteria": "Verification of partial evidence in Python",
+        "levels": [
+          {
+            "score": 5,
+            "description": "Articulates deep internal mechanics, concurrency behavior, and production optimization in Python.",
+            "signalsToLookFor": [
+              "Production mastery",
+              "Deep internals"
+            ]
+          },
+          {
+            "score": 3,
+            "description": "Demonstrates working knowledge of Python, but lacks deep distributed systems or performance tuning expertise.",
+            "signalsToLookFor": [
+              "Working knowledge",
+              "Basic syntax"
+            ]
+          },
+          {
+            "score": 1,
+            "description": "Unable to explain architectural fundamentals of Python; gap is confirmed.",
+            "signalsToLookFor": [
+              "Unable to explain fundamentals",
+              "Fabricated claim"
+            ]
+          }
+        ]
+      },
+      "followUpProbes": [
+        "How did you handle edge cases in Python?"
+      ],
+      "evidenceStateTargeted": "partial_evidence"
+    },
+    {
+      "id": "q-dynamic-cand-sara-khan-mw3ae81e-2",
+      "jobId": "job-backend-001",
+      "candidateId": "cand-sara-khan-mw3ae81e",
+      "questionText": "Can you describe how your micro-framework experience with FastAPI and Flask translates to Django's batteries-included ORM, migrations, and middleware architecture?",
+      "category": "technical",
+      "targetSkillOrTopic": "Django",
+      "contextReasoning": "Investigating confirmed absence status for required skill Django",
+      "difficulty": "senior",
+      "expectedSignals": [
+        "Django",
+        "production architecture",
+        "performance tuning"
+      ],
+      "redFlagIndicators": [
+        "Unable to explain internals",
+        "Surface-level buzzwords"
+      ],
+      "rubric": {
+        "criteria": "Verification of confirmed absence in Django",
+        "levels": [
+          {
+            "score": 5,
+            "description": "Articulates deep internal mechanics, concurrency behavior, and production optimization in Django.",
+            "signalsToLookFor": [
+              "Production mastery",
+              "Deep internals"
+            ]
+          },
+          {
+            "score": 3,
+            "description": "Demonstrates working knowledge of Django, but lacks deep distributed systems or performance tuning expertise.",
+            "signalsToLookFor": [
+              "Working knowledge",
+              "Basic syntax"
+            ]
+          },
+          {
+            "score": 1,
+            "description": "Unable to explain architectural fundamentals of Django; gap is confirmed.",
+            "signalsToLookFor": [
+              "Unable to explain fundamentals",
+              "Fabricated claim"
+            ]
+          }
+        ]
+      },
+      "followUpProbes": [
+        "How did you handle edge cases in Django?"
+      ],
+      "evidenceStateTargeted": "confirmed_absence"
+    },
+    {
+      "id": "q-dynamic-cand-sara-khan-mw3ae81e-3",
+      "jobId": "job-backend-001",
+      "candidateId": "cand-sara-khan-mw3ae81e",
+      "questionText": "You noted general familiarity with containers. How would you construct a multi-stage Dockerfile for a production Python backend to minimize final image size and attack surface?",
+      "category": "technical",
+      "targetSkillOrTopic": "Docker",
+      "contextReasoning": "Investigating missing evidence status for required skill Docker",
+      "difficulty": "senior",
+      "expectedSignals": [
+        "Docker",
+        "production architecture",
+        "performance tuning"
+      ],
+      "redFlagIndicators": [
+        "Unable to explain internals",
+        "Surface-level buzzwords"
+      ],
+      "rubric": {
+        "criteria": "Verification of missing evidence in Docker",
+        "levels": [
+          {
+            "score": 5,
+            "description": "Articulates deep internal mechanics, concurrency behavior, and production optimization in Docker.",
+            "signalsToLookFor": [
+              "Production mastery",
+              "Deep internals"
+            ]
+          },
+          {
+            "score": 3,
+            "description": "Demonstrates working knowledge of Docker, but lacks deep distributed systems or performance tuning expertise.",
+            "signalsToLookFor": [
+              "Working knowledge",
+              "Basic syntax"
+            ]
+          },
+          {
+            "score": 1,
+            "description": "Unable to explain architectural fundamentals of Docker; gap is confirmed.",
+            "signalsToLookFor": [
+              "Unable to explain fundamentals",
+              "Fabricated claim"
+            ]
+          }
+        ]
+      },
+      "followUpProbes": [
+        "How did you handle edge cases in Docker?"
+      ],
+      "evidenceStateTargeted": "missing_evidence"
     }
   ],
   "schedules": [
