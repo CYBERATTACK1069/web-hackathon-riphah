@@ -4,9 +4,17 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
 export const metadata: Metadata = {
-  title: "TALENTIQ // Enterprise AI Recruitment Engine",
+  title: "TalentLens — AI Recruitment Platform",
   description:
     "Next-generation AI recruitment intelligence with explainable scoring, grounded resume citations, candidate co-pilot, and blind screening.",
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({

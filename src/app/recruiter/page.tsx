@@ -278,14 +278,14 @@ const INITIAL_CANDIDATES: RecruiterCandidate[] = [
       {
         fromStage: "SUBMITTED",
         toStage: "PARSED",
-        actionBy: "TalentIQ Parser v2.5",
+        actionBy: "TalentLens Parser v2.5",
         timestamp: "2026-11-04T09:12:00Z",
         note: "Extracted 14 skills, 2 degree credentials, and 2 verified work histories.",
       },
       {
         fromStage: "PARSED",
         toStage: "AI_ASSESSMENT",
-        actionBy: "TalentIQ Intelligence Engine",
+        actionBy: "TalentLens Intelligence Engine",
         timestamp: "2026-11-04T09:14:00Z",
         note: "Evaluated composite 50/25/15/10 weighted score: 92.4%. All 4 core skills verified.",
       },
@@ -406,14 +406,14 @@ const INITIAL_CANDIDATES: RecruiterCandidate[] = [
       {
         fromStage: "SUBMITTED",
         toStage: "PARSED",
-        actionBy: "TalentIQ Parser v2.5",
+        actionBy: "TalentLens Parser v2.5",
         timestamp: "2026-11-04T14:20:00Z",
         note: "Extracted 9 skills. Candidate declared 0 Django experience transparently.",
       },
       {
         fromStage: "PARSED",
         toStage: "AI_ASSESSMENT",
-        actionBy: "TalentIQ Intelligence Engine",
+        actionBy: "TalentLens Intelligence Engine",
         timestamp: "2026-11-04T14:22:00Z",
         note: "Weighted score: 68.2%. Flagged Missing Evidence on Docker, Confirmed Absence on Django.",
       },
@@ -534,14 +534,14 @@ const INITIAL_CANDIDATES: RecruiterCandidate[] = [
       {
         fromStage: "SUBMITTED",
         toStage: "PARSED",
-        actionBy: "TalentIQ Parser v2.5",
+        actionBy: "TalentLens Parser v2.5",
         timestamp: "2026-11-05T06:10:00Z",
         note: "Canonically normalized 5 alias terms: 'JS'->JavaScript, 'TS'->TypeScript, 'Py'->Python, 'Postgres'->PostgreSQL, 'K8s'->Kubernetes.",
       },
       {
         fromStage: "PARSED",
         toStage: "AI_ASSESSMENT",
-        actionBy: "TalentIQ Intelligence Engine",
+        actionBy: "TalentLens Intelligence Engine",
         timestamp: "2026-11-05T06:12:00Z",
         note: "AI Hallucination Verifier flagged ungrounded tenure claim. Composite weighted score: 54.0%.",
       },
@@ -951,7 +951,7 @@ export default function RecruiterCommandCenter() {
                 {
                   fromStage: c.stage,
                   toStage: c.stage,
-                  actionBy: "TalentIQ Deduplication Engine",
+                  actionBy: "TalentLens Deduplication Engine",
                   timestamp: new Date().toISOString(),
                   note: `Merged duplicate record #APP-1092-PRIOR into canonical record #${c.id}. Dossier consolidated.`,
                 },
@@ -1012,7 +1012,7 @@ export default function RecruiterCommandCenter() {
     handleStageTransition(activeCandidate.id, toStage);
 
     setFinalDecisionToast(
-      `Decision recorded: ${activeCandidate.name} marked as ${decision.toUpperCase()}. Simulated candidate notification email dispatched via TalentIQ Relay.`
+      `Decision recorded: ${activeCandidate.name} marked as ${decision.toUpperCase()}. Simulated candidate notification email dispatched via TalentLens Relay.`
     );
     setTimeout(() => setFinalDecisionToast(null), 6000);
   };
@@ -2874,7 +2874,7 @@ export default function RecruiterCommandCenter() {
 
       {/* Footer */}
       <footer className="border-t border-zinc-200 dark:border-zinc-800/80 bg-white dark:bg-zinc-950 px-6 py-3 text-center text-xs font-mono text-zinc-500">
-        TALENTIQ ENTERPRISE // SECTION 6 BENCHMARK DEMO // RAPID SHOWCASE MODE ACTIVE
+        TALENTLENS ENTERPRISE // SECTION 6 BENCHMARK DEMO // RAPID SHOWCASE MODE ACTIVE
       </footer>
     </div>
   );

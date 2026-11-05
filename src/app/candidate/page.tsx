@@ -1274,7 +1274,7 @@ export default function CandidatePortalPage() {
 
       {/* Footer */}
       <footer className="border-t border-zinc-200 dark:border-zinc-800/80 bg-white dark:bg-zinc-950 px-6 py-3 text-center text-xs font-mono text-zinc-500">
-        TALENTIQ ENTERPRISE // CANDIDATE PORTAL // SECTION 3.3 & 3.5
+        TALENTLENS ENTERPRISE // CANDIDATE PORTAL // SECTION 3.3 & 3.5
       </footer>
     </div>
   );

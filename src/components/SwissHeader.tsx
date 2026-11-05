@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { UserRole } from "@/types/platform";
@@ -121,18 +121,56 @@ export const SwissHeader: React.FC<SwissHeaderProps> = ({
     }
   }, [currentRole]);
 
-  const navLinks = [
-    { href: "/", label: "Overview", icon: LayoutDashboard },
-    { href: "/recruiter", label: "Recruiter Command", icon: Building2 },
-    { href: "/jobs", label: "Vacancies // 3.2", icon: Briefcase },
-    { href: "/pipeline", label: "Pipeline // 3.6", icon: GitPullRequest },
-    { href: "/interviews", label: "Interviews // 3.7-3.8", icon: Calendar },
-    { href: "/analytics", label: "Analytics // 3.9", icon: BarChart3 },
-    { href: "/talent", label: "Talent Intel // 3.10", icon: Sparkles },
-    { href: "/ai-lab", label: "AI Lab // PDF", icon: Sparkles },
-    { href: "/candidate", label: "Candidate Portal // 3.3-3.5", icon: User },
-    { href: "/auth", label: "Auth // 3.1", icon: KeyRound },
-  ];
+  const [moreMenuOpen, setMoreMenuOpen] = useState(false);
+  const moreMenuRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (moreMenuRef.current && !moreMenuRef.current.contains(event.target as Node)) {
+        setMoreMenuOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const isCandidateView = currentRole === "candidate" || pathname.startsWith("/candidate");
+
+  // Precise primary tabs - role-adapted to eliminate horizontal scrollbar
+  const primaryLinks = isCandidateView
+    ? [
+        { href: "/candidate", label: "Candidate Portal", icon: User },
+        { href: "/jobs", label: "Vacancies", icon: Briefcase },
+        { href: "/interviews", label: "Interview Studio", icon: Calendar },
+        { href: "/ai-lab", label: "AI Verification Lab", icon: Sparkles },
+      ]
+    : [
+        { href: "/recruiter", label: "Command", icon: Building2 },
+        { href: "/jobs", label: "Vacancies", icon: Briefcase },
+        { href: "/pipeline", label: "Pipeline", icon: GitPullRequest },
+        { href: "/interviews", label: "Interviews", icon: Calendar },
+        { href: "/analytics", label: "Analytics", icon: BarChart3 },
+        { href: "/talent", label: "Talent Intel", icon: Sparkles },
+      ];
+
+  // Secondary links tucked cleanly in the More dropdown
+  const secondaryLinks = isCandidateView
+    ? [
+        { href: "/", label: "Landing Overview", icon: LayoutDashboard },
+        { href: "/recruiter", label: "Recruiter Command", icon: Building2 },
+        { href: "/pipeline", label: "Pipeline Management", icon: GitPullRequest },
+        { href: "/analytics", label: "Recruitment Analytics", icon: BarChart3 },
+        { href: "/talent", label: "Talent Intelligence", icon: Sparkles },
+        { href: "/auth", label: "Auth / Switch Account", icon: KeyRound },
+      ]
+    : [
+        { href: "/", label: "Landing Overview", icon: LayoutDashboard },
+        { href: "/candidate", label: "Candidate Portal", icon: User },
+        { href: "/ai-lab", label: "AI Verification Lab", icon: Sparkles },
+        { href: "/auth", label: "Auth / Switch Account", icon: KeyRound },
+      ];
+
+  const isMoreActive = secondaryLinks.some((link) => pathname === link.href);
 
   const handleRoleToggle = (role: UserRole) => {
     onRoleChange(role);
@@ -189,10 +227,6 @@ export const SwissHeader: React.FC<SwissHeaderProps> = ({
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
             SWISS-GRID RECRUITMENT ENGINE
           </span>
-          <span className="text-zinc-400 dark:text-zinc-600">//</span>
-          <span className="hidden sm:inline text-zinc-600 dark:text-zinc-400">SPEC: ISO-AUDIT 2026.4</span>
-          <span className="hidden md:inline text-zinc-400 dark:text-zinc-600">//</span>
-          <span className="hidden md:inline text-zinc-600 dark:text-zinc-400">CONTRACT: STRICT SHARED TYPES</span>
         </div>
 
         <div className="flex items-center gap-3 text-[11px] font-mono">
@@ -217,17 +251,17 @@ export const SwissHeader: React.FC<SwissHeaderProps> = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-2.5 flex items-center justify-between gap-4">
         {/* Brand */}
         <div className="flex items-center gap-3">
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-8 h-8 rounded-sm bg-zinc-900 text-white dark:bg-emerald-600 flex items-center justify-center font-mono font-bold text-sm border border-zinc-700 group-hover:bg-emerald-600 transition-colors shadow-xs">
-              TQ
+          <Link href="/" className="flex items-center gap-2.5 group">
+            <div className="w-8 h-8 rounded-lg bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-950 flex items-center justify-center font-bold text-xs tracking-wider shadow-sm transition-transform group-hover:scale-105 shrink-0">
+              <Zap className="w-4 h-4 fill-current text-emerald-500" />
             </div>
             <div>
-              <div className="flex items-center gap-2">
-                <h1 className="font-semibold text-base text-zinc-900 dark:text-white tracking-tight group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
-                  TALENTIQ
-                </h1>
-                <span className="text-[10px] font-mono px-1.5 py-0.5 bg-emerald-50 dark:bg-emerald-950/70 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 rounded-sm font-semibold">
-                  V3.8 ENTERPRISE
+              <div className="flex items-center gap-1.5">
+                <span className="font-semibold text-base tracking-tight font-mono text-zinc-900 dark:text-zinc-100 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+                  TALENTLENS
+                </span>
+                <span className="hidden sm:inline-block px-1.5 py-0.5 rounded text-[10px] font-mono font-medium bg-emerald-50 text-emerald-700 dark:bg-emerald-950/80 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800/60">
+                  PRECISION V2.0
                 </span>
               </div>
               <p className="text-[11px] text-zinc-500 dark:text-zinc-400 hidden sm:block">
@@ -394,51 +428,134 @@ export const SwissHeader: React.FC<SwissHeaderProps> = ({
 
       {/* Secondary Navigation Strip (Desktop) */}
       <div className="border-t border-zinc-200 dark:border-zinc-800/80 bg-zinc-50/80 dark:bg-zinc-950/60 hidden lg:block">
-        <div className="max-w-7xl mx-auto px-6 flex items-center gap-1 overflow-x-auto text-xs font-medium py-1">
-          {navLinks.map((link) => {
-            const Icon = link.icon;
-            const isActive = pathname === link.href;
-            return (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-sm transition-colors whitespace-nowrap ${
-                  isActive
-                    ? "bg-white dark:bg-zinc-900 text-emerald-800 dark:text-emerald-400 font-semibold shadow-2xs border border-zinc-200 dark:border-zinc-800"
-                    : "text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/60"
-                }`}
-              >
-                <Icon className={`w-3.5 h-3.5 ${isActive ? "text-emerald-600 dark:text-emerald-400" : "text-zinc-400 dark:text-zinc-500"}`} />
-                <span>{link.label}</span>
-              </Link>
-            );
-          })}
-        </div>
-      </div>
-
-      {/* Mobile Drawer (Responsive Navigation) */}
-      {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 px-4 py-3 space-y-2 animate-in slide-in-from-top-2">
-          <div className="grid grid-cols-2 gap-1.5">
-            {navLinks.map((link) => {
+        <div className="max-w-7xl mx-auto px-6 flex items-center justify-between text-xs font-medium py-1">
+          <div className="flex items-center gap-1">
+            {primaryLinks.map((link) => {
               const Icon = link.icon;
               const isActive = pathname === link.href;
               return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={`inline-flex items-center gap-2 px-3 py-2 rounded-sm text-xs font-medium transition-colors ${
+                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-sm transition-colors whitespace-nowrap ${
                     isActive
-                      ? "bg-emerald-50 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 font-bold border border-emerald-300 dark:border-emerald-800"
-                      : "text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 border border-transparent"
+                      ? "bg-white dark:bg-zinc-900 text-emerald-800 dark:text-emerald-400 font-semibold shadow-2xs border border-zinc-200 dark:border-zinc-800"
+                      : "text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/60"
                   }`}
                 >
-                  <Icon className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
+                  <Icon className={`w-3.5 h-3.5 ${isActive ? "text-emerald-600 dark:text-emerald-400" : "text-zinc-400 dark:text-zinc-500"}`} />
                   <span>{link.label}</span>
                 </Link>
               );
             })}
+
+            {/* Compact More Dropdown */}
+            <div className="relative" ref={moreMenuRef}>
+              <button
+                type="button"
+                onClick={() => setMoreMenuOpen(!moreMenuOpen)}
+                className={`inline-flex items-center gap-1 px-2.5 py-1.5 rounded-sm transition-colors ${
+                  isMoreActive
+                    ? "bg-white dark:bg-zinc-900 text-emerald-800 dark:text-emerald-400 font-semibold border border-zinc-200 dark:border-zinc-800"
+                    : "text-zinc-500 hover:text-zinc-800 dark:hover:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800/60"
+                }`}
+                title="Additional Platform Views"
+              >
+                <span>More</span>
+                <ChevronDown className={`w-3 h-3 transition-transform ${moreMenuOpen ? "rotate-180" : ""}`} />
+              </button>
+
+              {moreMenuOpen && (
+                <div className="absolute left-0 mt-1 w-56 rounded-md shadow-lg bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 py-1 z-50 animate-in fade-in-50 zoom-in-95">
+                  <div className="px-3 py-1.5 text-[10px] font-mono text-zinc-400 uppercase tracking-wider border-b border-zinc-100 dark:border-zinc-800">
+                    Additional Portals
+                  </div>
+                  {secondaryLinks.map((link) => {
+                    const Icon = link.icon;
+                    const isActive = pathname === link.href;
+                    return (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        onClick={() => setMoreMenuOpen(false)}
+                        className={`flex items-center gap-2 px-3 py-2 text-xs transition-colors ${
+                          isActive
+                            ? "bg-emerald-50 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 font-semibold"
+                            : "text-zinc-700 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-800"
+                        }`}
+                      >
+                        <Icon className="w-3.5 h-3.5 text-zinc-400" />
+                        <span>{link.label}</span>
+                      </Link>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
+          </div>
+
+          <div className="hidden xl:flex items-center gap-2 text-[11px] font-mono text-zinc-400">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+            <span>CONTEXT: {isCandidateView ? "CANDIDATE SUITE" : "RECRUITER ENTERPRISE"}</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Drawer (Responsive Navigation) */}
+      {mobileMenuOpen && (
+        <div className="lg:hidden border-t border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 px-4 py-3 space-y-2 animate-in slide-in-from-top-2">
+          <div>
+            <p className="text-[10px] font-mono text-zinc-400 uppercase tracking-wider mb-1.5">
+              {isCandidateView ? "Candidate Portal" : "Recruiter Workspace"}
+            </p>
+            <div className="grid grid-cols-2 gap-1.5">
+              {primaryLinks.map((link) => {
+                const Icon = link.icon;
+                const isActive = pathname === link.href;
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={`inline-flex items-center gap-2 px-3 py-2 rounded-sm text-xs font-medium transition-colors ${
+                      isActive
+                        ? "bg-emerald-50 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 font-bold border border-emerald-300 dark:border-emerald-800"
+                        : "text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 border border-transparent"
+                    }`}
+                  >
+                    <Icon className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
+                    <span>{link.label}</span>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+
+          <div>
+            <p className="text-[10px] font-mono text-zinc-400 uppercase tracking-wider mb-1.5">
+              Additional Views
+            </p>
+            <div className="grid grid-cols-2 gap-1.5">
+              {secondaryLinks.map((link) => {
+                const Icon = link.icon;
+                const isActive = pathname === link.href;
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={`inline-flex items-center gap-2 px-3 py-2 rounded-sm text-xs font-medium transition-colors ${
+                      isActive
+                        ? "bg-emerald-50 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 font-bold border border-emerald-300 dark:border-emerald-800"
+                        : "text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 border border-transparent"
+                    }`}
+                  >
+                    <Icon className="w-3.5 h-3.5 text-zinc-400 dark:text-zinc-500" />
+                    <span>{link.label}</span>
+                  </Link>
+                );
+              })}
+            </div>
           </div>
 
           <div className="pt-2 border-t border-zinc-100 dark:border-zinc-800 flex items-center justify-between text-xs font-mono">

@@ -347,7 +347,7 @@ export default function RecruiterJobsPage() {
       description: job.description,
       identifier: {
         "@type": "PropertyValue",
-        name: "TALENTIQ",
+        name: "TALENTLENS",
         value: job.id,
       },
       datePosted: job.createdAt || new Date().toISOString(),
@@ -385,7 +385,7 @@ export default function RecruiterJobsPage() {
         <div className="flex flex-wrap items-center justify-between gap-4 border-b border-zinc-200 dark:border-zinc-800 pb-5">
           <div>
             <div className="flex items-center gap-2 font-mono text-xs text-zinc-500 dark:text-zinc-400 mb-1">
-              <span>TALENTIQ</span>
+              <span>TALENTLENS</span>
               <span>/</span>
               <span>RECRUITER</span>
               <span>/</span>

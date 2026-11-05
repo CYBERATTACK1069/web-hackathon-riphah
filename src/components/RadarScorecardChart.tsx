@@ -83,19 +83,23 @@ export const RadarScorecardChart: React.FC<RadarScorecardProps> = ({
               textStyle: { color: "#f4f4f5", fontSize: 12 },
             },
             legend: {
-              bottom: 4,
+              bottom: 8,
+              itemGap: 28,
               data: [candidateName, "Target Benchmark"],
-              textStyle: { color: "#a1a1aa", fontSize: 11 },
+              textStyle: { color: "#a1a1aa", fontSize: 11, padding: [0, 4] },
               selectedMode: false,
             },
             radar: {
               shape: "polygon",
+              center: ["50%", "44%"],
+              radius: "56%",
               indicator: indicators.map((ind) => ({ name: ind.name, max: ind.max })),
               splitNumber: 4,
               axisName: {
                 color: "#d4d4d8",
-                fontSize: 11,
+                fontSize: 10,
                 fontWeight: 500,
+                padding: [4, 6],
               },
               splitLine: {
                 lineStyle: {
@@ -202,15 +206,15 @@ export const RadarScorecardChart: React.FC<RadarScorecardProps> = ({
       {/* Resilient High-Contrast SVG Fallback for sandbox environments */}
       {useSvgFallback && (
         <div className="relative w-full h-full flex flex-col items-center justify-center p-2">
-          <svg viewBox="0 0 300 260" className="w-full h-full max-w-[320px]">
+          <svg viewBox="0 0 300 225" className="w-full h-full max-w-[320px]">
             {/* Concentric Hexagons */}
             {[0.25, 0.5, 0.75, 1.0].map((scale, sIdx) => {
-              const r = 90 * scale;
+              const r = 72 * scale;
               const points = indicators
                 .map((_, i) => {
                   const angle = (Math.PI * 2 * i) / indicators.length - Math.PI / 2;
                   const x = 150 + r * Math.cos(angle);
-                  const y = 125 + r * Math.sin(angle);
+                  const y = 110 + r * Math.sin(angle);
                   return `${x.toFixed(1)},${y.toFixed(1)}`;
                 })
                 .join(" ");
@@ -229,13 +233,13 @@ export const RadarScorecardChart: React.FC<RadarScorecardProps> = ({
             {/* Radial Axes */}
             {indicators.map((_, i) => {
               const angle = (Math.PI * 2 * i) / indicators.length - Math.PI / 2;
-              const x2 = 150 + 90 * Math.cos(angle);
-              const y2 = 125 + 90 * Math.sin(angle);
+              const x2 = 150 + 72 * Math.cos(angle);
+              const y2 = 110 + 72 * Math.sin(angle);
               return (
                 <line
                   key={i}
                   x1="150"
-                  y1="125"
+                  y1="110"
                   x2={x2}
                   y2={y2}
                   stroke="#52525b"
@@ -249,10 +253,10 @@ export const RadarScorecardChart: React.FC<RadarScorecardProps> = ({
               const points = indicators
                 .map((ind, i) => {
                   const ratio = ind.targetVal / 100;
-                  const r = 90 * ratio;
+                  const r = 72 * ratio;
                   const angle = (Math.PI * 2 * i) / indicators.length - Math.PI / 2;
                   const x = 150 + r * Math.cos(angle);
-                  const y = 125 + r * Math.sin(angle);
+                  const y = 110 + r * Math.sin(angle);
                   return `${x.toFixed(1)},${y.toFixed(1)}`;
                 })
                 .join(" ");
@@ -272,10 +276,10 @@ export const RadarScorecardChart: React.FC<RadarScorecardProps> = ({
               const points = indicators
                 .map((ind, i) => {
                   const ratio = ind.candVal / 100;
-                  const r = 90 * ratio;
+                  const r = 72 * ratio;
                   const angle = (Math.PI * 2 * i) / indicators.length - Math.PI / 2;
                   const x = 150 + r * Math.cos(angle);
-                  const y = 125 + r * Math.sin(angle);
+                  const y = 110 + r * Math.sin(angle);
                   return `${x.toFixed(1)},${y.toFixed(1)}`;
                 })
                 .join(" ");
@@ -292,10 +296,10 @@ export const RadarScorecardChart: React.FC<RadarScorecardProps> = ({
             {/* Candidate Vertex Points */}
             {indicators.map((ind, i) => {
               const ratio = ind.candVal / 100;
-              const r = 90 * ratio;
+              const r = 72 * ratio;
               const angle = (Math.PI * 2 * i) / indicators.length - Math.PI / 2;
               const cx = 150 + r * Math.cos(angle);
-              const cy = 125 + r * Math.sin(angle);
+              const cy = 110 + r * Math.sin(angle);
               return (
                 <circle
                   key={i}
@@ -312,8 +316,8 @@ export const RadarScorecardChart: React.FC<RadarScorecardProps> = ({
             {/* Indicator Labels */}
             {indicators.map((ind, i) => {
               const angle = (Math.PI * 2 * i) / indicators.length - Math.PI / 2;
-              const lx = 150 + 115 * Math.cos(angle);
-              const ly = 125 + 105 * Math.sin(angle);
+              const lx = 150 + 96 * Math.cos(angle);
+              const ly = 110 + 90 * Math.sin(angle);
               return (
                 <text
                   key={i}
@@ -330,14 +334,14 @@ export const RadarScorecardChart: React.FC<RadarScorecardProps> = ({
           </svg>
 
           {/* Fallback legend */}
-          <div className="flex items-center gap-4 text-xs font-mono text-zinc-400 mt-1">
-            <span className="flex items-center gap-1.5">
+          <div className="flex items-center justify-center gap-6 text-xs font-mono text-zinc-400 mt-3 pt-1.5 border-t border-zinc-800/40 w-full">
+            <span className="flex items-center gap-2 px-2.5 py-0.5 rounded bg-zinc-800/40">
               <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block"></span>
-              {candidateName} ({scores.skills}%)
+              <span>{candidateName} ({scores.skills}%)</span>
             </span>
-            <span className="flex items-center gap-1.5">
-              <span className="w-2.5 h-0.5 border-b border-dashed border-indigo-400 inline-block"></span>
-              Benchmark (80%)
+            <span className="flex items-center gap-2 px-2.5 py-0.5 rounded bg-zinc-800/40">
+              <span className="w-3.5 h-0.5 border-b border-dashed border-indigo-400 inline-block"></span>
+              <span>Benchmark (80%)</span>
             </span>
           </div>
         </div>

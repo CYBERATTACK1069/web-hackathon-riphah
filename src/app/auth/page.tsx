@@ -147,18 +147,20 @@ export default function AuthPage() {
     <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 flex flex-col justify-between selection:bg-emerald-500/20 transition-colors duration-150">
       {/* Top Header */}
       <header className="border-b border-zinc-200 dark:border-zinc-800/80 bg-white/90 dark:bg-zinc-900/90 backdrop-blur-md px-6 py-3 sticky top-0 z-30 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-sm bg-zinc-900 text-white dark:bg-emerald-600 flex items-center justify-center font-mono font-bold text-sm shadow-xs">
-            TQ
+        <Link href="/" className="flex items-center gap-2.5 group">
+          <div className="w-8 h-8 rounded-lg bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-950 flex items-center justify-center font-bold text-xs tracking-wider shadow-sm transition-transform group-hover:scale-105 shrink-0">
+            <Zap className="w-4 h-4 fill-current text-emerald-500" />
           </div>
           <div>
-            <div className="flex items-center gap-2">
-              <span className="font-bold text-zinc-900 dark:text-zinc-100 tracking-tight text-sm">TALENTIQ</span>
-              <span className="text-[10px] font-mono px-1.5 py-0.5 bg-emerald-50 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 rounded-sm font-semibold">
+            <div className="flex items-center gap-1.5">
+              <span className="font-semibold text-base tracking-tight font-mono text-zinc-900 dark:text-zinc-100 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+                TALENTLENS
+              </span>
+              <span className="text-[10px] font-mono px-1.5 py-0.5 bg-emerald-50 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 rounded font-semibold">
                 AUTH // SEC 3.1
               </span>
             </div>
-            <p className="text-[11px] text-zinc-500 dark:text-zinc-400">Institutional Talent Intelligence Platform</p>
+            <p className="text-[11px] text-zinc-500 dark:text-zinc-400 hidden sm:block">Institutional Talent Intelligence Platform</p>
           </div>
         </Link>
 
@@ -411,7 +413,7 @@ export default function AuthPage() {
 
       {/* Footer */}
       <footer className="border-t border-zinc-200 dark:border-zinc-800/80 bg-white dark:bg-zinc-950/80 px-6 py-3 text-center text-xs font-mono text-zinc-500 dark:text-zinc-400">
-        TALENTIQ ENTERPRISE // SECTION 3.1 AUTHENTICATION & ACCESS CONTROL // RIPHAH HACKATHON 2026
+        TALENTLENS ENTERPRISE // SECTION 3.1 AUTHENTICATION & ACCESS CONTROL // RIPHAH HACKATHON 2026
       </footer>
     </div>
   );

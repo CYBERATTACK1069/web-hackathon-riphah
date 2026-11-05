@@ -16,7 +16,7 @@ export function middleware(request: NextRequest) {
   }
 
   // Read session / role from cookies
-  const roleCookie = request.cookies.get("talentiq_role")?.value?.toLowerCase();
+  const roleCookie = (request.cookies.get("talentlens_role")?.value || request.cookies.get("talentiq_role")?.value)?.toLowerCase();
   const sessionCookie = request.cookies.get("talentswiss_session")?.value;
 
   // Determine active role

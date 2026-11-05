@@ -18,6 +18,9 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     setMounted(true);
+    if (typeof document !== "undefined") {
+      document.title = "TalentLens — AI Recruitment Platform";
+    }
     // Read stored theme from localStorage or system preference
     const stored = localStorage.getItem("talentiq_theme") as Theme | null;
     if (stored === "light" || stored === "dark") {

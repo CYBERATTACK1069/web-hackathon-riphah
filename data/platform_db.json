@@ -3408,6 +3408,30 @@
       ],
       "createdAt": "2026-10-14T11:00:00Z",
       "updatedAt": "2026-10-14T11:00:00Z"
+    },
+    {
+      "id": "sched-4902",
+      "applicationId": "cand-ali-raza",
+      "jobId": "job-backend-001",
+      "candidateId": "cand-ali-raza",
+      "interviewType": "technical_screen",
+      "title": "Technical Assessment: Elena Vance",
+      "scheduledAt": "2026-11-10T14:00:00Z",
+      "durationMinutes": 60,
+      "meetingLink": "https://meet.talentswiss.io/interview-backend-eval",
+      "interviewer": {
+        "id": "usr-recruiter-01",
+        "name": "Elena Vance",
+        "email": "elena.vance@talentswiss.io",
+        "title": "Lead Technical Talent Partner"
+      },
+      "status": "scheduled",
+      "questionIds": [
+        "q-int-01",
+        "q-adv-01"
+      ],
+      "createdAt": "2026-11-05T10:25:24.902Z",
+      "updatedAt": "2026-11-05T10:25:24.902Z"
     }
   ],
   "users": [
