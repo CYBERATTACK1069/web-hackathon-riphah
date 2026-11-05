@@ -17,6 +17,8 @@ export interface UserAccount {
   avatarUrl?: string;
   organization?: string;
   title?: string;
+  passwordHash?: string;
+  passwordSalt?: string;
   createdAt: string;
 }
 

@@ -1,0 +1,752 @@
+{
+  "users": [
+    {
+      "id": "usr_recruiter_1",
+      "name": "Sarah Chen",
+      "email": "sarah.chen@nexacorp.io",
+      "role": "RECRUITER",
+      "avatarUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80",
+      "title": "Lead Technical Recruiter",
+      "companyOrAffiliation": "NexaCorp Talent Solutions"
+    },
+    {
+      "id": "usr_candidate_1",
+      "name": "Alex Rivera",
+      "email": "alex.rivera@devmail.io",
+      "role": "CANDIDATE",
+      "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
+      "title": "Senior Full-Stack Engineer (Python, Django, Docker)",
+      "companyOrAffiliation": "Available Immediately"
+    },
+    {
+      "id": "usr_candidate_2",
+      "name": "Maya Lin",
+      "email": "maya.lin@devmail.org",
+      "role": "CANDIDATE",
+      "avatarUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&auto=format&fit=crop&q=80",
+      "title": "Backend Developer (Python, FastAPI, PostgreSQL)",
+      "companyOrAffiliation": "Exploring Backend Roles"
+    },
+    {
+      "id": "usr_candidate_3",
+      "name": "Tariq Mahmood",
+      "email": "tariq.mahmood@codestack.net",
+      "role": "CANDIDATE",
+      "avatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80",
+      "title": "Junior Software Developer",
+      "companyOrAffiliation": "Seeking Junior Backend"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "job_backend_dev_01",
+      "title": "Backend Developer",
+      "department": "Core Platform Engineering",
+      "location": "Remote (Global)",
+      "type": "REMOTE",
+      "salaryRange": "$115,000 - $145,000 / yr",
+      "description": "We are seeking a talented Backend Developer to engineer scalable services, manage data persistence, and maintain containerized CI/CD workflows. The ideal engineer must have strong expertise in Python, Django REST framework, PostgreSQL schema optimization, and Docker containerization.",
+      "requiredSkills": [
+        {
+          "name": "Python",
+          "importance": 5,
+          "minYearsRequired": 3,
+          "category": "BACKEND"
+        },
+        {
+          "name": "Django",
+          "importance": 5,
+          "minYearsRequired": 3,
+          "category": "BACKEND"
+        },
+        {
+          "name": "PostgreSQL",
+          "importance": 4,
+          "minYearsRequired": 2,
+          "category": "DATABASE"
+        },
+        {
+          "name": "Docker",
+          "importance": 4,
+          "minYearsRequired": 2,
+          "category": "DEVOPS"
+        }
+      ],
+      "preferredSkills": [
+        "Redis",
+        "Celery",
+        "PyTest",
+        "REST APIs",
+        "CI/CD"
+      ],
+      "minExperienceYears": 3,
+      "qualifications": [
+        "Degree in Computer Science or Software Engineering or equivalent experience",
+        "Demonstrated hands-on experience building asynchronous REST services in production"
+      ],
+      "applicantCount": 3,
+      "status": "OPEN",
+      "createdAt": "2026-11-01T09:00:00Z",
+      "updatedAt": "2026-11-05T10:00:00Z",
+      "createdBy": "usr_recruiter_1"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "cand_alex_rivera",
+      "userId": "usr_candidate_1",
+      "fullName": "Alex Rivera",
+      "email": "alex.rivera@devmail.io",
+      "phone": "+1 (555) 342-9981",
+      "location": "San Francisco, CA (Remote)",
+      "summary": "Senior Full-Stack & Backend Engineer with 5+ years of production experience architecting high-throughput REST APIs and asynchronous task processing using Python, Django, PostgreSQL, and Docker.",
+      "portfolioUrl": "https://davidvance.dev",
+      "githubUrl": "https://github.com/davidvance-backend",
+      "skills": [
+        {
+          "originalTerm": "Python",
+          "normalizedName": "Python",
+          "yearsOfExperience": 5,
+          "proficiencyLevel": "EXPERT",
+          "category": "BACKEND"
+        },
+        {
+          "originalTerm": "Django",
+          "normalizedName": "Django",
+          "yearsOfExperience": 4,
+          "proficiencyLevel": "EXPERT",
+          "category": "BACKEND"
+        },
+        {
+          "originalTerm": "PostgreSQL",
+          "normalizedName": "PostgreSQL",
+          "yearsOfExperience": 5,
+          "proficiencyLevel": "EXPERT",
+          "category": "DATABASE"
+        },
+        {
+          "originalTerm": "Docker",
+          "normalizedName": "Docker",
+          "yearsOfExperience": 3,
+          "proficiencyLevel": "ADVANCED",
+          "category": "DEVOPS"
+        },
+        {
+          "originalTerm": "Redis",
+          "normalizedName": "Redis",
+          "yearsOfExperience": 3,
+          "proficiencyLevel": "ADVANCED",
+          "category": "DATABASE"
+        },
+        {
+          "originalTerm": "Celery",
+          "normalizedName": "Celery",
+          "yearsOfExperience": 3,
+          "proficiencyLevel": "ADVANCED",
+          "category": "BACKEND"
+        }
+      ],
+      "experience": [
+        {
+          "id": "exp_dv_1",
+          "company": "Apex Financial Cloud",
+          "role": "Senior Backend Developer",
+          "startDate": "2022-01",
+          "current": true,
+          "highlights": [
+            "Architected core banking ledger REST APIs using Django and PostgreSQL, supporting 6,000 req/sec with sub-40ms response times.",
+            "Containerized microservices architecture with Docker and Docker Compose, reducing onboarding time from 3 days to 20 minutes.",
+            "Re-engineered complex PostgreSQL joins and implemented Redis query caching, reducing p99 database latency by 45%."
+          ],
+          "technologiesUsed": [
+            "Python",
+            "Django",
+            "PostgreSQL",
+            "Docker",
+            "Redis",
+            "Celery"
+          ]
+        }
+      ],
+      "projects": [
+        {
+          "id": "proj_dv_1",
+          "title": "Distributed Ledger Engine",
+          "description": "High-throughput asynchronous banking transaction processor built on Django, Celery, and PostgreSQL.",
+          "technologies": [
+            "Python",
+            "Django",
+            "PostgreSQL",
+            "Docker",
+            "Celery"
+          ],
+          "metricsOrOutcomes": "Processed $450M in simulated transactional volume with zero data inconsistencies."
+        }
+      ],
+      "education": [
+        {
+          "id": "edu_dv_1",
+          "institution": "University of Michigan",
+          "degree": "B.S.",
+          "fieldOfStudy": "Computer Science",
+          "graduationYear": 2020
+        }
+      ],
+      "rawResumeText": "ALEX RIVERA | alex.rivera@devmail.io | Senior Backend Engineer with 5+ years of experience in Python, Django, PostgreSQL, Docker, Redis, Celery. Architected banking ledger with Django & PostgreSQL (6k req/sec). B.S. in CS from University of Michigan.",
+      "parsedAt": "2026-11-05T09:15:00Z"
+    },
+    {
+      "id": "cand_maya_lin",
+      "userId": "usr_candidate_2",
+      "fullName": "Maya Lin",
+      "email": "maya.lin@devmail.org",
+      "phone": "+1 (555) 671-2290",
+      "location": "Remote",
+      "summary": "Backend Developer with 3+ years experience building asynchronous REST services with Python and FastAPI. Experienced with PostgreSQL relational modeling, Redis pub/sub, and schema migrations.",
+      "skills": [
+        {
+          "originalTerm": "Python",
+          "normalizedName": "Python",
+          "yearsOfExperience": 3,
+          "proficiencyLevel": "ADVANCED",
+          "category": "BACKEND"
+        },
+        {
+          "originalTerm": "FastAPI",
+          "normalizedName": "FastAPI",
+          "yearsOfExperience": 2,
+          "proficiencyLevel": "ADVANCED",
+          "category": "BACKEND"
+        },
+        {
+          "originalTerm": "PostgreSQL",
+          "normalizedName": "PostgreSQL",
+          "yearsOfExperience": 2,
+          "proficiencyLevel": "INTERMEDIATE",
+          "category": "DATABASE"
+        },
+        {
+          "originalTerm": "Redis",
+          "normalizedName": "Redis",
+          "yearsOfExperience": 2,
+          "proficiencyLevel": "INTERMEDIATE",
+          "category": "DATABASE"
+        }
+      ],
+      "experience": [
+        {
+          "id": "exp_er_1",
+          "company": "Orbit Solutions",
+          "role": "Backend Engineer",
+          "startDate": "2022-06",
+          "current": true,
+          "highlights": [
+            "Built high-performance async microservices with Python and FastAPI handling real-time telemetry ingestion.",
+            "Designed PostgreSQL relational tables and normalized schema migrations with Alembic.",
+            "Ran local integration tests using a dockerized test container provided by DevOps."
+          ],
+          "technologiesUsed": [
+            "Python",
+            "FastAPI",
+            "PostgreSQL",
+            "Redis"
+          ]
+        }
+      ],
+      "projects": [
+        {
+          "id": "proj_er_1",
+          "title": "Telemetry Ingestion Gateway",
+          "description": "FastAPI microservice for streaming IoT sensor telemetry into PostgreSQL.",
+          "technologies": [
+            "Python",
+            "FastAPI",
+            "PostgreSQL"
+          ]
+        }
+      ],
+      "education": [
+        {
+          "id": "edu_er_1",
+          "institution": "Eastern State University",
+          "degree": "B.S.",
+          "fieldOfStudy": "Software Engineering",
+          "graduationYear": 2021
+        }
+      ],
+      "rawResumeText": "MAYA LIN | maya.lin@devmail.org | Backend Developer with Python, FastAPI, PostgreSQL, Redis. Orbit Solutions (2022-Present). Telemetry Ingestion Gateway. Ran tests in a dockerized test container. B.S. in Software Engineering.",
+      "parsedAt": "2026-11-05T09:30:00Z"
+    },
+    {
+      "id": "cand_tariq_mahmood",
+      "userId": "usr_candidate_3",
+      "fullName": "Tariq Mahmood",
+      "email": "tariq.mahmood@codestack.net",
+      "phone": "+1 (555) 890-4411",
+      "location": "Chicago, IL",
+      "summary": "Junior Software Developer with 2 years of experience building web applications using React, JavaScript, and basic Node.js. Transitioning to full-stack backend development.",
+      "skills": [
+        {
+          "originalTerm": "JavaScript",
+          "normalizedName": "JavaScript",
+          "yearsOfExperience": 2,
+          "proficiencyLevel": "INTERMEDIATE",
+          "category": "FRONTEND"
+        },
+        {
+          "originalTerm": "React",
+          "normalizedName": "React",
+          "yearsOfExperience": 2,
+          "proficiencyLevel": "INTERMEDIATE",
+          "category": "FRONTEND"
+        },
+        {
+          "originalTerm": "Node.js",
+          "normalizedName": "Node.js",
+          "yearsOfExperience": 1,
+          "proficiencyLevel": "BEGINNER",
+          "category": "BACKEND"
+        },
+        {
+          "originalTerm": "MongoDB",
+          "normalizedName": "MongoDB",
+          "yearsOfExperience": 1,
+          "proficiencyLevel": "BEGINNER",
+          "category": "DATABASE"
+        }
+      ],
+      "experience": [
+        {
+          "id": "exp_lo_1",
+          "company": "Horizon Creative",
+          "role": "Frontend Web Developer",
+          "startDate": "2023-01",
+          "current": true,
+          "highlights": [
+            "Built responsive landing pages and interactive dashboards using React and Tailwind CSS.",
+            "Developed basic mock API endpoints in Node.js and Express to simulate payment processing."
+          ],
+          "technologiesUsed": [
+            "JavaScript",
+            "React",
+            "Node.js",
+            "Tailwind CSS"
+          ]
+        }
+      ],
+      "projects": [
+        {
+          "id": "proj_lo_1",
+          "title": "DevStore Mock Shop",
+          "description": "Mock ecommerce web app built with React, Node.js, and MongoDB.",
+          "technologies": [
+            "React",
+            "Node.js",
+            "MongoDB"
+          ]
+        }
+      ],
+      "education": [
+        {
+          "id": "edu_lo_1",
+          "institution": "City Community College",
+          "degree": "A.S.",
+          "fieldOfStudy": "Web Development",
+          "graduationYear": 2022
+        }
+      ],
+      "rawResumeText": "TARIQ MAHMOOD | tariq.mahmood@codestack.net | Frontend developer with 2 years in React, JS, Tailwind, Node.js, Express, MongoDB. Horizon Creative. Seeking junior backend role. A.S. in Web Development.",
+      "parsedAt": "2026-11-05T09:45:00Z"
+    }
+  ],
+  "applications": [
+    {
+      "id": "app_alex_backend",
+      "jobId": "job_backend_dev_01",
+      "candidateId": "cand_alex_rivera",
+      "status": "SHORTLISTED",
+      "submittedAt": "2026-11-05T09:15:00Z",
+      "updatedAt": "2026-11-05T10:15:00Z",
+      "notes": [
+        {
+          "id": "note_dv_1",
+          "authorId": "usr_recruiter_1",
+          "authorName": "Sarah Chen",
+          "createdAt": "2026-11-05T10:10:00Z",
+          "content": "Flawless alignment with our stack. Strong 5-year track record in Django, PostgreSQL, and Docker Compose microservices. Advancing to technical interview."
+        }
+      ],
+      "auditTrail": [
+        {
+          "id": "audit_dv_1",
+          "timestamp": "2026-11-05T09:15:00Z",
+          "toStage": "SUBMITTED",
+          "actionBy": "Alex Rivera",
+          "userRole": "CANDIDATE"
+        },
+        {
+          "id": "audit_dv_2",
+          "timestamp": "2026-11-05T09:16:00Z",
+          "fromStage": "SUBMITTED",
+          "toStage": "PARSED",
+          "actionBy": "System AI Parser",
+          "userRole": "RECRUITER"
+        },
+        {
+          "id": "audit_dv_3",
+          "timestamp": "2026-11-05T09:17:00Z",
+          "fromStage": "PARSED",
+          "toStage": "AI_ASSESSMENT",
+          "actionBy": "Semantic Matcher Engine",
+          "userRole": "RECRUITER",
+          "note": "Overall Match Score: 93.5/100"
+        },
+        {
+          "id": "audit_dv_4",
+          "timestamp": "2026-11-05T10:10:00Z",
+          "fromStage": "AI_ASSESSMENT",
+          "toStage": "SHORTLISTED",
+          "actionBy": "Sarah Chen",
+          "userRole": "RECRUITER",
+          "note": "Shortlisted for Round 1 Technical Interview."
+        }
+      ]
+    },
+    {
+      "id": "app_maya_backend",
+      "jobId": "job_backend_dev_01",
+      "candidateId": "cand_maya_lin",
+      "status": "RECRUITER_REVIEW",
+      "submittedAt": "2026-11-05T09:30:00Z",
+      "updatedAt": "2026-11-05T09:35:00Z",
+      "notes": [
+        {
+          "id": "note_er_1",
+          "authorId": "usr_recruiter_1",
+          "authorName": "Sarah Chen",
+          "createdAt": "2026-11-05T09:35:00Z",
+          "content": "Competent async Python developer, but heavily focused on FastAPI rather than required Django framework. Docker experience is minimal."
+        }
+      ],
+      "auditTrail": [
+        {
+          "id": "audit_er_1",
+          "timestamp": "2026-11-05T09:30:00Z",
+          "toStage": "SUBMITTED",
+          "actionBy": "Maya Lin",
+          "userRole": "CANDIDATE"
+        },
+        {
+          "id": "audit_er_2",
+          "timestamp": "2026-11-05T09:32:00Z",
+          "fromStage": "SUBMITTED",
+          "toStage": "AI_ASSESSMENT",
+          "actionBy": "System Matcher Engine",
+          "userRole": "RECRUITER"
+        },
+        {
+          "id": "audit_er_3",
+          "timestamp": "2026-11-05T09:35:00Z",
+          "fromStage": "AI_ASSESSMENT",
+          "toStage": "RECRUITER_REVIEW",
+          "actionBy": "Sarah Chen",
+          "userRole": "RECRUITER"
+        }
+      ]
+    },
+    {
+      "id": "app_tariq_backend",
+      "jobId": "job_backend_dev_01",
+      "candidateId": "cand_tariq_mahmood",
+      "status": "REJECTED",
+      "submittedAt": "2026-11-05T09:45:00Z",
+      "updatedAt": "2026-11-05T10:05:00Z",
+      "notes": [
+        {
+          "id": "note_lo_1",
+          "authorId": "usr_recruiter_1",
+          "authorName": "Sarah Chen",
+          "createdAt": "2026-11-05T10:05:00Z",
+          "content": "Profile lacks Python, Django, PostgreSQL, and Docker. Primarily a frontend web developer. Recommending for frontend pipeline instead."
+        }
+      ],
+      "auditTrail": [
+        {
+          "id": "audit_lo_1",
+          "timestamp": "2026-11-05T09:45:00Z",
+          "toStage": "SUBMITTED",
+          "actionBy": "Tariq Mahmood",
+          "userRole": "CANDIDATE"
+        },
+        {
+          "id": "audit_lo_2",
+          "timestamp": "2026-11-05T09:47:00Z",
+          "fromStage": "SUBMITTED",
+          "toStage": "AI_ASSESSMENT",
+          "actionBy": "System Matcher Engine",
+          "userRole": "RECRUITER"
+        },
+        {
+          "id": "audit_lo_3",
+          "timestamp": "2026-11-05T10:05:00Z",
+          "fromStage": "AI_ASSESSMENT",
+          "toStage": "REJECTED",
+          "actionBy": "Sarah Chen",
+          "userRole": "RECRUITER",
+          "note": "Insufficient stack alignment."
+        }
+      ]
+    }
+  ],
+  "evaluations": [
+    {
+      "id": "eval_alex_backend",
+      "applicationId": "app_alex_backend",
+      "jobId": "job_backend_dev_01",
+      "candidateId": "cand_alex_rivera",
+      "overallScore": 93.5,
+      "skillsScore": 96,
+      "experienceScore": 94,
+      "projectsScore": 95,
+      "qualificationsScore": 85,
+      "matchedSkills": [
+        "Python",
+        "Django",
+        "PostgreSQL",
+        "Docker",
+        "Redis",
+        "Celery"
+      ],
+      "missingSkills": [],
+      "citations": [
+        {
+          "skillOrClaim": "Django & PostgreSQL High Throughput",
+          "excerptText": "Architected core banking ledger REST APIs using Django and PostgreSQL, supporting 6,000 req/sec with sub-40ms response times.",
+          "sourceSection": "EXPERIENCE",
+          "verified": true
+        },
+        {
+          "skillOrClaim": "Docker Microservices Containerization",
+          "excerptText": "Containerized microservices architecture with Docker and Docker Compose, reducing onboarding time from 3 days to 20 minutes.",
+          "sourceSection": "EXPERIENCE",
+          "verified": true
+        },
+        {
+          "skillOrClaim": "PostgreSQL & Redis Caching Optimization",
+          "excerptText": "Re-engineered complex PostgreSQL joins and implemented Redis query caching, reducing p99 database latency by 45%.",
+          "sourceSection": "EXPERIENCE",
+          "verified": true
+        }
+      ],
+      "executiveSummary": "Candidate demonstrates complete, authoritative mastery across all 4 mandatory technologies: Python, Django, PostgreSQL, and Docker. Experience exceeds the 3-year threshold with verifiable high-throughput metrics.",
+      "strengths": [
+        "Verified 5 years production experience in Python and PostgreSQL",
+        "Direct experience with Django REST framework and Celery asynchronous queuing",
+        "Proven database tuning delivering 45% p99 latency reduction"
+      ],
+      "weaknesses": [],
+      "upskillingRoadmap": []
+    },
+    {
+      "id": "eval_maya_backend",
+      "applicationId": "app_maya_backend",
+      "jobId": "job_backend_dev_01",
+      "candidateId": "cand_maya_lin",
+      "overallScore": 68,
+      "skillsScore": 65,
+      "experienceScore": 75,
+      "projectsScore": 70,
+      "qualificationsScore": 85,
+      "matchedSkills": [
+        "Python",
+        "PostgreSQL",
+        "Redis"
+      ],
+      "missingSkills": [
+        {
+          "skillName": "Django",
+          "importance": 5,
+          "status": "CONFIRMED_ABSENT",
+          "rationale": "Applicant has exclusively developed APIs using FastAPI and Flask; zero Django references found."
+        },
+        {
+          "skillName": "Docker",
+          "importance": 4,
+          "status": "MISSING_EVIDENCE",
+          "rationale": "Resume notes running tests in a pre-configured dockerized test container, but lacks evidence of authoring Dockerfiles, multi-stage builds, or Docker Compose orchestration."
+        }
+      ],
+      "citations": [
+        {
+          "skillOrClaim": "Python & PostgreSQL Async Services",
+          "excerptText": "Built high-performance async microservices with Python and FastAPI... Designed PostgreSQL relational tables.",
+          "sourceSection": "EXPERIENCE",
+          "verified": true
+        }
+      ],
+      "executiveSummary": "Candidate meets the Python and PostgreSQL requirements, but exhibits a confirmed absence of Django experience and has only casual missing evidence for Docker container orchestration.",
+      "strengths": [
+        "Strong modern asynchronous Python craft",
+        "Hands-on PostgreSQL schema migration experience with Alembic"
+      ],
+      "weaknesses": [
+        "Confirmed absence of Django (used FastAPI)",
+        "Missing evidence for production Docker containerization"
+      ],
+      "upskillingRoadmap": [
+        {
+          "skillToLearn": "Django REST Framework & Django ORM",
+          "recommendedProjectOrCourse": "Build a modular REST API in Django using class-based views, serializers, and Django ORM relationships.",
+          "estimatedTimeToAcquire": "1.5 weeks",
+          "expectedScoreBump": 16
+        },
+        {
+          "skillToLearn": "Docker Compose Orchestration",
+          "recommendedProjectOrCourse": "Author multi-stage Dockerfiles for Python web services and configure local Docker Compose environments with PostgreSQL.",
+          "estimatedTimeToAcquire": "4 days",
+          "expectedScoreBump": 9.5
+        }
+      ]
+    },
+    {
+      "id": "eval_tariq_backend",
+      "applicationId": "app_tariq_backend",
+      "jobId": "job_backend_dev_01",
+      "candidateId": "cand_tariq_mahmood",
+      "overallScore": 41.5,
+      "skillsScore": 30,
+      "experienceScore": 50,
+      "projectsScore": 45,
+      "qualificationsScore": 65,
+      "matchedSkills": [],
+      "missingSkills": [
+        {
+          "skillName": "Python",
+          "importance": 5,
+          "status": "CONFIRMED_ABSENT",
+          "rationale": "Candidate is a JavaScript/React developer with no Python experience."
+        },
+        {
+          "skillName": "Django",
+          "importance": 5,
+          "status": "CONFIRMED_ABSENT",
+          "rationale": "Confirmed absent across all work history and projects."
+        },
+        {
+          "skillName": "PostgreSQL",
+          "importance": 4,
+          "status": "CONFIRMED_ABSENT",
+          "rationale": "Candidate only has basic experience with MongoDB NoSQL document store."
+        },
+        {
+          "skillName": "Docker",
+          "importance": 4,
+          "status": "CONFIRMED_ABSENT",
+          "rationale": "Confirmed absent."
+        }
+      ],
+      "citations": [],
+      "executiveSummary": "Candidate has primarily worked as a frontend UI engineer with basic Node.js. Lacks all 4 mandatory requirements (Python, Django, PostgreSQL, Docker) for this Backend Developer vacancy.",
+      "strengths": [
+        "Basic REST API endpoint development in Node.js/Express"
+      ],
+      "weaknesses": [
+        "Confirmed absent across all 4 core technologies"
+      ],
+      "upskillingRoadmap": [
+        {
+          "skillToLearn": "Python & Relational Databases (PostgreSQL)",
+          "recommendedProjectOrCourse": "Complete core Python fundamentals course followed by relational database modeling with PostgreSQL.",
+          "estimatedTimeToAcquire": "4 weeks",
+          "expectedScoreBump": 28
+        }
+      ]
+    }
+  ],
+  "interviews": [
+    {
+      "id": "int_existing_busy_slot",
+      "applicationId": "app_david_backend",
+      "candidateId": "cand_david_vance",
+      "jobId": "job_backend_dev_01",
+      "scheduledDate": "2026-11-10",
+      "scheduledTime": "14:00",
+      "interviewerName": "Sarah Chen",
+      "interviewerEmail": "sarah.chen@nexacorp.io",
+      "interviewType": "TECHNICAL",
+      "meetingLink": "https://meet.nexacorp.io/interview-backend-david",
+      "hasConflict": false,
+      "status": "SCHEDULED"
+    }
+  ],
+  "interviewQuestions": {
+    "app_david_backend": [
+      {
+        "id": "q_dv_1",
+        "category": "TECHNICAL_DEPTH",
+        "difficulty": "ADVANCED",
+        "question": "In your Apex Financial Cloud experience, you achieved 6,000 req/sec on Django REST APIs. How did you structure connection pooling and prevent the Django ORM N+1 query problem across relational serializers?",
+        "tailoredProjectContext": "Apex Financial Cloud Ledger API",
+        "expectedAnswerRubric": "Candidate should explain `select_related` for single-valued relationships, `prefetch_related` for reverse foreign keys/many-to-many, `django-db-geventpool` or PgBouncer for connection pooling, and serializer method field optimizations."
+      },
+      {
+        "id": "q_dv_2",
+        "category": "SYSTEM_DESIGN",
+        "difficulty": "ADVANCED",
+        "question": "How did you configure multi-stage Docker builds for Django to minimize the final production image size and prevent build secrets from leaking into container layers?",
+        "tailoredProjectContext": "Docker Microservices Containerization",
+        "expectedAnswerRubric": "Candidate should describe a builder stage (compiling wheels/dependencies) and a runtime stage (copying only installed site-packages), non-root user execution, and ignoring `.env` and `__pycache__` via `.dockerignore`."
+      },
+      {
+        "id": "q_dv_3",
+        "category": "PROBLEM_SOLVING",
+        "difficulty": "INTERMEDIATE",
+        "question": "When PostgreSQL queries spike p99 latency under heavy concurrent writes, how do you diagnose lock contention between `SELECT ... FOR UPDATE` and transactional Celery tasks?",
+        "tailoredProjectContext": "PostgreSQL & Redis Caching Optimization",
+        "expectedAnswerRubric": "Candidate should discuss inspecting `pg_stat_activity`, setting `statement_timeout` and `lock_timeout`, using `SKIP LOCKED` for queue consumers, and moving long-running writes outside critical read transactions."
+      }
+    ]
+  },
+  "duplicateGroups": [],
+  "analytics": {
+    "activeJobsCount": 1,
+    "totalApplicationsCount": 3,
+    "shortlistedCount": 1,
+    "pendingReviewsCount": 1,
+    "interviewsScheduledCount": 1,
+    "applicationToShortlistRate": 33.3,
+    "avgProcessingTimeDays": 1.2,
+    "stageDistribution": {
+      "SUBMITTED": 0,
+      "PARSED": 0,
+      "AI_ASSESSMENT": 0,
+      "RECRUITER_REVIEW": 1,
+      "SHORTLISTED": 1,
+      "INTERVIEW": 0,
+      "SELECTED": 0,
+      "REJECTED": 1
+    },
+    "topSkillGapsAcrossPool": [
+      {
+        "skill": "Django",
+        "count": 2,
+        "percentage": 66.7
+      },
+      {
+        "skill": "Docker",
+        "count": 2,
+        "percentage": 66.7
+      },
+      {
+        "skill": "PostgreSQL",
+        "count": 1,
+        "percentage": 33.3
+      },
+      {
+        "skill": "Python",
+        "count": 1,
+        "percentage": 33.3
+      }
+    ]
+  }
+}

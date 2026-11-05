@@ -1,0 +1,26 @@
+ELENA ROSTOVA
+Email: elena.rostova@devmail.org | Phone: +1 (555) 671-2290 | Location: Remote
+GitHub: https://github.com/erostova | Portfolio: https://elenarostova.tech
+
+PROFESSIONAL SUMMARY:
+Backend Developer with 3+ years experience building asynchronous REST services with Python and FastAPI. Experienced with PostgreSQL relational modeling, Redis pub/sub, and schema migrations. Interested in scaling microservice architectures.
+
+CORE TECHNICAL SKILLS:
+• Languages: Python (3 yrs), SQL, HTML/CSS
+• Frameworks: FastAPI, Flask, Pydantic, SQLAlchemy, Alembic
+• Databases: PostgreSQL (2 yrs), Redis
+• Tools: Git, Postman, Linux, basic Docker usage in CI
+
+WORK EXPERIENCE:
+Backend Engineer | Orbit Solutions (2022 - Present)
+• Built high-performance async microservices with Python and FastAPI handling real-time telemetry ingestion.
+• Designed PostgreSQL relational tables and normalized schema migrations with Alembic.
+• Integrated Redis caching for frequent catalog lookups, improving throughput by 25%.
+• Note on deployment: Ran local integration tests using a dockerized test container provided by DevOps.
+
+Junior Python Developer | CodePulse Agency (2021 - 2022)
+• Developed Python automation scripts and REST endpoints using Flask and SQLite/PostgreSQL.
+
+EDUCATION:
+B.S. in Software Engineering | Eastern State University (2021)
+

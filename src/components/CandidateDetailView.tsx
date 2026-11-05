@@ -11,6 +11,7 @@ import {
   UserRole,
   EvidenceState,
 } from "@/types/platform";
+import { RadarScorecardChart } from "./RadarScorecardChart";
 import {
   CheckCircle2,
   AlertTriangle,
@@ -353,6 +354,17 @@ export const CandidateDetailView: React.FC<CandidateDetailViewProps> = ({
               </div>
             </div>
           </div>
+
+          {/* Recharts Multi-Axis Radar Scorecard */}
+          <RadarScorecardChart
+            candidateName={application.candidateProfile.fullName}
+            scores={{
+              skills: evaluation.scoreBreakdown.skillsScore,
+              experience: evaluation.scoreBreakdown.experienceScore,
+              projects: evaluation.scoreBreakdown.projectsScore,
+              qualifications: evaluation.scoreBreakdown.qualificationsScore,
+            }}
+          />
 
           {/* Skill Evidence Matrix: Separating Missing Evidence from Confirmed Absence */}
           <div className="swiss-card">
