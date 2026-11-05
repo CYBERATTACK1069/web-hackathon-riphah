@@ -128,7 +128,10 @@
           "normalizedName": "Python",
           "claimedYears": 6,
           "proficiencyLevel": "expert",
-          "citationIds": ["cit-farhan-01", "cit-farhan-05"]
+          "citationIds": [
+            "cit-farhan-01",
+            "cit-farhan-05"
+          ]
         },
         {
           "skillId": "sk-django",
@@ -137,7 +140,10 @@
           "normalizedName": "Django",
           "claimedYears": 5,
           "proficiencyLevel": "expert",
-          "citationIds": ["cit-farhan-02", "cit-farhan-06"]
+          "citationIds": [
+            "cit-farhan-02",
+            "cit-farhan-06"
+          ]
         },
         {
           "skillId": "sk-postgres",
@@ -146,7 +152,10 @@
           "normalizedName": "PostgreSQL",
           "claimedYears": 5,
           "proficiencyLevel": "expert",
-          "citationIds": ["cit-farhan-03", "cit-farhan-07"]
+          "citationIds": [
+            "cit-farhan-03",
+            "cit-farhan-07"
+          ]
         },
         {
           "skillId": "sk-docker",
@@ -155,7 +164,10 @@
           "normalizedName": "Docker",
           "claimedYears": 4,
           "proficiencyLevel": "proficient",
-          "citationIds": ["cit-farhan-04", "cit-farhan-08"]
+          "citationIds": [
+            "cit-farhan-04",
+            "cit-farhan-08"
+          ]
         }
       ],
       "workExperience": [
@@ -172,8 +184,21 @@
             "Optimized mission-critical PostgreSQL queries: redesigned indexing strategies cutting p99 query latency from 840ms to 42ms on 300M+ rows.",
             "Containerized backend microservices with multi-stage Docker builds, reducing image footprint by 87%."
           ],
-          "technologiesUsed": ["Python", "Django", "PostgreSQL", "Docker", "Redis", "Celery", "AWS"],
-          "citationIds": ["cit-farhan-01", "cit-farhan-02", "cit-farhan-03", "cit-farhan-04"]
+          "technologiesUsed": [
+            "Python",
+            "Django",
+            "PostgreSQL",
+            "Docker",
+            "Redis",
+            "Celery",
+            "AWS"
+          ],
+          "citationIds": [
+            "cit-farhan-01",
+            "cit-farhan-02",
+            "cit-farhan-03",
+            "cit-farhan-04"
+          ]
         },
         {
           "id": "exp-farhan-02",
@@ -187,8 +212,19 @@
             "Engineered customer onboarding microservices using Python, Django, and PostgreSQL.",
             "Created standardized Docker Compose dev setups for 18 engineers."
           ],
-          "technologiesUsed": ["Python", "Django", "PostgreSQL", "Docker Compose", "Pytest"],
-          "citationIds": ["cit-farhan-05", "cit-farhan-06", "cit-farhan-07", "cit-farhan-08"]
+          "technologiesUsed": [
+            "Python",
+            "Django",
+            "PostgreSQL",
+            "Docker Compose",
+            "Pytest"
+          ],
+          "citationIds": [
+            "cit-farhan-05",
+            "cit-farhan-06",
+            "cit-farhan-07",
+            "cit-farhan-08"
+          ]
         }
       ],
       "projects": [
@@ -196,11 +232,20 @@
           "id": "proj-farhan-01",
           "title": "Distributed Event Ledger",
           "summary": "High-throughput transactional ledger in Python/Django backed by PostgreSQL connection pooling and Docker Compose orchestration.",
-          "technologies": ["Python", "Django", "PostgreSQL", "Docker"],
+          "technologies": [
+            "Python",
+            "Django",
+            "PostgreSQL",
+            "Docker"
+          ],
           "githubUrl": "https://github.com/ftariq-dev/event-ledger",
           "role": "Creator & Maintainer",
-          "outcomes": ["Sustained 4,800 writes/sec with automated stress tests"],
-          "citationIds": ["cit-farhan-09"]
+          "outcomes": [
+            "Sustained 4,800 writes/sec with automated stress tests"
+          ],
+          "citationIds": [
+            "cit-farhan-09"
+          ]
         }
       ],
       "education": [
@@ -211,7 +256,9 @@
           "fieldOfStudy": "Computer Science",
           "graduationDate": "2019-07",
           "gradeOrGpa": "5.4 / 6.0",
-          "citationIds": ["cit-farhan-10"]
+          "citationIds": [
+            "cit-farhan-10"
+          ]
         }
       ],
       "certifications": [
@@ -220,7 +267,9 @@
           "title": "Docker Certified Associate (DCA)",
           "issuingOrganization": "Docker Inc.",
           "issueDate": "2022-11",
-          "citationIds": ["cit-farhan-11"]
+          "citationIds": [
+            "cit-farhan-11"
+          ]
         }
       ],
       "excerptMapping": [
@@ -363,7 +412,10 @@
           "normalizedName": "Python",
           "claimedYears": 4,
           "proficiencyLevel": "proficient",
-          "citationIds": ["cit-zainab-01", "cit-zainab-03"]
+          "citationIds": [
+            "cit-zainab-01",
+            "cit-zainab-03"
+          ]
         },
         {
           "skillId": "sk-django",
@@ -372,7 +424,10 @@
           "normalizedName": "Django",
           "claimedYears": 3.5,
           "proficiencyLevel": "proficient",
-          "citationIds": ["cit-zainab-02", "cit-zainab-04"]
+          "citationIds": [
+            "cit-zainab-02",
+            "cit-zainab-04"
+          ]
         },
         {
           "skillId": "sk-postgres",
@@ -381,7 +436,9 @@
           "normalizedName": "PostgreSQL",
           "claimedYears": 1.5,
           "proficiencyLevel": "competent",
-          "citationIds": ["cit-zainab-05"]
+          "citationIds": [
+            "cit-zainab-05"
+          ]
         }
       ],
       "workExperience": [
@@ -398,8 +455,17 @@
             "Integrated third-party payment gateways (Stripe) and webhook listeners.",
             "Managed deployments on Heroku and configured AWS S3 for static assets."
           ],
-          "technologiesUsed": ["Python", "Django", "Django REST Framework", "Heroku", "AWS S3"],
-          "citationIds": ["cit-zainab-01", "cit-zainab-02"]
+          "technologiesUsed": [
+            "Python",
+            "Django",
+            "Django REST Framework",
+            "Heroku",
+            "AWS S3"
+          ],
+          "citationIds": [
+            "cit-zainab-01",
+            "cit-zainab-02"
+          ]
         },
         {
           "id": "exp-zainab-02",
@@ -413,8 +479,17 @@
             "Maintained e-commerce platforms using Django and Python.",
             "Wrote SQL database queries for reporting scripts and order tracking."
           ],
-          "technologiesUsed": ["Python", "Django", "SQL", "Vue.js"],
-          "citationIds": ["cit-zainab-03", "cit-zainab-04", "cit-zainab-05"]
+          "technologiesUsed": [
+            "Python",
+            "Django",
+            "SQL",
+            "Vue.js"
+          ],
+          "citationIds": [
+            "cit-zainab-03",
+            "cit-zainab-04",
+            "cit-zainab-05"
+          ]
         }
       ],
       "projects": [
@@ -422,8 +497,15 @@
           "id": "proj-zainab-01",
           "title": "PyPortal - Task & Team Collaboration Tool",
           "summary": "Django-based project management platform deployed on Heroku with PostgreSQL addon.",
-          "technologies": ["Python", "Django", "Heroku", "PostgreSQL"],
-          "citationIds": ["cit-zainab-06"]
+          "technologies": [
+            "Python",
+            "Django",
+            "Heroku",
+            "PostgreSQL"
+          ],
+          "citationIds": [
+            "cit-zainab-06"
+          ]
         }
       ],
       "education": [
@@ -433,7 +515,9 @@
           "degree": "B.S. in Information Systems",
           "fieldOfStudy": "Information Systems",
           "graduationDate": "2021-07",
-          "citationIds": ["cit-zainab-07"]
+          "citationIds": [
+            "cit-zainab-07"
+          ]
         }
       ],
       "certifications": [],
@@ -537,7 +621,9 @@
           "normalizedName": "Python",
           "claimedYears": 1,
           "proficiencyLevel": "novice",
-          "citationIds": ["cit-hamza-01"]
+          "citationIds": [
+            "cit-hamza-01"
+          ]
         },
         {
           "skillId": "sk-django",
@@ -546,7 +632,9 @@
           "normalizedName": "Django",
           "claimedYears": 0.5,
           "proficiencyLevel": "novice",
-          "citationIds": ["cit-hamza-02"]
+          "citationIds": [
+            "cit-hamza-02"
+          ]
         },
         {
           "skillId": "sk-postgres",
@@ -555,7 +643,9 @@
           "normalizedName": "PostgreSQL",
           "claimedYears": 0,
           "proficiencyLevel": "novice",
-          "citationIds": ["cit-hamza-03"]
+          "citationIds": [
+            "cit-hamza-03"
+          ]
         },
         {
           "skillId": "sk-docker",
@@ -564,7 +654,9 @@
           "normalizedName": "Docker",
           "claimedYears": 0,
           "proficiencyLevel": "novice",
-          "citationIds": ["cit-hamza-04"]
+          "citationIds": [
+            "cit-hamza-04"
+          ]
         }
       ],
       "workExperience": [
@@ -581,8 +673,16 @@
             "Experimented with Python automation scripts to scrape website leads.",
             "Integrated Firebase Firestore for serverless realtime document storage."
           ],
-          "technologiesUsed": ["React", "HTML/CSS", "Python (Scripts)", "Firebase"],
-          "citationIds": ["cit-hamza-01", "cit-hamza-05"]
+          "technologiesUsed": [
+            "React",
+            "HTML/CSS",
+            "Python (Scripts)",
+            "Firebase"
+          ],
+          "citationIds": [
+            "cit-hamza-01",
+            "cit-hamza-05"
+          ]
         },
         {
           "id": "exp-hamza-02",
@@ -596,8 +696,14 @@
             "Built responsive UI components with React, Tailwind CSS, and TypeScript.",
             "Consumed REST APIs developed by backend team."
           ],
-          "technologiesUsed": ["React", "TypeScript", "Tailwind CSS"],
-          "citationIds": ["cit-hamza-06"]
+          "technologiesUsed": [
+            "React",
+            "TypeScript",
+            "Tailwind CSS"
+          ],
+          "citationIds": [
+            "cit-hamza-06"
+          ]
         }
       ],
       "projects": [],
@@ -608,7 +714,9 @@
           "degree": "Bachelor of Science",
           "fieldOfStudy": "Web Technologies",
           "graduationDate": "2024-06",
-          "citationIds": ["cit-hamza-07"]
+          "citationIds": [
+            "cit-hamza-07"
+          ]
         }
       ],
       "certifications": [],
@@ -686,6 +794,426 @@
       ],
       "parsingConfidence": 0.92,
       "parsedAt": "2026-10-25T11:48:00Z"
+    },
+    {
+      "id": "res-mw38ji03-qj4v",
+      "candidateId": "cand-ali-raza-mw38ji03",
+      "rawText": "ALI RAZA\nSenior Backend Developer (Python & Cloud Specialist)\nEmail:\nali.raza.dev@gmail.com\nPhone: +92 300\n5550192\nLocation: Lahore,\nPakistan\nLinkedIn: linkedin.com/in/ali-raza-\nbackend\nPROFESSIONAL SUMMARY\nResults-driven Backend Developer with 4+ years of dedicated hands-on experience architectural design,\nbuilding scalable RESTful APIs, and optimizing database performance using Python, Django REST\nFramework, and PostgreSQL. Demonstrated expertise in containerizing multi-service microservices using\nDocker and configuring automated CI/CD deployment pipelines on Kubernetes and AWS.\nCORE TECHNICAL SKILLS\nBackend\nFrameworks:\nPython 3.11+, Django, Django REST Framework (DRF), Celery, Redis\nDatabase &\nQuerying:\nPostgreSQL (Indexing, EXPLAIN ANALYZE Query Optimization, Partitioning), ORM\nDevOps & Cloud: \tDocker, Docker Compose, CI/CD (GitHub Actions, GitLab CI), Kubernetes, AWS\nEC2/S3\nArchitecture &\nTooling:\nRESTful APIs, Microservices Architecture, Git, PyTest, OpenAPI/Swagger\nPROFESSIONAL EXPERIENCE\nSenior Python / Django Developer — TechLogix Solutions \tJan 2022 – Present | Lahore, Pakistan\nArchitected and deployed high-throughput backend services for enterprise clients using Python and Django\nREST Framework (DRF), supporting over 250k daily active users.\nEngineered PostgreSQL query optimization strategies, utilizing complex indexes, materialized views, and\nrefactoring ORM queries to reduce database response times by 42%.\nContainerized complex microservice workloads using Docker and Docker Compose, ensuring environment\nparity across local, staging, and production clusters.\nDesigned and maintained automated CI/CD pipelines using GitHub Actions, enabling zero-downtime\nautomated deployments and continuous integration testing.\nBackend Software Engineer — Systems Limited \tJun 2020 – Dec 2021 | Lahore, Pakistan\nDeveloped secure RESTful API endpoints in Python/Django for financial transaction management software,\nmaintaining 99.98% uptime.\nManaged complex PostgreSQL relational database schemas, handling transactions, data migration scripts,\nand database scaling.\nIntegrated Docker containers into daily developer workflows to streamline team onboarding and unified dev\nenvironments.\nResume - Candidate 1: Ali Raza (Strong Match) \t\n\n\n\nKEY ENGINEERING PROJECTS\nAutomated Logistics & Fleet Monitoring Engine \t2023\nBuilt a distributed telemetry ingestion service using Python, Django REST Framework, and Celery backed\nby a tuned PostgreSQL instance.\nSetup end-to-end multi-stage Docker CI/CD build scripts that reduced deployment pipeline times by 35%.\nEDUCATION\nBachelor of Science in Computer Science (BSCS)\nNational University of Computer and Emerging Sciences (FAST-NUCES)\nGraduated: 2020\nResume - Candidate 1: Ali Raza (Strong Match)",
+      "fileMetadata": {
+        "fileName": "Candidate 1 - Strong Match (Ali Raza).pdf",
+        "fileSizeKB": 140,
+        "mimeType": "application/pdf",
+        "uploadedAt": "2026-11-05T07:39:50.114Z"
+      },
+      "contactInfo": {
+        "fullName": "ALI RAZA",
+        "email": "ali.raza.dev@gmail.com",
+        "location": "Lahore, Pakistan",
+        "phone": "+92 300 5550192",
+        "portfolioUrl": "linkedin.com/in/ali-raza-backend"
+      },
+      "summary": "Results-driven Backend Developer with 4+ years of dedicated hands-on experience architectural design, building scalable RESTful APIs, and optimizing database performance using Python, Django REST Framework, and PostgreSQL. Demonstrated expertise in containerizing multi-service microservices using Docker and configuring automated CI/CD deployment pipelines on Kubernetes and AWS.",
+      "normalizedSkills": [
+        {
+          "skillId": "skill-python",
+          "name": "Python",
+          "normalizedName": "Python",
+          "category": "language",
+          "claimedYears": 4,
+          "proficiencyLevel": "expert",
+          "citationIds": [
+            "cit-skill-1"
+          ]
+        },
+        {
+          "skillId": "skill-django",
+          "name": "Django",
+          "normalizedName": "Django",
+          "category": "framework",
+          "claimedYears": 4,
+          "proficiencyLevel": "expert",
+          "citationIds": [
+            "cit-skill-2"
+          ]
+        },
+        {
+          "skillId": "skill-postgresql",
+          "name": "PostgreSQL",
+          "normalizedName": "PostgreSQL",
+          "category": "database",
+          "claimedYears": 4,
+          "proficiencyLevel": "expert",
+          "citationIds": [
+            "cit-skill-3"
+          ]
+        },
+        {
+          "skillId": "skill-docker",
+          "name": "Docker",
+          "normalizedName": "Docker",
+          "category": "devops",
+          "claimedYears": 4,
+          "proficiencyLevel": "proficient",
+          "citationIds": [
+            "cit-skill-4"
+          ]
+        },
+        {
+          "skillId": "skill-kubernetes",
+          "name": "Kubernetes",
+          "normalizedName": "Kubernetes",
+          "category": "devops",
+          "claimedYears": 4,
+          "proficiencyLevel": "competent",
+          "citationIds": [
+            "cit-skill-5"
+          ]
+        }
+      ],
+      "workExperience": [
+        {
+          "id": "exp-1",
+          "company": "TechLogix Solutions",
+          "title": "Senior Python / Django Developer",
+          "location": "Lahore, Pakistan",
+          "startDate": "Jan 2022",
+          "endDate": "Present",
+          "isCurrent": true,
+          "bulletPoints": [
+            "Architected and deployed high-throughput backend services for enterprise clients using Python and Django REST Framework (DRF), supporting over 250k daily active users.",
+            "Engineered PostgreSQL query optimization strategies, utilizing complex indexes, materialized views, and refactoring ORM queries to reduce database response times by 42%.",
+            "Containerized complex microservice workloads using Docker and Docker Compose, ensuring environment parity across local, staging, and production clusters.",
+            "Designed and maintained automated CI/CD pipelines using GitHub Actions, enabling zero-downtime automated deployments and continuous integration testing."
+          ],
+          "technologiesUsed": [
+            "Python",
+            "Django",
+            "PostgreSQL",
+            "Docker",
+            "Docker",
+            "GitHub Actions"
+          ],
+          "citationIds": [
+            "cit-work_experience-6"
+          ]
+        },
+        {
+          "id": "exp-2",
+          "company": "Systems Limited",
+          "title": "Backend Software Engineer",
+          "location": "Lahore, Pakistan",
+          "startDate": "Jun 2020",
+          "endDate": "Dec 2021",
+          "isCurrent": false,
+          "bulletPoints": [
+            "Developed secure RESTful API endpoints in Python/Django for financial transaction management software, maintaining 99.98% uptime.",
+            "Managed complex PostgreSQL relational database schemas, handling transactions, data migration scripts, and database scaling.",
+            "Integrated Docker containers into daily developer workflows to streamline team onboarding and unified dev environments."
+          ],
+          "technologiesUsed": [
+            "Python",
+            "Django",
+            "PostgreSQL",
+            "Docker"
+          ],
+          "citationIds": [
+            "cit-work_experience-7"
+          ]
+        }
+      ],
+      "projects": [
+        {
+          "id": "proj-1",
+          "title": "Automated Logistics & Fleet Monitoring Engine",
+          "summary": "Built a distributed telemetry ingestion service using Python, Django REST Framework, and Celery backed by a tuned PostgreSQL instance.",
+          "technologies": [
+            "Python",
+            "Django",
+            "Celery",
+            "PostgreSQL",
+            "Docker"
+          ],
+          "outcomes": [
+            "reduced deployment pipeline times by 35%"
+          ],
+          "citationIds": [
+            "cit-project-8"
+          ]
+        }
+      ],
+      "education": [
+        {
+          "id": "edu-1",
+          "institution": "National University of Computer and Emerging Sciences (FAST-NUCES)",
+          "degree": "Bachelor of Science in Computer Science (BSCS)",
+          "fieldOfStudy": "Computer Science",
+          "graduationDate": "2020",
+          "citationIds": [
+            "cit-education-9"
+          ]
+        }
+      ],
+      "certifications": [],
+      "excerptMapping": [
+        {
+          "id": "cit-skill-1",
+          "targetField": "skill",
+          "associatedIdentifier": "Python",
+          "excerptText": "Python 3.11+",
+          "characterStart": 630,
+          "characterEnd": 642,
+          "contextSnippet": "...tes and AWS. CORE TECHNICAL SKILLS Backend Frameworks: Python 3.11+, Django, Django REST Framework (DRF), Celery, Redis Da...",
+          "confidence": 1
+        },
+        {
+          "id": "cit-skill-2",
+          "targetField": "skill",
+          "associatedIdentifier": "Django",
+          "excerptText": "Django, Django REST Framework (DRF)",
+          "characterStart": 644,
+          "characterEnd": 679,
+          "contextSnippet": "...ORE TECHNICAL SKILLS Backend Frameworks: Python 3.11+, Django, Django REST Framework (DRF), Celery, Redis Database & Querying: PostgreSQL (Indexi...",
+          "confidence": 1
+        },
+        {
+          "id": "cit-skill-3",
+          "targetField": "skill",
+          "associatedIdentifier": "PostgreSQL",
+          "excerptText": "PostgreSQL (Indexing, EXPLAIN ANALYZE Query Optimization, Partitioning)",
+          "characterStart": 716,
+          "characterEnd": 787,
+          "contextSnippet": "...ST Framework (DRF), Celery, Redis Database & Querying: PostgreSQL (Indexing, EXPLAIN ANALYZE Query Optimization, Partitioning), ORM DevOps & Cloud: \tDocker, Docker Compose, CI/CD (G...",
+          "confidence": 1
+        },
+        {
+          "id": "cit-skill-4",
+          "targetField": "skill",
+          "associatedIdentifier": "Docker",
+          "excerptText": "Docker, Docker Compose",
+          "characterStart": 810,
+          "characterEnd": 832,
+          "contextSnippet": "...uery Optimization, Partitioning), ORM DevOps & Cloud: \tDocker, Docker Compose, CI/CD (GitHub Actions, GitLab CI), Kubernetes, AWS EC...",
+          "confidence": 1
+        },
+        {
+          "id": "cit-skill-5",
+          "targetField": "skill",
+          "associatedIdentifier": "Kubernetes",
+          "excerptText": "Kubernetes",
+          "characterStart": 568,
+          "characterEnd": 578,
+          "contextSnippet": "...nd configuring automated CI/CD deployment pipelines on Kubernetes and AWS. CORE TECHNICAL SKILLS Backend Frameworks: Pyt...",
+          "confidence": 1
+        },
+        {
+          "id": "cit-work_experience-6",
+          "targetField": "work_experience",
+          "associatedIdentifier": "Senior Python / Django Developer at TechLogix Solutions",
+          "excerptText": "Senior Python / Django Developer — TechLogix Solutions \tJan 2022 – Present | Lahore, Pakistan",
+          "characterStart": 1011,
+          "characterEnd": 1104,
+          "contextSnippet": "..., Git, PyTest, OpenAPI/Swagger PROFESSIONAL EXPERIENCE Senior Python / Django Developer — TechLogix Solutions \tJan 2022 – Present | Lahore, Pakistan Architected and deployed high-throughput backend servi...",
+          "confidence": 1
+        },
+        {
+          "id": "cit-work_experience-7",
+          "targetField": "work_experience",
+          "associatedIdentifier": "Backend Software Engineer at Systems Limited",
+          "excerptText": "Backend Software Engineer — Systems Limited \tJun 2020 – Dec 2021 | Lahore, Pakistan",
+          "characterStart": 1750,
+          "characterEnd": 1833,
+          "contextSnippet": "...omated deployments and continuous integration testing. Backend Software Engineer — Systems Limited \tJun 2020 – Dec 2021 | Lahore, Pakistan Developed secure RESTful API endpoints in Python/Djang...",
+          "confidence": 1
+        },
+        {
+          "id": "cit-project-8",
+          "targetField": "project",
+          "associatedIdentifier": "Automated Logistics & Fleet Monitoring Engine",
+          "excerptText": "Built a distributed telemetry ingestion service using Python, Django REST Framework, and Celery backed by a tuned PostgreSQL instance.",
+          "characterStart": 2337,
+          "characterEnd": 2471,
+          "contextSnippet": "...TS Automated Logistics & Fleet Monitoring Engine \t2023 Built a distributed telemetry ingestion service using Python, Django REST Framework, and Celery backed by a tuned PostgreSQL instance. Setup end-to-end multi-stage Docker CI/CD build script...",
+          "confidence": 0.95
+        },
+        {
+          "id": "cit-education-9",
+          "targetField": "education",
+          "associatedIdentifier": "Bachelor of Science in Computer Science (BSCS) - National University of Computer and Emerging Sciences (FAST-NUCES)",
+          "excerptText": "Bachelor of Science in Computer Science (BSCS)\nNational University of Computer and Emerging Sciences (FAST-NUCES)\nGraduated: 2020",
+          "characterStart": 2585,
+          "characterEnd": 2714,
+          "contextSnippet": "...at reduced deployment pipeline times by 35%. EDUCATION Bachelor of Science in Computer Science (BSCS) National University of Computer and Emerging Sciences (FAST-NUCES) Graduated: 2020 Resume - Candidate 1: Ali Raza (Strong Match)",
+          "confidence": 1
+        }
+      ],
+      "parsingConfidence": 0.99,
+      "parsedAt": "2026-11-05T07:39:50.114Z"
+    },
+    {
+      "id": "res-mw38p8vv-zf8a",
+      "candidateId": "cand-taylor-vance-mw38p8vv",
+      "rawText": "TAYLOR VANCE\nJunior Developer claiming Senior Architect\nEmail: taylor.vance.test@techaudit.org | Phone: +1 (212) 555-4302 | Location: New York, NY\nGitHub: github.com/taylorvance-audit\n\nPROFESSIONAL SUMMARY\nMotivated software engineer with 2 years of professional experience. \nClaiming 12 years of hands-on expertise in Next.js, React, and QuantumFluxDB as Lead Architect.\n\nWORK EXPERIENCE\n\nJunior Frontend Developer | QuickStart Media | 2022 - Present\n- Built promotional landing pages using React and Tailwind CSS.\n- Maintained internal documentation, bug triage, and WordPress landing pages.\n\nEDUCATION\nState University of New York | 2018 - 2022\nBachelor of Arts in Media Studies (Graduated: May 2022)\n\nTECHNICAL CLAIMS\n- Next.js (Claimed: 12 years)\n- QuantumFluxDB (Claimed: 8 years)",
+      "fileMetadata": {
+        "fileName": "Candidate_4_Hallucination_Stress_Test.pdf",
+        "fileSizeKB": 1,
+        "mimeType": "text/plain",
+        "uploadedAt": "2026-11-05T07:44:18.230Z"
+      },
+      "contactInfo": {
+        "fullName": "TAYLOR VANCE",
+        "email": "taylor.vance.test@techaudit.org",
+        "location": "New York, NY",
+        "githubUrl": "github.com/taylorvance-audit",
+        "phone": "+1 (212) 555-4302"
+      },
+      "summary": "Motivated software engineer with 2 years of professional experience. Claiming 12 years of hands-on expertise in Next.js, React, and QuantumFluxDB as Lead Architect.",
+      "normalizedSkills": [
+        {
+          "skillId": "skill-next-js",
+          "name": "Next.js",
+          "normalizedName": "Next.js",
+          "category": "framework",
+          "claimedYears": 12,
+          "proficiencyLevel": "expert",
+          "citationIds": [
+            "cit-skill-1"
+          ]
+        },
+        {
+          "skillId": "skill-react",
+          "name": "React",
+          "normalizedName": "React",
+          "category": "framework",
+          "claimedYears": 2,
+          "proficiencyLevel": "competent",
+          "citationIds": [
+            "cit-skill-2"
+          ]
+        },
+        {
+          "skillId": "skill-quantumfluxdb",
+          "name": "QuantumFluxDB",
+          "normalizedName": "QuantumFluxDB",
+          "category": "database",
+          "claimedYears": 8,
+          "proficiencyLevel": "expert",
+          "citationIds": [
+            "cit-skill-3"
+          ]
+        },
+        {
+          "skillId": "skill-tailwind-css",
+          "name": "Tailwind CSS",
+          "normalizedName": "Tailwind CSS",
+          "category": "framework",
+          "claimedYears": 2,
+          "proficiencyLevel": "competent",
+          "citationIds": [
+            "cit-skill-4"
+          ]
+        }
+      ],
+      "workExperience": [
+        {
+          "id": "exp-1",
+          "company": "QuickStart Media",
+          "title": "Junior Frontend Developer",
+          "startDate": "2022",
+          "endDate": "Present",
+          "isCurrent": true,
+          "bulletPoints": [
+            "Built promotional landing pages using React and Tailwind CSS.",
+            "Maintained internal documentation, bug triage, and WordPress landing pages."
+          ],
+          "technologiesUsed": [
+            "React",
+            "Tailwind CSS",
+            "WordPress"
+          ],
+          "citationIds": [
+            "cit-work_experience-5"
+          ]
+        }
+      ],
+      "projects": [],
+      "education": [
+        {
+          "id": "edu-1",
+          "institution": "State University of New York",
+          "degree": "Bachelor of Arts",
+          "fieldOfStudy": "Media Studies",
+          "startDate": "2018",
+          "graduationDate": "May 2022",
+          "citationIds": [
+            "cit-education-6"
+          ]
+        }
+      ],
+      "certifications": [],
+      "excerptMapping": [
+        {
+          "id": "cit-skill-1",
+          "targetField": "skill",
+          "associatedIdentifier": "Next.js",
+          "excerptText": "- Next.js (Claimed: 12 years)",
+          "characterStart": 722,
+          "characterEnd": 751,
+          "contextSnippet": "...Media Studies (Graduated: May 2022) TECHNICAL CLAIMS - Next.js (Claimed: 12 years) - QuantumFluxDB (Claimed: 8 years)",
+          "confidence": 1
+        },
+        {
+          "id": "cit-skill-2",
+          "targetField": "skill",
+          "associatedIdentifier": "React",
+          "excerptText": "expertise in Next.js, React, and QuantumFluxDB",
+          "characterStart": 306,
+          "characterEnd": 352,
+          "contextSnippet": "...rofessional experience.  Claiming 12 years of hands-on expertise in Next.js, React, and QuantumFluxDB as Lead Architect. WORK EXPERIENCE Junior Frontend D...",
+          "confidence": 1
+        },
+        {
+          "id": "cit-skill-3",
+          "targetField": "skill",
+          "associatedIdentifier": "QuantumFluxDB",
+          "excerptText": "- QuantumFluxDB (Claimed: 8 years)",
+          "characterStart": 752,
+          "characterEnd": 786,
+          "contextSnippet": "...2022) TECHNICAL CLAIMS - Next.js (Claimed: 12 years) - QuantumFluxDB (Claimed: 8 years)",
+          "confidence": 1
+        },
+        {
+          "id": "cit-skill-4",
+          "targetField": "skill",
+          "associatedIdentifier": "Tailwind CSS",
+          "excerptText": "- Built promotional landing pages using React and Tailwind CSS.",
+          "characterStart": 452,
+          "characterEnd": 515,
+          "contextSnippet": "...Frontend Developer | QuickStart Media | 2022 - Present - Built promotional landing pages using React and Tailwind CSS. - Maintained internal documentation, bug triage, and W...",
+          "confidence": 1
+        },
+        {
+          "id": "cit-work_experience-5",
+          "targetField": "work_experience",
+          "associatedIdentifier": "Junior Frontend Developer at QuickStart Media",
+          "excerptText": "Junior Frontend Developer | QuickStart Media | 2022 - Present",
+          "characterStart": 390,
+          "characterEnd": 451,
+          "contextSnippet": "...and QuantumFluxDB as Lead Architect. WORK EXPERIENCE Junior Frontend Developer | QuickStart Media | 2022 - Present - Built promotional landing pages using React and Tail...",
+          "confidence": 1
+        },
+        {
+          "id": "cit-education-6",
+          "targetField": "education",
+          "associatedIdentifier": "Bachelor of Arts - State University of New York",
+          "excerptText": "State University of New York | 2018 - 2022\nBachelor of Arts in Media Studies (Graduated: May 2022)",
+          "characterStart": 605,
+          "characterEnd": 703,
+          "contextSnippet": "...n, bug triage, and WordPress landing pages. EDUCATION State University of New York | 2018 - 2022 Bachelor of Arts in Media Studies (Graduated: May 2022) TECHNICAL CLAIMS - Next.js (Claimed: 12 years) - Quan...",
+          "confidence": 1
+        }
+      ],
+      "parsingConfidence": 0.99,
+      "parsedAt": "2026-11-05T07:44:18.230Z"
     }
   ],
   "evaluations": [
@@ -720,7 +1248,10 @@
           "candidateYearsFound": 6,
           "requiredYears": 4,
           "justification": "Explicitly evidenced across 6 years, leading backend development with Python 3.11 at FinScale and NexaDigital.",
-          "relevantExcerptIds": ["cit-farhan-01", "cit-farhan-05"],
+          "relevantExcerptIds": [
+            "cit-farhan-01",
+            "cit-farhan-05"
+          ],
           "verificationNeeded": false
         },
         {
@@ -732,7 +1263,10 @@
           "candidateYearsFound": 5,
           "requiredYears": 3,
           "justification": "Demonstrated production architectural expertise in Django 4/5 and DRF powering 12M+ monthly transactions.",
-          "relevantExcerptIds": ["cit-farhan-02", "cit-farhan-06"],
+          "relevantExcerptIds": [
+            "cit-farhan-02",
+            "cit-farhan-06"
+          ],
           "verificationNeeded": false
         },
         {
@@ -744,7 +1278,10 @@
           "candidateYearsFound": 5,
           "requiredYears": 2,
           "justification": "Concrete quantitative achievements in B-Tree/partial indexing, query optimization cutting latency from 840ms to 42ms on 300M rows.",
-          "relevantExcerptIds": ["cit-farhan-03", "cit-farhan-07"],
+          "relevantExcerptIds": [
+            "cit-farhan-03",
+            "cit-farhan-07"
+          ],
           "verificationNeeded": false
         },
         {
@@ -756,7 +1293,11 @@
           "candidateYearsFound": 4,
           "requiredYears": 2,
           "justification": "Holds Docker Certified Associate (DCA). Implemented multi-stage Docker builds reducing image sizes to 148MB and standardized dev environments.",
-          "relevantExcerptIds": ["cit-farhan-04", "cit-farhan-08", "cit-farhan-11"],
+          "relevantExcerptIds": [
+            "cit-farhan-04",
+            "cit-farhan-08",
+            "cit-farhan-11"
+          ],
           "verificationNeeded": false
         }
       ],
@@ -776,7 +1317,12 @@
         "score": 92,
         "complexityRating": "exceptional",
         "relevantProjectsCount": 1,
-        "stackOverlapDetails": ["Python", "Django REST Framework", "PostgreSQL", "Docker Compose"],
+        "stackOverlapDetails": [
+          "Python",
+          "Django REST Framework",
+          "PostgreSQL",
+          "Docker Compose"
+        ],
         "justification": "Open-source distributed event ledger directly proves competence in transaction isolation and performance benchmarking (4.8k writes/sec)."
       },
       "qualificationsMatchAnalysis": {
@@ -831,7 +1377,10 @@
           "candidateYearsFound": 4,
           "requiredYears": 4,
           "justification": "Strong 4-year track record with Python in web APIs, background reporting, and third-party integrations.",
-          "relevantExcerptIds": ["cit-zainab-01", "cit-zainab-03"],
+          "relevantExcerptIds": [
+            "cit-zainab-01",
+            "cit-zainab-03"
+          ],
           "verificationNeeded": false
         },
         {
@@ -843,7 +1392,11 @@
           "candidateYearsFound": 3.5,
           "requiredYears": 3,
           "justification": "Evidenced Django and DRF development across two professional roles and a personal project.",
-          "relevantExcerptIds": ["cit-zainab-02", "cit-zainab-04", "cit-zainab-06"],
+          "relevantExcerptIds": [
+            "cit-zainab-02",
+            "cit-zainab-04",
+            "cit-zainab-06"
+          ],
           "verificationNeeded": false
         },
         {
@@ -855,7 +1408,10 @@
           "candidateYearsFound": 1.5,
           "requiredYears": 2,
           "justification": "Resume notes generic 'SQL databases' and a Heroku PostgreSQL addon, but lacks evidence of deep index tuning, query plan analysis, or high-scale schema design.",
-          "relevantExcerptIds": ["cit-zainab-05", "cit-zainab-06"],
+          "relevantExcerptIds": [
+            "cit-zainab-05",
+            "cit-zainab-06"
+          ],
           "verificationNeeded": true,
           "suggestedProbingQuestion": "Can you describe a scenario where you debugged a slow SQL query in PostgreSQL using EXPLAIN ANALYZE?"
         },
@@ -891,7 +1447,11 @@
         "score": 72,
         "complexityRating": "moderate",
         "relevantProjectsCount": 1,
-        "stackOverlapDetails": ["Python", "Django", "PostgreSQL (Heroku Addon)"],
+        "stackOverlapDetails": [
+          "Python",
+          "Django",
+          "PostgreSQL (Heroku Addon)"
+        ],
         "justification": "PyPortal demonstrates standard Django ORM and task management, but lacks stress testing or high-concurrency benchmarks."
       },
       "qualificationsMatchAnalysis": {
@@ -913,7 +1473,9 @@
           "status": "unverified",
           "detectedConfidence": 0.62,
           "recommendedInterviewProbe": "Ask candidate to clarify their direct hands-on responsibility with AWS beyond basic S3 console uploads.",
-          "evidenceExcerptIds": ["cit-zainab-01"]
+          "evidenceExcerptIds": [
+            "cit-zainab-01"
+          ]
         }
       ],
       "executiveSummary": "Zainab Mirza shows genuine competence in core Python and Django web development. However, her profile exhibits a key evidentiary divergence: Docker containerization has NO evidence (0% confirmed score), and PostgreSQL experience is partial (primarily basic SQL scripts and Heroku managed DB). She is a viable mid-level candidate provided technical interviews verify her adaptability to Docker and deeper relational performance concepts.",
@@ -958,7 +1520,9 @@
           "candidateYearsFound": 0.5,
           "requiredYears": 4,
           "justification": "Candidate mentions writing basic web scraping scripts in Python, far short of required 4 years professional backend engineering.",
-          "relevantExcerptIds": ["cit-hamza-01"],
+          "relevantExcerptIds": [
+            "cit-hamza-01"
+          ],
           "verificationNeeded": true,
           "suggestedProbingQuestion": "Can you walk through any Python production service you have deployed?"
         },
@@ -971,7 +1535,9 @@
           "candidateYearsFound": 0.2,
           "requiredYears": 3,
           "justification": "Resume explicitly notes 'Django (Tutorial Projects)' with no commercial deployment.",
-          "relevantExcerptIds": ["cit-hamza-02"],
+          "relevantExcerptIds": [
+            "cit-hamza-02"
+          ],
           "verificationNeeded": true
         },
         {
@@ -983,7 +1549,9 @@
           "candidateYearsFound": 0,
           "requiredYears": 2,
           "justification": "Candidate explicitly wrote: 'Note: No relational SQL experience; exclusively NoSQL document stores'. This constitutes confirmed absence rather than missing evidence.",
-          "relevantExcerptIds": ["cit-hamza-03"],
+          "relevantExcerptIds": [
+            "cit-hamza-03"
+          ],
           "verificationNeeded": false
         },
         {
@@ -995,7 +1563,9 @@
           "candidateYearsFound": 0,
           "requiredYears": 2,
           "justification": "Candidate notes 'Interested in learning / watched tutorials'. Zero professional container experience.",
-          "relevantExcerptIds": ["cit-hamza-04"],
+          "relevantExcerptIds": [
+            "cit-hamza-04"
+          ],
           "verificationNeeded": false
         }
       ],
@@ -1003,7 +1573,9 @@
         "score": 22,
         "totalYearsRelevant": 0.5,
         "seniorityAlignment": "below",
-        "keyStrengths": ["Frontend React.js UI styling"],
+        "keyStrengths": [
+          "Frontend React.js UI styling"
+        ],
         "gapsIdentified": [
           "Severe gap in backend engineering experience.",
           "Work history is overwhelmingly client-side React and WordPress maintenance."
@@ -1036,7 +1608,10 @@
           "status": "verified_hallucination",
           "detectedConfidence": 0.99,
           "recommendedInterviewProbe": "Address the chronological contradiction between university graduation in 2024 and the claimed 6 years of enterprise tenure.",
-          "evidenceExcerptIds": ["cit-hamza-05", "cit-hamza-07"]
+          "evidenceExcerptIds": [
+            "cit-hamza-05",
+            "cit-hamza-07"
+          ]
         },
         {
           "id": "flag-hamza-02",
@@ -1047,7 +1622,9 @@
           "status": "verified_hallucination",
           "detectedConfidence": 0.96,
           "recommendedInterviewProbe": "Clarify architectural authority vs UI form building at Basel Web Studios.",
-          "evidenceExcerptIds": ["cit-hamza-05"]
+          "evidenceExcerptIds": [
+            "cit-hamza-05"
+          ]
         },
         {
           "id": "flag-hamza-03",
@@ -1058,7 +1635,9 @@
           "status": "verified_hallucination",
           "detectedConfidence": 0.98,
           "recommendedInterviewProbe": "Probe candidate on ACID properties or cluster replication topologies.",
-          "evidenceExcerptIds": ["cit-hamza-03"]
+          "evidenceExcerptIds": [
+            "cit-hamza-03"
+          ]
         }
       ],
       "executiveSummary": "Hamza Bilal's application triggers CRITICAL hallucination and temporal inconsistency alerts. While the resume summary advertises '6+ years as Senior Lead Distributed Backend Architect', verifiable dates demonstrate graduation in June 2024 and actual duties centered around React landing pages. Furthermore, candidate confirms zero relational SQL experience. The application represents a severe mismatch for this position.",
@@ -1069,6 +1648,273 @@
       ],
       "targetedInterviewFocusAreas": [
         "Not recommended for interview loop. Discrepancy report archived in compliance log."
+      ]
+    },
+    {
+      "id": "eval-cand-ali-raza-mw38ji03-0119",
+      "candidateId": "cand-ali-raza-mw38ji03",
+      "jobId": "job-backend-001",
+      "resumeId": "res-mw38ji03-qj4v",
+      "evaluatedAt": "2026-11-05T07:39:50.119Z",
+      "modelIdentifier": "gemini-3.1-flash-lite",
+      "weights": {
+        "skills": 0.5,
+        "experience": 0.25,
+        "projects": 0.15,
+        "qualifications": 0.1
+      },
+      "scoreBreakdown": {
+        "skillsScore": 99.3,
+        "experienceScore": 100,
+        "projectsScore": 90,
+        "qualificationsScore": 80,
+        "compositeScore": 96.1
+      },
+      "verdict": "strong_match",
+      "skillAssessments": [
+        {
+          "skillName": "Python",
+          "requiredWeight": 0.35,
+          "importance": "critical",
+          "evidenceState": "confirmed_present",
+          "score": 100,
+          "candidateYearsFound": 4,
+          "requiredYears": 4,
+          "justification": "Verified 4 years hands-on experience in Python (expert). Backed by production work experience and verifiable citations.",
+          "relevantExcerptIds": [
+            "cit-skill-1"
+          ],
+          "verificationNeeded": false
+        },
+        {
+          "skillName": "Django",
+          "requiredWeight": 0.3,
+          "importance": "critical",
+          "evidenceState": "confirmed_present",
+          "score": 100,
+          "candidateYearsFound": 4,
+          "requiredYears": 3,
+          "justification": "Verified 4 years hands-on experience in Django (expert). Backed by production work experience and verifiable citations.",
+          "relevantExcerptIds": [
+            "cit-skill-2"
+          ],
+          "verificationNeeded": false
+        },
+        {
+          "skillName": "PostgreSQL",
+          "requiredWeight": 0.2,
+          "importance": "important",
+          "evidenceState": "confirmed_present",
+          "score": 100,
+          "candidateYearsFound": 4,
+          "requiredYears": 2,
+          "justification": "Verified 4 years hands-on experience in PostgreSQL (expert). Backed by production work experience and verifiable citations.",
+          "relevantExcerptIds": [
+            "cit-skill-3"
+          ],
+          "verificationNeeded": false
+        },
+        {
+          "skillName": "Docker",
+          "requiredWeight": 0.15,
+          "importance": "important",
+          "evidenceState": "confirmed_present",
+          "score": 95,
+          "candidateYearsFound": 4,
+          "requiredYears": 2,
+          "justification": "Verified 4 years hands-on experience in Docker (proficient). Backed by production work experience and verifiable citations.",
+          "relevantExcerptIds": [
+            "cit-skill-4"
+          ],
+          "verificationNeeded": false
+        }
+      ],
+      "experienceMatchAnalysis": {
+        "score": 100,
+        "totalYearsRelevant": 6,
+        "seniorityAlignment": "exceeds",
+        "keyStrengths": [
+          "Verified 4y hands-on proficiency in Python.",
+          "Verified 4y hands-on proficiency in Django.",
+          "Verified 4y hands-on proficiency in PostgreSQL.",
+          "Verified 4y hands-on proficiency in Docker."
+        ],
+        "gapsIdentified": [],
+        "justification": "ALI RAZA demonstrates exceptional alignment with the Senior Backend Developer specification, achieving a 96.1% composite score. Strong verified presence across Python, Django, PostgreSQL, and Docker with production microservices evidence."
+      },
+      "projectsMatchAnalysis": {
+        "score": 90,
+        "complexityRating": "high",
+        "relevantProjectsCount": 1,
+        "stackOverlapDetails": [
+          "Python",
+          "PostgreSQL",
+          "Docker"
+        ],
+        "justification": "Candidate completed 1 relevant technical project(s)."
+      },
+      "qualificationsMatchAnalysis": {
+        "score": 80,
+        "degreeRelevant": true,
+        "educationLevelMet": true,
+        "certificationsBonus": 0,
+        "justification": "Degree and qualification evaluation scored at 80%."
+      },
+      "isHallucinationFlagged": false,
+      "hallucinationRiskLevel": "clean",
+      "hallucinationFlags": [],
+      "executiveSummary": "ALI RAZA demonstrates exceptional alignment with the Senior Backend Developer specification, achieving a 96.1% composite score. Strong verified presence across Python, Django, PostgreSQL, and Docker with production microservices evidence.",
+      "recommendationReasoning": [
+        "Verified 4y hands-on proficiency in Python.",
+        "Verified 4y hands-on proficiency in Django.",
+        "Verified 4y hands-on proficiency in PostgreSQL.",
+        "Verified 4y hands-on proficiency in Docker."
+      ],
+      "targetedInterviewFocusAreas": []
+    },
+    {
+      "id": "eval-cand-taylor-vance-mw38p8vv-8245",
+      "candidateId": "cand-taylor-vance-mw38p8vv",
+      "jobId": "job-backend-001",
+      "resumeId": "res-mw38p8vv-zf8a",
+      "evaluatedAt": "2026-11-05T07:44:18.245Z",
+      "modelIdentifier": "gemini-3.1-flash-lite",
+      "weights": {
+        "skills": 0.5,
+        "experience": 0.25,
+        "projects": 0.15,
+        "qualifications": 0.1
+      },
+      "scoreBreakdown": {
+        "skillsScore": 0,
+        "experienceScore": 90,
+        "projectsScore": 50,
+        "qualificationsScore": 35,
+        "compositeScore": 33.5
+      },
+      "verdict": "requires_investigation",
+      "skillAssessments": [
+        {
+          "skillName": "Python",
+          "requiredWeight": 0.35,
+          "importance": "critical",
+          "evidenceState": "missing_evidence",
+          "score": 0,
+          "candidateYearsFound": 0,
+          "requiredYears": 4,
+          "justification": "No direct evidence or mention of Python found in candidate work history, projects, or skill listings.",
+          "relevantExcerptIds": [],
+          "verificationNeeded": true,
+          "suggestedProbingQuestion": "Verify candidate's hands-on proficiency with Python and investigate why it is not referenced in their work experience."
+        },
+        {
+          "skillName": "Django",
+          "requiredWeight": 0.3,
+          "importance": "critical",
+          "evidenceState": "missing_evidence",
+          "score": 0,
+          "candidateYearsFound": 0,
+          "requiredYears": 3,
+          "justification": "No direct evidence or mention of Django found in candidate work history, projects, or skill listings.",
+          "relevantExcerptIds": [],
+          "verificationNeeded": true,
+          "suggestedProbingQuestion": "Verify candidate's hands-on proficiency with Django and investigate why it is not referenced in their work experience."
+        },
+        {
+          "skillName": "PostgreSQL",
+          "requiredWeight": 0.2,
+          "importance": "important",
+          "evidenceState": "missing_evidence",
+          "score": 0,
+          "candidateYearsFound": 0,
+          "requiredYears": 2,
+          "justification": "No direct evidence or mention of PostgreSQL found in candidate work history, projects, or skill listings.",
+          "relevantExcerptIds": [],
+          "verificationNeeded": true,
+          "suggestedProbingQuestion": "Verify candidate's hands-on proficiency with PostgreSQL and investigate why it is not referenced in their work experience."
+        },
+        {
+          "skillName": "Docker",
+          "requiredWeight": 0.15,
+          "importance": "important",
+          "evidenceState": "missing_evidence",
+          "score": 0,
+          "candidateYearsFound": 0,
+          "requiredYears": 2,
+          "justification": "No direct evidence or mention of Docker found in candidate work history, projects, or skill listings.",
+          "relevantExcerptIds": [],
+          "verificationNeeded": true,
+          "suggestedProbingQuestion": "Verify candidate's hands-on proficiency with Docker and investigate why it is not referenced in their work experience."
+        }
+      ],
+      "experienceMatchAnalysis": {
+        "score": 90,
+        "totalYearsRelevant": 4,
+        "seniorityAlignment": "exceeds",
+        "keyStrengths": [],
+        "gapsIdentified": [
+          "Missing evidence for Python: unmentioned in verified employment history.",
+          "Missing evidence for Django: unmentioned in verified employment history.",
+          "Missing evidence for PostgreSQL: unmentioned in verified employment history.",
+          "Missing evidence for Docker: unmentioned in verified employment history.",
+          "[HALLUCINATION RISK] Next.js (12 years claimed): Candidate claims 12 years of experience in Next.js, but documented employment history spans only ~5 years.",
+          "[HALLUCINATION RISK] QuantumFluxDB (8 years claimed): Candidate claims 8 years of experience in QuantumFluxDB, but documented employment history spans only ~5 years."
+        ],
+        "justification": "TAYLOR VANCE presents critical timeline or technology discrepancies that require mandatory interview investigation. Detected 2 severe verification flags."
+      },
+      "projectsMatchAnalysis": {
+        "score": 50,
+        "complexityRating": "moderate",
+        "relevantProjectsCount": 0,
+        "stackOverlapDetails": [
+          "Python",
+          "PostgreSQL",
+          "Docker"
+        ],
+        "justification": "Candidate completed 0 relevant technical project(s)."
+      },
+      "qualificationsMatchAnalysis": {
+        "score": 35,
+        "degreeRelevant": true,
+        "educationLevelMet": true,
+        "certificationsBonus": 0,
+        "justification": "Degree and qualification evaluation scored at 35%."
+      },
+      "isHallucinationFlagged": true,
+      "hallucinationRiskLevel": "critical",
+      "hallucinationFlags": [
+        {
+          "id": "flag-temporal-1",
+          "claimType": "temporal_impossibility",
+          "suspectClaim": "Next.js (12 years claimed)",
+          "reason": "Candidate claims 12 years of experience in Next.js, but documented employment history spans only ~5 years.",
+          "severity": "critical",
+          "status": "verified_hallucination",
+          "detectedConfidence": 0.98,
+          "recommendedInterviewProbe": "Probe timeline discrepancy: verify when candidate started using Next.js and whether this includes pre-professional or student work.",
+          "evidenceExcerptIds": []
+        },
+        {
+          "id": "flag-temporal-3",
+          "claimType": "temporal_impossibility",
+          "suspectClaim": "QuantumFluxDB (8 years claimed)",
+          "reason": "Candidate claims 8 years of experience in QuantumFluxDB, but documented employment history spans only ~5 years.",
+          "severity": "critical",
+          "status": "verified_hallucination",
+          "detectedConfidence": 0.98,
+          "recommendedInterviewProbe": "Probe timeline discrepancy: verify when candidate started using QuantumFluxDB and whether this includes pre-professional or student work.",
+          "evidenceExcerptIds": []
+        }
+      ],
+      "executiveSummary": "TAYLOR VANCE presents critical timeline or technology discrepancies that require mandatory interview investigation. Detected 2 severe verification flags.",
+      "recommendationReasoning": [],
+      "targetedInterviewFocusAreas": [
+        "Missing evidence for Python: unmentioned in verified employment history.",
+        "Missing evidence for Django: unmentioned in verified employment history.",
+        "Missing evidence for PostgreSQL: unmentioned in verified employment history.",
+        "Missing evidence for Docker: unmentioned in verified employment history.",
+        "[HALLUCINATION RISK] Next.js (12 years claimed): Candidate claims 12 years of experience in Next.js, but documented employment history spans only ~5 years.",
+        "[HALLUCINATION RISK] QuantumFluxDB (8 years claimed): Candidate claims 8 years of experience in QuantumFluxDB, but documented employment history spans only ~5 years."
       ]
     }
   ],
@@ -1088,7 +1934,12 @@
         "location": "Zurich, Switzerland",
         "headline": "Senior Backend Engineer | Python, Django, PostgreSQL, Docker"
       },
-      "tags": ["High Priority", "Verified 95%", "Fast-Track", "Zurich Local"],
+      "tags": [
+        "High Priority",
+        "Verified 95%",
+        "Fast-Track",
+        "Zurich Local"
+      ],
       "recruiterNotes": "Exceptional profile. All core technologies empirically grounded with measurable latency reductions. Interview scheduled with Head of Engineering.",
       "auditTrail": [
         {
@@ -1159,7 +2010,11 @@
         "location": "Geneva, Switzerland",
         "headline": "Full-Stack Python Developer | Django & Web APIs"
       },
-      "tags": ["Potential Match", "Docker Missing Evidence", "Probing Required"],
+      "tags": [
+        "Potential Match",
+        "Docker Missing Evidence",
+        "Probing Required"
+      ],
       "recruiterNotes": "Strong Python/Django baseline. Must conduct 30-minute tech screen to determine if Docker and Postgres gaps can be bridged.",
       "auditTrail": [
         {
@@ -1217,7 +2072,11 @@
         "location": "Basel, Switzerland",
         "headline": "Junior Developer (Claimed Backend Architect)"
       },
-      "tags": ["Hallucination Flagged", "Temporal Impossibility", "Confirmed Absence"],
+      "tags": [
+        "Hallucination Flagged",
+        "Temporal Impossibility",
+        "Confirmed Absence"
+      ],
       "recruiterNotes": "Critical hallucination alert: claims 6 years experience after graduating in June 2024. Confirmed absence in relational SQL. Candidate disqualified from senior role.",
       "auditTrail": [
         {
@@ -1259,6 +2118,115 @@
           "notes": "CRITICAL risk level triggered. Reverted to applied with investigation warning banner."
         }
       ]
+    },
+    {
+      "id": "app-cand-ali-raza-mw38ji03",
+      "candidateId": "cand-ali-raza-mw38ji03",
+      "jobId": "job-backend-001",
+      "resumeId": "res-mw38ji03-qj4v",
+      "evaluationId": "eval-cand-ali-raza-mw38ji03-0119",
+      "appliedDate": "2026-11-05T07:39:50.135Z",
+      "currentStage": "interview_completed",
+      "lastUpdated": "2026-11-05T07:40:03.823Z",
+      "candidateProfile": {
+        "fullName": "ALI RAZA",
+        "email": "ali.raza.dev@gmail.com",
+        "phone": "+92 300 5550192",
+        "location": "Lahore, Pakistan",
+        "headline": "Senior Python / Django Developer"
+      },
+      "auditTrail": [
+        {
+          "id": "aud-sub-mw38ji0n",
+          "timestamp": "2026-11-05T07:39:50.135Z",
+          "action": "Application Submitted & Resume Ingested",
+          "newStage": "applied",
+          "actor": {
+            "id": "cand-ali-raza-mw38ji03",
+            "name": "ALI RAZA",
+            "role": "candidate"
+          },
+          "notes": "Uploaded Candidate 1 - Strong Match (Ali Raza).pdf (140KB). Raw text extracted (2760 chars)."
+        },
+        {
+          "id": "aud-eval-mw38ji0n",
+          "timestamp": "2026-11-05T07:39:50.135Z",
+          "action": "AI Evaluation & Citation Mapping Completed",
+          "previousStage": "applied",
+          "newStage": "ai_evaluated",
+          "actor": {
+            "id": "sys-evaluator",
+            "name": "Swiss-Grid AI Talent Engine",
+            "role": "system"
+          },
+          "notes": "Calculated 96.1% composite score. Verdict: strong_match."
+        },
+        {
+          "id": "aud-mw38jskv-122e",
+          "timestamp": "2026-11-05T07:40:03.823Z",
+          "action": "Stage transitioned from interview_scheduled to interview_completed",
+          "previousStage": "interview_scheduled",
+          "newStage": "interview_completed",
+          "actor": {
+            "id": "usr-recruiter-01",
+            "name": "Elena Vance",
+            "role": "recruiter"
+          },
+          "notes": "Recruiter manually transitioned stage to interview_completed"
+        }
+      ],
+      "tags": [
+        "Shortlist Target",
+        "Verified Credentials"
+      ]
+    },
+    {
+      "id": "app-cand-taylor-vance-mw38p8vv",
+      "candidateId": "cand-taylor-vance-mw38p8vv",
+      "jobId": "job-backend-001",
+      "resumeId": "res-mw38p8vv-zf8a",
+      "evaluationId": "eval-cand-taylor-vance-mw38p8vv-8245",
+      "appliedDate": "2026-11-05T07:44:18.278Z",
+      "currentStage": "ai_evaluated",
+      "lastUpdated": "2026-11-05T07:44:18.278Z",
+      "candidateProfile": {
+        "fullName": "TAYLOR VANCE",
+        "email": "taylor.vance.test@techaudit.org",
+        "phone": "+1 (212) 555-4302",
+        "location": "New York, NY",
+        "headline": "Junior Frontend Developer"
+      },
+      "auditTrail": [
+        {
+          "id": "aud-sub-mw38p8x2",
+          "timestamp": "2026-11-05T07:44:18.278Z",
+          "action": "Application Submitted & Resume Ingested",
+          "newStage": "applied",
+          "actor": {
+            "id": "cand-taylor-vance-mw38p8vv",
+            "name": "TAYLOR VANCE",
+            "role": "candidate"
+          },
+          "notes": "Uploaded Candidate_4_Hallucination_Stress_Test.pdf (1KB). Raw text extracted (786 chars)."
+        },
+        {
+          "id": "aud-eval-mw38p8x2",
+          "timestamp": "2026-11-05T07:44:18.278Z",
+          "action": "AI Evaluation & Citation Mapping Completed",
+          "previousStage": "applied",
+          "newStage": "ai_evaluated",
+          "actor": {
+            "id": "sys-evaluator",
+            "name": "Swiss-Grid AI Talent Engine",
+            "role": "system"
+          },
+          "notes": "Calculated 33.5% composite score. Verdict: requires_investigation."
+        }
+      ],
+      "tags": [
+        "Under Review",
+        "Hallucination Alert"
+      ]
     }
   ],
   "questions": [
@@ -1289,17 +2257,27 @@
           {
             "score": 5,
             "description": "Exceptional: Articulates exact row locking semantics, lock ordering strategies, and connection pool sizing.",
-            "signalsToLookFor": ["SELECT FOR UPDATE NOWAIT", "Deterministic sort order on IDs", "PgBouncer transaction pooling caveat"]
+            "signalsToLookFor": [
+              "SELECT FOR UPDATE NOWAIT",
+              "Deterministic sort order on IDs",
+              "PgBouncer transaction pooling caveat"
+            ]
           },
           {
             "score": 3,
             "description": "Competent: Understands database transactions and standard locking, but needs prompting on distributed deadlock scenarios.",
-            "signalsToLookFor": ["Standard db.transaction() context manager", "Basic retry loops"]
+            "signalsToLookFor": [
+              "Standard db.transaction() context manager",
+              "Basic retry loops"
+            ]
           },
           {
             "score": 1,
             "description": "Unacceptable: Demonstrates no grasp of concurrency bugs; suggests in-memory locks on multi-instance setups.",
-            "signalsToLookFor": ["Unaware of race conditions", "Confuses SQLite with Postgres concurrency"]
+            "signalsToLookFor": [
+              "Unaware of race conditions",
+              "Confuses SQLite with Postgres concurrency"
+            ]
           }
         ]
       },
@@ -1336,17 +2314,28 @@
           {
             "score": 5,
             "description": "Expert: Flawlessly explains build vs runtime layers, wheel caching, dumb-init/tini PID 1 handling, and non-root USER directive.",
-            "signalsToLookFor": ["Multi-stage build separation", "python -m venv replication", "USER nonroot", "Proper signal propagation"]
+            "signalsToLookFor": [
+              "Multi-stage build separation",
+              "python -m venv replication",
+              "USER nonroot",
+              "Proper signal propagation"
+            ]
           },
           {
             "score": 3,
             "description": "Acceptable: Mentions python-slim and .dockerignore, but hazy on wheel compilation or non-root user creation.",
-            "signalsToLookFor": ["Slim image", ".dockerignore usage"]
+            "signalsToLookFor": [
+              "Slim image",
+              ".dockerignore usage"
+            ]
           },
           {
             "score": 1,
             "description": "Inadequate: Cannot explain what a multi-stage Docker build is.",
-            "signalsToLookFor": ["Single stage only", "Installs build packages on final layer"]
+            "signalsToLookFor": [
+              "Single stage only",
+              "Installs build packages on final layer"
+            ]
           }
         ]
       },
@@ -1380,17 +2369,27 @@
           {
             "score": 5,
             "description": "Has unlisted experience with local docker-compose and writes basic Dockerfiles comfortably.",
-            "signalsToLookFor": ["Dockerfile instructions", "docker-compose up/down", "Port mapping knowledge"]
+            "signalsToLookFor": [
+              "Dockerfile instructions",
+              "docker-compose up/down",
+              "Port mapping knowledge"
+            ]
           },
           {
             "score": 3,
             "description": "Understands the concept and has used Docker Desktop, but has not managed production containers.",
-            "signalsToLookFor": ["Conceptually clear", "Willingness to learn"]
+            "signalsToLookFor": [
+              "Conceptually clear",
+              "Willingness to learn"
+            ]
           },
           {
             "score": 1,
             "description": "Complete lack of familiarity; unable to explain what an image vs a container is.",
-            "signalsToLookFor": ["No knowledge", "Evasive answers"]
+            "signalsToLookFor": [
+              "No knowledge",
+              "Evasive answers"
+            ]
           }
         ]
       },
@@ -1424,17 +2423,27 @@
           {
             "score": 5,
             "description": "Demonstrates crisp understanding of N+1 problems, query plans, and index definitions in Django models.",
-            "signalsToLookFor": ["select_related vs prefetch_related", "django-debug-toolbar", "db_index=True"]
+            "signalsToLookFor": [
+              "select_related vs prefetch_related",
+              "django-debug-toolbar",
+              "db_index=True"
+            ]
           },
           {
             "score": 3,
             "description": "Knows about select_related and indexing, but has limited experience with raw EXPLAIN queries.",
-            "signalsToLookFor": ["select_related mentioned", "Understands indexes reduce scan time"]
+            "signalsToLookFor": [
+              "select_related mentioned",
+              "Understands indexes reduce scan time"
+            ]
           },
           {
             "score": 1,
             "description": "Does not understand how the ORM communicates with SQL; unaware of query multiplication.",
-            "signalsToLookFor": ["Blanks on N+1", "No knowledge of indexing"]
+            "signalsToLookFor": [
+              "Blanks on N+1",
+              "No knowledge of indexing"
+            ]
           }
         ]
       },
@@ -1442,6 +2451,298 @@
         "When would you choose NOT to index a column in PostgreSQL?"
       ],
       "evidenceStateTargeted": "partial_evidence"
+    },
+    {
+      "id": "q-dynamic-cand-taylor-vance-mw38p8vv-1",
+      "jobId": "job-backend-001",
+      "candidateId": "cand-taylor-vance-mw38p8vv",
+      "questionText": "Verify candidate's hands-on proficiency with Python and investigate why it is not referenced in their work experience.",
+      "category": "technical",
+      "targetSkillOrTopic": "Python",
+      "contextReasoning": "Investigating missing evidence status for required skill Python",
+      "difficulty": "senior",
+      "expectedSignals": [
+        "Python",
+        "production architecture",
+        "performance tuning"
+      ],
+      "redFlagIndicators": [
+        "Unable to explain internals",
+        "Surface-level buzzwords"
+      ],
+      "rubric": {
+        "criteria": "Verification of missing evidence in Python",
+        "levels": [
+          {
+            "score": 5,
+            "description": "Articulates deep internal mechanics, concurrency behavior, and production optimization in Python.",
+            "signalsToLookFor": [
+              "Production mastery",
+              "Deep internals"
+            ]
+          },
+          {
+            "score": 3,
+            "description": "Demonstrates working knowledge of Python, but lacks deep distributed systems or performance tuning expertise.",
+            "signalsToLookFor": [
+              "Working knowledge",
+              "Basic syntax"
+            ]
+          },
+          {
+            "score": 1,
+            "description": "Unable to explain architectural fundamentals of Python; gap is confirmed.",
+            "signalsToLookFor": [
+              "Unable to explain fundamentals",
+              "Fabricated claim"
+            ]
+          }
+        ]
+      },
+      "followUpProbes": [
+        "How did you handle edge cases in Python?"
+      ],
+      "evidenceStateTargeted": "missing_evidence"
+    },
+    {
+      "id": "q-dynamic-cand-taylor-vance-mw38p8vv-2",
+      "jobId": "job-backend-001",
+      "candidateId": "cand-taylor-vance-mw38p8vv",
+      "questionText": "Verify candidate's hands-on proficiency with Django and investigate why it is not referenced in their work experience.",
+      "category": "technical",
+      "targetSkillOrTopic": "Django",
+      "contextReasoning": "Investigating missing evidence status for required skill Django",
+      "difficulty": "senior",
+      "expectedSignals": [
+        "Django",
+        "production architecture",
+        "performance tuning"
+      ],
+      "redFlagIndicators": [
+        "Unable to explain internals",
+        "Surface-level buzzwords"
+      ],
+      "rubric": {
+        "criteria": "Verification of missing evidence in Django",
+        "levels": [
+          {
+            "score": 5,
+            "description": "Articulates deep internal mechanics, concurrency behavior, and production optimization in Django.",
+            "signalsToLookFor": [
+              "Production mastery",
+              "Deep internals"
+            ]
+          },
+          {
+            "score": 3,
+            "description": "Demonstrates working knowledge of Django, but lacks deep distributed systems or performance tuning expertise.",
+            "signalsToLookFor": [
+              "Working knowledge",
+              "Basic syntax"
+            ]
+          },
+          {
+            "score": 1,
+            "description": "Unable to explain architectural fundamentals of Django; gap is confirmed.",
+            "signalsToLookFor": [
+              "Unable to explain fundamentals",
+              "Fabricated claim"
+            ]
+          }
+        ]
+      },
+      "followUpProbes": [
+        "How did you handle edge cases in Django?"
+      ],
+      "evidenceStateTargeted": "missing_evidence"
+    },
+    {
+      "id": "q-dynamic-cand-taylor-vance-mw38p8vv-3",
+      "jobId": "job-backend-001",
+      "candidateId": "cand-taylor-vance-mw38p8vv",
+      "questionText": "Verify candidate's hands-on proficiency with PostgreSQL and investigate why it is not referenced in their work experience.",
+      "category": "technical",
+      "targetSkillOrTopic": "PostgreSQL",
+      "contextReasoning": "Investigating missing evidence status for required skill PostgreSQL",
+      "difficulty": "senior",
+      "expectedSignals": [
+        "PostgreSQL",
+        "production architecture",
+        "performance tuning"
+      ],
+      "redFlagIndicators": [
+        "Unable to explain internals",
+        "Surface-level buzzwords"
+      ],
+      "rubric": {
+        "criteria": "Verification of missing evidence in PostgreSQL",
+        "levels": [
+          {
+            "score": 5,
+            "description": "Articulates deep internal mechanics, concurrency behavior, and production optimization in PostgreSQL.",
+            "signalsToLookFor": [
+              "Production mastery",
+              "Deep internals"
+            ]
+          },
+          {
+            "score": 3,
+            "description": "Demonstrates working knowledge of PostgreSQL, but lacks deep distributed systems or performance tuning expertise.",
+            "signalsToLookFor": [
+              "Working knowledge",
+              "Basic syntax"
+            ]
+          },
+          {
+            "score": 1,
+            "description": "Unable to explain architectural fundamentals of PostgreSQL; gap is confirmed.",
+            "signalsToLookFor": [
+              "Unable to explain fundamentals",
+              "Fabricated claim"
+            ]
+          }
+        ]
+      },
+      "followUpProbes": [
+        "How did you handle edge cases in PostgreSQL?"
+      ],
+      "evidenceStateTargeted": "missing_evidence"
+    },
+    {
+      "id": "q-dynamic-cand-taylor-vance-mw38p8vv-4",
+      "jobId": "job-backend-001",
+      "candidateId": "cand-taylor-vance-mw38p8vv",
+      "questionText": "Verify candidate's hands-on proficiency with Docker and investigate why it is not referenced in their work experience.",
+      "category": "technical",
+      "targetSkillOrTopic": "Docker",
+      "contextReasoning": "Investigating missing evidence status for required skill Docker",
+      "difficulty": "senior",
+      "expectedSignals": [
+        "Docker",
+        "production architecture",
+        "performance tuning"
+      ],
+      "redFlagIndicators": [
+        "Unable to explain internals",
+        "Surface-level buzzwords"
+      ],
+      "rubric": {
+        "criteria": "Verification of missing evidence in Docker",
+        "levels": [
+          {
+            "score": 5,
+            "description": "Articulates deep internal mechanics, concurrency behavior, and production optimization in Docker.",
+            "signalsToLookFor": [
+              "Production mastery",
+              "Deep internals"
+            ]
+          },
+          {
+            "score": 3,
+            "description": "Demonstrates working knowledge of Docker, but lacks deep distributed systems or performance tuning expertise.",
+            "signalsToLookFor": [
+              "Working knowledge",
+              "Basic syntax"
+            ]
+          },
+          {
+            "score": 1,
+            "description": "Unable to explain architectural fundamentals of Docker; gap is confirmed.",
+            "signalsToLookFor": [
+              "Unable to explain fundamentals",
+              "Fabricated claim"
+            ]
+          }
+        ]
+      },
+      "followUpProbes": [
+        "How did you handle edge cases in Docker?"
+      ],
+      "evidenceStateTargeted": "missing_evidence"
+    },
+    {
+      "id": "q-flag-cand-taylor-vance-mw38p8vv-5",
+      "jobId": "job-backend-001",
+      "candidateId": "cand-taylor-vance-mw38p8vv",
+      "questionText": "Probe timeline discrepancy: verify when candidate started using Next.js and whether this includes pre-professional or student work.",
+      "category": "evidence_verification",
+      "targetSkillOrTopic": "Next.js (12 years claimed)",
+      "contextReasoning": "Resolving hallucination/discrepancy flag: Candidate claims 12 years of experience in Next.js, but documented employment history spans only ~5 years.",
+      "difficulty": "lead",
+      "expectedSignals": [
+        "Verifiable artifacts",
+        "Clear timeline reconciliation"
+      ],
+      "redFlagIndicators": [
+        "Defensive evasion",
+        "Inability to substantiate tenure"
+      ],
+      "rubric": {
+        "criteria": "Discrepancy resolution for: Next.js (12 years claimed)",
+        "levels": [
+          {
+            "score": 5,
+            "description": "Plausibly clarifies discrepancy with verifiable institutional artifacts or open-source commits.",
+            "signalsToLookFor": [
+              "Verifiable artifacts",
+              "Clear dates"
+            ]
+          },
+          {
+            "score": 1,
+            "description": "Admits resume claim was inflated or unsupported by professional tenure.",
+            "signalsToLookFor": [
+              "Admission of exaggeration",
+              "Contradictory explanations"
+            ]
+          }
+        ]
+      },
+      "followUpProbes": [
+        "Can you share the commit history or repository for this work?"
+      ]
+    },
+    {
+      "id": "q-flag-cand-taylor-vance-mw38p8vv-6",
+      "jobId": "job-backend-001",
+      "candidateId": "cand-taylor-vance-mw38p8vv",
+      "questionText": "Probe timeline discrepancy: verify when candidate started using QuantumFluxDB and whether this includes pre-professional or student work.",
+      "category": "evidence_verification",
+      "targetSkillOrTopic": "QuantumFluxDB (8 years claimed)",
+      "contextReasoning": "Resolving hallucination/discrepancy flag: Candidate claims 8 years of experience in QuantumFluxDB, but documented employment history spans only ~5 years.",
+      "difficulty": "lead",
+      "expectedSignals": [
+        "Verifiable artifacts",
+        "Clear timeline reconciliation"
+      ],
+      "redFlagIndicators": [
+        "Defensive evasion",
+        "Inability to substantiate tenure"
+      ],
+      "rubric": {
+        "criteria": "Discrepancy resolution for: QuantumFluxDB (8 years claimed)",
+        "levels": [
+          {
+            "score": 5,
+            "description": "Plausibly clarifies discrepancy with verifiable institutional artifacts or open-source commits.",
+            "signalsToLookFor": [
+              "Verifiable artifacts",
+              "Clear dates"
+            ]
+          },
+          {
+            "score": 1,
+            "description": "Admits resume claim was inflated or unsupported by professional tenure.",
+            "signalsToLookFor": [
+              "Admission of exaggeration",
+              "Contradictory explanations"
+            ]
+          }
+        ]
+      },
+      "followUpProbes": [
+        "Can you share the commit history or repository for this work?"
+      ]
     }
   ],
   "schedules": [
@@ -1467,7 +2768,10 @@
         "Review open-source repo github.com/ftariq-dev/event-ledger prior to session.",
         "Candidate holds DCA certification; verify multi-stage build best practices."
       ],
-      "questionIds": ["q-farhan-01", "q-farhan-02"],
+      "questionIds": [
+        "q-farhan-01",
+        "q-farhan-02"
+      ],
       "createdAt": "2026-10-14T11:00:00Z",
       "updatedAt": "2026-10-14T11:00:00Z"
     }
@@ -1508,4 +2812,3 @@
     }
   ]
 }
-

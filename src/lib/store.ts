@@ -259,6 +259,18 @@ export async function getApplicationById(id: string): Promise<ApplicationRecord 
   return db.applications.find((a) => a.id === id) || null;
 }
 
+export async function saveApplication(application: ApplicationRecord): Promise<ApplicationRecord> {
+  const db = await getDatabase();
+  const index = db.applications.findIndex((a) => a.id === application.id);
+  if (index >= 0) {
+    db.applications[index] = application;
+  } else {
+    db.applications.push(application);
+  }
+  await saveDatabase(db);
+  return application;
+}
+
 export async function updateApplicationStage(
   id: string,
   newStage: ApplicationStage,

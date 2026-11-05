@@ -1,0 +1,35 @@
+ALI RAZA
+Senior Python & Django Backend Engineer
+Email: ali.raza.backend@gmail.com | Phone: +92 (300) 555-0142 | Location: Islamabad, Pakistan
+GitHub: github.com/aliraza-core | LinkedIn: linkedin.com/in/aliraza-backend
+
+PROFESSIONAL SUMMARY
+Dedicated Backend Software Engineer with 4 years of hands-on experience designing and maintaining high-throughput distributed microservices using Python and Django REST Framework. Proven expertise in PostgreSQL query optimization, B-Tree and GIN indexing, and Docker multi-stage containerization. Extensive track record deploying automated CI/CD pipelines with zero downtime.
+
+CORE TECHNICAL SKILLS
+- Programming Languages: Python 3.10-3.12 (4 years, Expert), SQL, Bash
+- Web Frameworks: Django (4 years, Expert), Django REST Framework, Celery, Pytest
+- Databases & Storage: PostgreSQL (3 years, Advanced), Redis caching, Query Optimization
+- DevOps & Cloud: Docker (2 years, Proficient), Docker Compose, CI/CD pipelines, AWS, Git
+
+WORK EXPERIENCE
+
+Senior Backend Developer | CloudScale Solutions | 2022 - Present
+- Architected scalable RESTful services in Python and Django REST Framework processing 8M+ daily requests.
+- Optimized high-load PostgreSQL database queries with composite indexing, reducing latency by 45%.
+- Built and managed production Docker containers and orchestrated automated GitHub Actions CI/CD.
+- Implemented asynchronous Celery job queues backed by Redis for email and transactional pipelines.
+
+Backend Software Engineer | Apex Tech Innovations | 2020 - 2022
+- Built transactional API services using Python and Django with PostgreSQL datastores.
+- Containerized application services using Docker and configured Docker Compose for local environments.
+- Wrote comprehensive unit and integration test suites using pytest with 92% coverage.
+
+PROJECTS
+FinStream Distributed Ledger (Open Source)
+- High-throughput financial transaction engine written in Python and Django REST Framework.
+- Benchmarked at 3,200 requests/sec with PostgreSQL connection pooling and Docker Compose orchestration.
+
+EDUCATION & CERTIFICATIONS
+- Bachelor of Science in Computer Science (B.S.) | NUST (2016 - 2020)
+- Docker Certified Associate (DCA) | Docker Inc. (2023)

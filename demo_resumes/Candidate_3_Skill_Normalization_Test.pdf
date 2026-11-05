@@ -1,0 +1,65 @@
+%PDF-1.4
+1 0 obj
+<</Type /Catalog /Pages 2 0 R>>
+endobj
+2 0 obj
+<</Type /Pages /Kids [3 0 R] /Count 1>>
+endobj
+3 0 obj
+<</Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 5 0 R >> >> /Contents 4 0 R>>
+endobj
+4 0 obj
+<</Length 1643>>
+stream
+BT
+/F1 11 Tf
+50 740 Td
+14 TL
+(USMAN TARIQ) Tj T*
+(Full-Stack Developer \(Node & Frontend\)) Tj T*
+(Email: usman.tariq.code@gmail.com | Phone: +92 \(333\) 555-4920 | Location: Karachi, Pakistan) Tj T*
+(GitHub: github.com/usmantariq-code | LinkedIn: linkedin.com/in/usman-tariq-dev) Tj T*
+T*
+(PROFESSIONAL SUMMARY) Tj T*
+(Versatile Full-Stack Engineer with 3 years experience building dynamic web apps using JS, TS, and Py.) Tj T*
+(Skilled with Postgres databases and modern frontend architectures with React and Node.js.) Tj T*
+T*
+(SKILLS & ALIASES \(TESTING CANONICAL NORMALIZATION\)) Tj T*
+(Languages: JS \(JavaScript\), TS \(TypeScript\), Py \(Python\), HTML5, CSS3) Tj T*
+(Frameworks: Node.js, Express, React, Next.js) Tj T*
+(Databases: Postgres \(PostgreSQL\), MongoDB) Tj T*
+(DevOps & Tools: Git, GitHub, Linux, K8s \(Kubernetes\), Docker \(Basic\)) Tj T*
+T*
+(WORK EXPERIENCE) Tj T*
+(Full-Stack Developer | DevNexus Systems | 2021 - Present) Tj T*
+(- Built responsive frontend features with React and TS, backed by Node.js microservices.) Tj T*
+(- Wrote Py \(Python\) automation scripts to sync third-party REST APIs into our Postgres datastore.) Tj T*
+(- Maintained database schema migrations in Postgres and tuned basic queries.) Tj T*
+(- Containerized staging microservices with Docker and deployed to test K8s clusters.) Tj T*
+T*
+(Junior Web Developer | PixelCraft Studio | 2020 - 2021) Tj T*
+(- Created interactive web components using JS and CSS.) Tj T*
+(- Assisted with backend integration using Express and Postgres.) Tj T*
+T*
+(EDUCATION) Tj T*
+(Bachelor of Computer Applications | University of Karachi \(2016 - 2020\)) Tj T*
+ET
+
+endstream
+endobj
+5 0 obj
+<</Type /Font /Subtype /Type1 /BaseFont /Helvetica>>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000056 00000 n 
+0000000111 00000 n 
+0000000235 00000 n 
+0000001928 00000 n 
+trailer
+<</Size 6 /Root 1 0 R>>
+startxref
+1996
+%%EOF

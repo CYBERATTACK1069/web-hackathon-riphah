@@ -1,0 +1,74 @@
+%PDF-1.4
+1 0 obj
+<</Type /Catalog /Pages 2 0 R>>
+endobj
+2 0 obj
+<</Type /Pages /Kids [3 0 R] /Count 1>>
+endobj
+3 0 obj
+<</Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 5 0 R >> >> /Contents 4 0 R>>
+endobj
+4 0 obj
+<</Length 2506>>
+stream
+BT
+/F1 11 Tf
+50 740 Td
+14 TL
+(ALI RAZA) Tj T*
+(Senior Python & Django Backend Engineer) Tj T*
+(Email: ali.raza.backend@gmail.com | Phone: +92 \(300\) 555-0142 | Location: Islamabad, Pakistan) Tj T*
+(GitHub: github.com/aliraza-core | LinkedIn: linkedin.com/in/aliraza-backend) Tj T*
+T*
+(PROFESSIONAL SUMMARY) Tj T*
+(Dedicated Backend Software Engineer with 4 years of hands-on experience designing and maintaining) Tj T*
+(high-throughput distributed microservices using Python and Django REST Framework. Proven expertise) Tj T*
+(in PostgreSQL query optimization, B-Tree and GIN indexing, and Docker multi-stage containerization.) Tj T*
+(Extensive track record deploying automated CI/CD pipelines with zero downtime.) Tj T*
+T*
+(CORE TECHNICAL SKILLS) Tj T*
+(Programming Languages: Python 3.10-3.12 \(4 years, Expert\), SQL, Bash) Tj T*
+(Web Frameworks: Django \(4 years, Expert\), Django REST Framework, Celery, Pytest) Tj T*
+(Databases & Storage: PostgreSQL \(3 years, Advanced\), Redis caching, Query Optimization) Tj T*
+(DevOps & Cloud: Docker \(2 years, Proficient\), Docker Compose, CI/CD pipelines, AWS, Git) Tj T*
+T*
+(WORK EXPERIENCE) Tj T*
+(Senior Backend Developer | CloudScale Solutions | 2022 - Present) Tj T*
+(- Architected scalable RESTful services in Python and Django REST Framework processing 8M+ daily requests.) Tj T*
+(- Optimized high-load PostgreSQL database queries with composite indexing, reducing latency by 45%.) Tj T*
+(- Built and managed production Docker containers and orchestrated automated GitHub Actions CI/CD.) Tj T*
+(- Implemented asynchronous Celery job queues backed by Redis for email and transactional pipelines.) Tj T*
+T*
+(Backend Software Engineer | Apex Tech Innovations | 2020 - 2022) Tj T*
+(- Built transactional API services using Python and Django with PostgreSQL datastores.) Tj T*
+(- Containerized application services using Docker and configured Docker Compose for local environments.) Tj T*
+(- Wrote comprehensive unit and integration test suites using pytest with 92% coverage.) Tj T*
+T*
+(PROJECTS) Tj T*
+(FinStream Distributed Ledger \(Open Source\)) Tj T*
+(- High-throughput financial transaction engine written in Python and Django REST Framework.) Tj T*
+(- Benchmarked at 3,200 requests/sec with PostgreSQL connection pooling and Docker Compose orchestration.) Tj T*
+T*
+(EDUCATION & CERTIFICATIONS) Tj T*
+(Bachelor of Science in Computer Science \(B.S.\) | NUST \(2016 - 2020\)) Tj T*
+(Docker Certified Associate \(DCA\) | Docker Inc. \(2023\)) Tj T*
+ET
+
+endstream
+endobj
+5 0 obj
+<</Type /Font /Subtype /Type1 /BaseFont /Helvetica>>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000056 00000 n 
+0000000111 00000 n 
+0000000235 00000 n 
+0000002791 00000 n 
+trailer
+<</Size 6 /Root 1 0 R>>
+startxref
+2859
+%%EOF

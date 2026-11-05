@@ -1,0 +1,22 @@
+TAYLOR VANCE
+Junior Developer claiming Senior Architect
+Email: taylor.vance.test@techaudit.org | Phone: +1 (212) 555-4302 | Location: New York, NY
+GitHub: github.com/taylorvance-audit
+
+PROFESSIONAL SUMMARY
+Motivated software engineer with 2 years of professional experience. 
+Claiming 12 years of hands-on expertise in Next.js, React, and QuantumFluxDB as Lead Architect.
+
+WORK EXPERIENCE
+
+Junior Frontend Developer | QuickStart Media | 2022 - Present
+- Built promotional landing pages using React and Tailwind CSS.
+- Maintained internal documentation, bug triage, and WordPress landing pages.
+
+EDUCATION
+State University of New York | 2018 - 2022
+Bachelor of Arts in Media Studies (Graduated: May 2022)
+
+TECHNICAL CLAIMS
+- Next.js (Claimed: 12 years)
+- QuantumFluxDB (Claimed: 8 years)

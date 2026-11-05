@@ -1,0 +1,67 @@
+%PDF-1.4
+1 0 obj
+<</Type /Catalog /Pages 2 0 R>>
+endobj
+2 0 obj
+<</Type /Pages /Kids [3 0 R] /Count 1>>
+endobj
+3 0 obj
+<</Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 5 0 R >> >> /Contents 4 0 R>>
+endobj
+4 0 obj
+<</Length 2009>>
+stream
+BT
+/F1 11 Tf
+50 740 Td
+14 TL
+(SARA KHAN) Tj T*
+(Python API Developer \(FastAPI & Flask\)) Tj T*
+(Email: sara.khan.dev@gmail.com | Phone: +92 \(321\) 555-8821 | Location: Lahore, Pakistan) Tj T*
+(GitHub: github.com/sarakhan-dev | LinkedIn: linkedin.com/in/sarakhan-python) Tj T*
+T*
+(PROFESSIONAL SUMMARY) Tj T*
+(Backend developer with 2 years of professional experience developing REST APIs and microservices) Tj T*
+(using Python, FastAPI, and Flask. Strong background in relational database modeling in PostgreSQL.) Tj T*
+(Note: 0 production Django projects \(primary experience in micro-frameworks FastAPI and Flask\).) Tj T*
+(Possess general familiarity with containers, but have not managed production Docker environments.) Tj T*
+T*
+(CORE TECHNICAL SKILLS) Tj T*
+(Programming Languages: Python \(2 years, Competent\), SQL, JavaScript) Tj T*
+(Web Frameworks: FastAPI, Flask \(Note: 0 production Django projects; exclusively micro-frameworks\)) Tj T*
+(Databases: PostgreSQL \(2 years, Competent\), SQLite, Redis) Tj T*
+(DevOps & Tools: Git, GitHub, Linux, Familiarity with containers \(watched Docker tutorials\)) Tj T*
+T*
+(WORK EXPERIENCE) Tj T*
+(Python Backend Developer | DataPulse Tech | 2022 - Present) Tj T*
+(- Developed lightweight asynchronous APIs using Python and FastAPI for real-time analytics dashboards.) Tj T*
+(- Designed relational database tables and written complex SQL queries in PostgreSQL.) Tj T*
+(- Collaborated with DevOps engineers; gained familiarity with containers during staging deployments.) Tj T*
+(- Explicit note: Focused exclusively on FastAPI and Flask; 0 production Django projects completed.) Tj T*
+T*
+(Junior Software Engineer | InnovateSoft Labs | 2021 - 2022) Tj T*
+(- Built internal reporting tools and data export utilities using Python and Flask.) Tj T*
+(- Maintained PostgreSQL database migrations and performed routine database backup scripts.) Tj T*
+T*
+(EDUCATION) Tj T*
+(Bachelor of Science in Software Engineering \(B.S.\) | FAST-NUCES \(2017 - 2021\)) Tj T*
+ET
+
+endstream
+endobj
+5 0 obj
+<</Type /Font /Subtype /Type1 /BaseFont /Helvetica>>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000056 00000 n 
+0000000111 00000 n 
+0000000235 00000 n 
+0000002294 00000 n 
+trailer
+<</Size 6 /Root 1 0 R>>
+startxref
+2362
+%%EOF

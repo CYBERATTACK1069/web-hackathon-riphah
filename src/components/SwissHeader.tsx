@@ -1,8 +1,9 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { UserRole } from "@/types/platform";
-import { ShieldCheck, RotateCcw, Database, Building2, UserCircle2 } from "lucide-react";
+import { ShieldCheck, RotateCcw, Database, Building2, UserCircle2, Sparkles } from "lucide-react";
 
 interface SwissHeaderProps {
   currentRole: UserRole;
@@ -104,6 +105,14 @@ export const SwissHeader: React.FC<SwissHeaderProps> = ({
               Candidate Mode
             </button>
           </div>
+
+          <Link
+            href="/ai-lab"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-mono font-medium text-emerald-700 bg-emerald-50 hover:bg-emerald-100 border border-emerald-300 rounded-sm transition-colors"
+          >
+            <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
+            <span>AI LAB & PDF TESTING</span>
+          </Link>
         </div>
       </div>
     </header>

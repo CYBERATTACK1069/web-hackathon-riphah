@@ -1,0 +1,28 @@
+USMAN TARIQ
+Full-Stack Developer (Node & Frontend)
+Email: usman.tariq.code@gmail.com | Phone: +92 (333) 555-4920 | Location: Karachi, Pakistan
+GitHub: github.com/usmantariq-code | LinkedIn: linkedin.com/in/usman-tariq-dev
+
+PROFESSIONAL SUMMARY
+Versatile Full-Stack Engineer with 3 years experience building dynamic web apps using JS, TS, and Py. Skilled with Postgres databases and modern frontend architectures with React and Node.js.
+
+SKILLS & ALIASES (TESTING CANONICAL NORMALIZATION)
+- Languages: JS (JavaScript), TS (TypeScript), Py (Python), HTML5, CSS3
+- Frameworks: Node.js, Express, React, Next.js
+- Databases: Postgres (PostgreSQL), MongoDB
+- DevOps & Tools: Git, GitHub, Linux, K8s (Kubernetes), Docker (Basic)
+
+WORK EXPERIENCE
+
+Full-Stack Developer | DevNexus Systems | 2021 - Present
+- Built responsive frontend features with React and TS, backed by Node.js microservices.
+- Wrote Py (Python) automation scripts to sync third-party REST APIs into our Postgres datastore.
+- Maintained database schema migrations in Postgres and tuned basic queries.
+- Containerized staging microservices with Docker and deployed to test K8s clusters.
+
+Junior Web Developer | PixelCraft Studio | 2020 - 2021
+- Created interactive web components using JS and CSS.
+- Assisted with backend integration using Express and Postgres.
+
+EDUCATION
+Bachelor of Computer Applications | University of Karachi (2016 - 2020)

@@ -5,6 +5,10 @@ import {
   PlatformDatabaseSchema,
   UserRole,
   ApplicationStage,
+  ApplicationRecord,
+  MatchEvaluation,
+  ParsedResume,
+  InterviewQuestion,
 } from "@/types/platform";
 import { SwissHeader } from "./SwissHeader";
 import { JobRequisitionCard } from "./JobRequisitionCard";
@@ -87,6 +91,46 @@ export const PlatformDashboard: React.FC<PlatformDashboardProps> = ({ initialDat
     }
   };
 
+  const handleCandidateAdded = (candidateData: {
+    application: ApplicationRecord;
+    evaluation: MatchEvaluation;
+    resume: ParsedResume;
+    questions?: InterviewQuestion[];
+  }) => {
+    setData((prev) => ({
+      ...prev,
+      applications: [
+        candidateData.application,
+        ...prev.applications.filter(
+          (a) =>
+            a.id !== candidateData.application.id &&
+            a.candidateId !== candidateData.application.candidateId
+        ),
+      ],
+      evaluations: [
+        candidateData.evaluation,
+        ...prev.evaluations.filter(
+          (e) =>
+            e.id !== candidateData.evaluation.id &&
+            e.candidateId !== candidateData.evaluation.candidateId
+        ),
+      ],
+      resumes: [
+        candidateData.resume,
+        ...prev.resumes.filter(
+          (r) =>
+            r.id !== candidateData.resume.id &&
+            r.candidateId !== candidateData.resume.candidateId
+        ),
+      ],
+      questions: [
+        ...(candidateData.questions || []),
+        ...prev.questions,
+      ],
+    }));
+    setSelectedCandidateId(candidateData.application.candidateId);
+  };
+
   return (
     <div className="min-h-screen flex flex-col swiss-grid-pattern">
       <SwissHeader
@@ -107,6 +151,7 @@ export const PlatformDashboard: React.FC<PlatformDashboardProps> = ({ initialDat
           evaluations={data.evaluations}
           selectedCandidateId={selectedCandidateId}
           onSelectCandidate={setSelectedCandidateId}
+          onCandidateAdded={handleCandidateAdded}
         />
 
         {/* Dynamic View based on Active Role */}

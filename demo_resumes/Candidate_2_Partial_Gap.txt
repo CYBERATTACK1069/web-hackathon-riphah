@@ -1,0 +1,30 @@
+SARA KHAN
+Python API Developer (FastAPI & Flask)
+Email: sara.khan.dev@gmail.com | Phone: +92 (321) 555-8821 | Location: Lahore, Pakistan
+GitHub: github.com/sarakhan-dev | LinkedIn: linkedin.com/in/sarakhan-python
+
+PROFESSIONAL SUMMARY
+Backend developer with 2 years of professional experience developing REST APIs and microservices using Python, FastAPI, and Flask. Strong background in relational database modeling in PostgreSQL.
+Note: 0 production Django projects (primary experience in micro-frameworks FastAPI and Flask).
+Possess general familiarity with containers, but have not managed production Docker environments.
+
+CORE TECHNICAL SKILLS
+- Programming Languages: Python (2 years, Competent), SQL, JavaScript
+- Web Frameworks: FastAPI, Flask (Note: 0 production Django projects; exclusively micro-frameworks)
+- Databases: PostgreSQL (2 years, Competent), SQLite, Redis
+- DevOps & Tools: Git, GitHub, Linux, Familiarity with containers (watched Docker tutorials)
+
+WORK EXPERIENCE
+
+Python Backend Developer | DataPulse Tech | 2022 - Present
+- Developed lightweight asynchronous APIs using Python and FastAPI for real-time analytics dashboards.
+- Designed relational database tables and written complex SQL queries in PostgreSQL.
+- Collaborated with DevOps engineers; gained familiarity with containers during staging deployments.
+- Explicit note: Focused exclusively on FastAPI and Flask; 0 production Django projects completed.
+
+Junior Software Engineer | InnovateSoft Labs | 2021 - 2022
+- Built internal reporting tools and data export utilities using Python and Flask.
+- Maintained PostgreSQL database migrations and performed routine database backup scripts.
+
+EDUCATION
+Bachelor of Science in Software Engineering (B.S.) | FAST-NUCES (2017 - 2021)
