@@ -26,6 +26,7 @@ export const PlatformDashboard: React.FC<PlatformDashboardProps> = ({ initialDat
   const [selectedCandidateId, setSelectedCandidateId] = useState<string>("usr-candidate-01");
   const [isResetting, setIsResetting] = useState(false);
   const [isAdvancingStage, setIsAdvancingStage] = useState(false);
+  const [blindMode, setBlindMode] = useState(false);
 
   const activeJob = data.jobs[0]; // Exact Demo Scenario: The Backend Developer job
   const activeApplication =
@@ -139,9 +140,11 @@ export const PlatformDashboard: React.FC<PlatformDashboardProps> = ({ initialDat
         onResetData={handleResetData}
         isResetting={isResetting}
         dbType="local_json"
+        blindMode={blindMode}
+        onToggleBlindMode={() => setBlindMode(!blindMode)}
       />
 
-      <main className="flex-1 max-w-7xl w-full mx-auto px-6 py-8">
+      <main className="flex-1 max-w-7xl w-full mx-auto px-6 py-8 space-y-6">
         {/* Requisition Overview */}
         {activeJob && <JobRequisitionCard job={activeJob} />}
 

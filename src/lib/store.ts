@@ -323,6 +323,34 @@ export async function addApplicationAuditEntry(
   return application;
 }
 
+export async function updateApplicationNotes(
+  id: string,
+  recruiterNotes: string,
+  actor?: { id: string; name: string; role: UserRole | "system" }
+): Promise<ApplicationRecord | null> {
+  const db = await getDatabase();
+  const application = db.applications.find((a) => a.id === id);
+  if (!application) return null;
+
+  const now = new Date().toISOString();
+  application.recruiterNotes = recruiterNotes;
+  application.lastUpdated = now;
+
+  const actorObj = actor || { id: "usr-recruiter-01", name: "Elena Vance", role: "recruiter" };
+  application.auditTrail.push({
+    id: `aud-${Date.now().toString(36)}-${Math.random().toString(36).substring(2, 6)}`,
+    timestamp: now,
+    action: "Recruiter note logged",
+    previousStage: application.currentStage,
+    newStage: application.currentStage,
+    actor: actorObj,
+    notes: recruiterNotes,
+  });
+
+  await saveDatabase(db);
+  return application;
+}
+
 // ============================================================================
 // INTERVIEW QUESTIONS REPOSITORY
 // ============================================================================
@@ -380,6 +408,21 @@ export async function saveInterviewSchedule(schedule: InterviewSchedule): Promis
   return schedule;
 }
 
+export async function updateInterviewFeedback(
+  scheduleId: string,
+  feedback: NonNullable<InterviewSchedule["feedback"]>
+): Promise<InterviewSchedule | null> {
+  const db = await getDatabase();
+  const schedule = db.schedules.find((s) => s.id === scheduleId);
+  if (!schedule) return null;
+
+  schedule.feedback = feedback;
+  schedule.status = "completed";
+  schedule.updatedAt = new Date().toISOString();
+  await saveDatabase(db);
+  return schedule;
+}
+
 // ============================================================================
 // USERS REPOSITORY
 // ============================================================================
@@ -392,5 +435,23 @@ export async function getUsers(): Promise<UserAccount[]> {
 export async function getUserById(id: string): Promise<UserAccount | null> {
   const db = await getDatabase();
   return db.users.find((u) => u.id === id) || null;
+}
+
+export async function getUserByEmail(email: string): Promise<UserAccount | null> {
+  const db = await getDatabase();
+  const lower = email.trim().toLowerCase();
+  return db.users.find((u) => u.email.toLowerCase() === lower) || null;
+}
+
+export async function saveUser(user: UserAccount): Promise<UserAccount> {
+  const db = await getDatabase();
+  const index = db.users.findIndex((u) => u.id === user.id);
+  if (index >= 0) {
+    db.users[index] = user;
+  } else {
+    db.users.push(user);
+  }
+  await saveDatabase(db);
+  return user;
 }
 

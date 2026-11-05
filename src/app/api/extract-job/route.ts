@@ -29,7 +29,8 @@ export async function POST(request: NextRequest) {
     }
 
     const body = await request.json();
-    const description = typeof body.description === "string" ? body.description.trim() : "";
+    const rawDescription = body.description || body.text || "";
+    const description = typeof rawDescription === "string" ? rawDescription.trim() : "";
 
     if (!description) {
       return NextResponse.json(
@@ -69,6 +70,18 @@ export async function POST(request: NextRequest) {
 
     const executionTimeMs = Date.now() - startTime;
 
+    const minExperienceYears =
+      (extractionResult.vacancy as { minExperienceYears?: number }).minExperienceYears ??
+      (extractionResult.vacancy.experienceLevel === "principal"
+        ? 8
+        : extractionResult.vacancy.experienceLevel === "lead"
+        ? 7
+        : extractionResult.vacancy.experienceLevel === "senior"
+        ? 5
+        : extractionResult.vacancy.experienceLevel === "mid"
+        ? 3
+        : 1);
+
     return NextResponse.json(
       {
         success: true,
@@ -83,6 +96,13 @@ export async function POST(request: NextRequest) {
           isFallback: extractionResult.isFallback,
           savedToStore: saved,
         },
+        requirements: {
+          skills: extractionResult.requiredSkills,
+          minExperienceYears,
+          qualifications: extractionResult.vacancy?.qualifications || [],
+          preferredSkills: extractionResult.preferredSkills,
+        },
+        extracted: extractionResult.vacancy,
         meta: {
           executionTimeMs,
           timestamp: new Date().toISOString(),

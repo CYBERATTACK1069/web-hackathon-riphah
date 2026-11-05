@@ -1,0 +1,27 @@
+DAVID VANCE
+Email: david.vance@backendpro.io | Phone: +1 (555) 342-9981 | Location: Remote
+GitHub: https://github.com/davidvance-backend | LinkedIn: https://linkedin.com/in/davidvance-dev
+
+PROFESSIONAL SUMMARY:
+Senior Backend Engineer with 5+ years of production experience architecting high-throughput REST APIs and asynchronous task processing using Python, Django, PostgreSQL, and Docker. Proven record optimizing database queries, managing containerized CI/CD deployments, and building resilient distributed systems.
+
+CORE TECHNICAL SKILLS:
+• Languages: Python (5 yrs, Expert), SQL (5 yrs), Bash
+• Frameworks & Libraries: Django (4 yrs), Django REST Framework, Celery, PyTest
+• Databases: PostgreSQL (5 yrs), Redis (Caching & Task Broker)
+• DevOps & Infrastructure: Docker, Docker Compose, AWS EC2/RDS, GitHub Actions, Linux
+
+WORK EXPERIENCE:
+Senior Backend Developer | Apex Financial Cloud (2022 - Present)
+• Architected core banking ledger REST APIs using Django and PostgreSQL, supporting 6,000 transactions/sec with sub-40ms response times.
+• Containerized microservices architecture with Docker and Docker Compose, reducing developer onboarding time from 3 days to 20 minutes.
+• Re-engineered complex PostgreSQL joins and implemented Redis query caching, reducing p99 database latency by 45%.
+• Established automated unit and integration testing suite using PyTest and Celery with 91% code coverage.
+
+Backend Software Engineer | DataStream Labs (2020 - 2022)
+• Built Python ETL data pipelines ingesting 10M+ daily events into PostgreSQL data warehouse.
+• Deployed containerized Django web services behind NGINX reverse proxies using Docker.
+
+EDUCATION:
+B.S. in Computer Science | University of Michigan (2020)
+

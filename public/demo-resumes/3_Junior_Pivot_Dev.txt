@@ -1,0 +1,25 @@
+LIAM O'CONNOR
+Email: liam.oconnor@codestack.net | Phone: +1 (555) 890-4411 | Location: Chicago, IL
+GitHub: https://github.com/liamoconnor-web | Portfolio: https://liamdesigns.dev
+
+PROFESSIONAL SUMMARY:
+Frontend and Web Developer with 2 years of experience building modern user interfaces using React, JavaScript, and Tailwind CSS. Recently transitioned to full-stack development using Node.js and Express. Seeking backend-oriented engineering opportunities.
+
+CORE TECHNICAL SKILLS:
+• Frontend: JavaScript (ES6+), React, Tailwind CSS, HTML5/CSS3
+• Backend: Node.js (1 yr), Express, REST APIs
+• Databases: MongoDB, basic SQL
+• Version Control: Git, GitHub
+
+WORK EXPERIENCE:
+Frontend Web Developer | Horizon Creative (2023 - Present)
+• Built responsive landing pages and interactive dashboards using React, Next.js, and Tailwind CSS.
+• Developed basic mock API endpoints in Node.js and Express to simulate payment processing.
+• Integrated REST APIs and managed client-side state using Redux Toolkit.
+
+Web Intern | Alpha Digital (2022 - 2023)
+• Maintained client WordPress websites and wrote custom JavaScript animations.
+
+EDUCATION:
+Associate Degree in Web Development | City Community College (2022)
+
